@@ -392,6 +392,10 @@ footer {
   padding: 20px;
 }
 
+footer h1 {
+  font-family: Shrikhanddisplay; /* Font family pou r le logo*/
+}
+
 .PiedDePage {
   display: flex;
   flex-direction: row;
