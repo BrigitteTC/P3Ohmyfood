@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <!-- OpenClassroom Projet 3  Omyfood -->
+    <!-- Création: 16/12/2021-->
+    <!-- Auteur: BTC-->
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--- pour les mobiles-->
+
+    <!--Polices de caractere-->
+
+      <!--Logo et titres: Shrikhand-->
+      <!--Texte: Roboto-->
+  
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Fontawsome-->
+    <script
+      src="https://kit.fontawesome.com/6a1e5290f1.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--Appel Normalize-->
+    <link rel="normalize" href="CSS/normalize.css" />
+
+    <!--Appel fichier de style css-->
+    <link rel="stylesheet" href="CSS/style.css" />
+
+    <title>Ohmyfood</title>
+  </head>
+
+  <body>
+    <div>
+      <!--Header-->
+      <header>
+
+
+        
+        <!--Image avec le logo du site-->                                                
+        <img class= "SiteLogo" 
+          src="images/logo/ohmyfood.png"   
+          alt="Ohmyfood">
+
+        <!--Section de recherche-->
+        <section class="Recherche">
+          <!--Formulaire de recherche-->
+          <form method="post" action="traitement.php">
+            <!--Bloc recherche avec logo, zone de saisie et Bouton submit-->
+            <div class="RechercheItem">
+              <div class="RechercheLogo">
+                <!--Logo position -->
+                <span class="fas fa-map-marker-alt Logo"></span>
+              </div>
+
+              <div class="RechercheChamp">
+                <!--zone de saisie-->
+                <p class="bold">
+                  <input
+                    class="saisie"
+                    type="text"
+                    name="ville"
+                    id="ville"
+                    placeholder="Paris, Belleville"
+                  />
+                </p>
+              </div>
+            </div>
+          </form>
+         
+            <h6 class="Transparent">""</h6>  <!--Balise h6 cachée pour passer le wC3-->
+          
+        </section>
+
+
+
+                        <!--Promesse-->
+                <section class="Promesse">
+                    
+                    
+
+
+                        <h1>Réservez le menu qui vous convient</h1>
+                        <h3>Découvrez des restaurants d'exception,</h3>
+                        <h3>sélectionnés par nos soins.</h3>
+
+                        <div class=Bouton>
+                          <p>Explorer nos restaurants</p>
+                        </div>
+
+                    
+                </section> 
+
+      </header>
+
+      <!--Main-->
+      <main >
+
+      <!--Choix de l'utilisateur-->
+
+      <div class="Fonctionnement">
+
+        <!-- Le titre-->
+
+
+          <h2> Fonctionnement</h2>
+
+
+
+
+        <!-- La liste des fonctionnements-->
+        <div class="FonctListe">
+
+          <!--Choix-->
+          <article class="FonctArticle LienArticle ">                          
+            <a href="#">  <!--Lien sur le bloc -->
+
+              <div Class="FonctItem FondItem1_2" >
+                <!--Numéro du fonctionnement-->   
+                <div class="FonctNum">
+                  <p>  1</p>
+                </div>
+                
+              
+                <!--Icone du fonctionnement-->
+                <div class="FonctIcone  CouleurIconeItem12">
+                  <span class="fas fa-mobile-alt  Logo"></span>
+                </div>                              
+                <!--Description-->             
+                <h3 class=FonctDescr> choisissez un restaurant</h3>
+                                          
+              </div>                          
+            </a>
+          </article>
+
+         <!--composez -->
+
+          <article class="FonctArticle LienArticle ">                          
+            <a href="#">  <!--Lien sur le bloc -->
+
+              <div Class="FonctItem FondItem1_2" >
+                <!--Numéro du fonctionnement-->  
+                <div class="FonctNum"> 
+                  <p>  2</p> 
+                </div> 
+              
+                <!--Icone du fonctionnement-->
+                <div class="FonctIcone  CouleurIconeItem12">
+                  <span class="fa-regular fa-list  Logo"></span>
+                </div>
+                                                
+                <!--Description-->             
+                <h3 class="FonctDescr"> Composez votre menu</h3>
+                                          
+              </div>                          
+            </a>
+          </article>
+
+          <!--dégustez -->
+
+          <article class="FonctArticle LienArticle ">                          
+            <a href="#">  <!--Lien sur le bloc -->
+
+              <div Class="FonctItem  FondItem3" >
+                <!--Numéro du fonctionnement--> 
+                <div class="FonctNum">   
+                  <p > 3</p> 
+                </div> 
+              
+                <!--Icone du fonctionnement-->
+                <div class="FonctIcone  CouleurIconeItem3">
+                  <span class="fas fa-store   Logo"></span>
+                </div>
+                                                
+                <!--Description-->     
+                  
+                <h3  class="FonctDescr"> Dégustez au restaurant</h3>
+                
+                                          
+              </div>                          
+            </a>
+          </article>
+
+                        
+
+                        
+
+        </div>  <!--Fin liste des  fonctionnements-->
+      </div>
+
+                 
+
+
+      <!--Restaurants--> 
+      <div class="Restaurants">
+
+        <!-- Le titre-->
+        <div class=TitreRestaurants>
+          <!-- Le titre-->
+          <h2 class="DecalageGauche">Restaurants</h2>
+        </div>
+
+
+
+        <!-- La liste des restaurants-->
+        <div class="RestaurantsListe">
+          <article class="RestaurantArticle LienArticle">                          
+            <a href="#">  <!--Lien sur le bloc -->
+                            
+              <div class="RestaurantItem">      <!--Article avec image et description -->   
+
+                <!--Image-->                                                
+                <img class= "RestaurantImg" 
+                  src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"   
+                  alt="La palette du goût">
+                                                
+                <!--Description-->
+                <div class=RestaurantDesc>
+                  <div class=RestaurantNom>
+                    <h3>La palette du goût</h3>
+                    <p>Ménilmontant</p>
+                  </div>
+                
+                                        
+                  <div class="RestaurantCoeur">
+                    <span class="fas fa-heart"></span>
+                  </div>
+
+               </div>   <!--Fin Restaurant Desc-->
+                                    
+              </div>    <!--Fin restaurant Item-->
+            </a>
+          </article>
+
+
+          <article class="RestaurantArticle LienArticle">                          
+            <a href="#">  <!--Lien sur le bloc -->
+                            
+              <div class="RestaurantItem">      <!--Article avec image et description -->   
+
+                <!--Image-->                                                
+                <img class= "RestaurantImg" 
+                  src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"   
+                  alt="La note enchantée">
+                                                
+                <!--Description-->
+                <div class=RestaurantDesc>
+                  <div class=RestaurantNom>
+                    <h3>La note enchantée</h3>
+                    <p>Charonne</p>
+                  </div>
+                
+                                        
+                  <div class="RestaurantCoeur">
+                    <span class="fas fa-heart"></span>
+                  </div>
+
+               </div>   <!--Fin Restaurant Desc-->
+                                    
+              </div>    <!--Fin restaurant Item-->
+            </a>
+          </article>
+
+
+          <article class="RestaurantArticle LienArticle">                          
+            <a href="#">  <!--Lien sur le bloc -->
+                            
+              <div class="RestaurantItem">      <!--Article avec image et description -->   
+
+                <!--Image-->                                                
+                <img class= "RestaurantImg" 
+                  src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"   
+                  alt="A la française">
+                                                
+                <!--Description-->
+                <div class=RestaurantDesc>
+                  <div class=RestaurantNom>
+                    <h3>A la française</h3>
+                    <p>Cité rouge</p>
+                  </div>
+                
+                                        
+                  <div class="RestaurantCoeur">
+                    <span class="fas fa-heart"></span>
+                  </div>
+
+               </div>   <!--Fin Restaurant Desc-->
+                                    
+              </div>    <!--Fin restaurant Item-->
+            </a>
+          </article>
+
+
+
+
+          <article class="RestaurantArticle LienArticle">                          
+            <a href="#">  <!--Lien sur le bloc -->
+                            
+              <div class="RestaurantItem">      <!--Article avec image et description -->   
+
+                <!--Image-->                                                
+                <img class= "RestaurantImg" 
+                  src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"   
+                  alt="Le délice des sens">
+                                                
+                <!--Description-->
+                <div class=RestaurantDesc>
+                  <div class=RestaurantNom>
+                    <h3>Le délice des sens</h3>
+                    <p>folie-Méricourt</p>
+                  </div>
+                
+                                        
+                  <div class="RestaurantCoeur">
+                    <span class="fas fa-heart"></span>
+                  </div>
+
+               </div>   <!--Fin Restaurant Desc-->
+                                    
+              </div>    <!--Fin restaurant Item-->
+            </a>
+          </article>
+
+
+      </div>  <!--Fin liste des restaurants-->
+
+
+
+
+
+      </main>
+
+      <!--Footer-->
+
+      <footer>
+
+      <!--Image avec le logo du site-->                                                
+
+
+      <h1>Ohmyfood</h1>
+
+      <!--Logo + Proposer--> 
+      <div class="PiedDePage">  
+        <div class="PositionLogo">
+          <span class="fas fa-utensils Logo"></span>
+        </div>
+        <h2>Proposer un restaurant</h2>
+      </div>
+
+      <!--Logo + Devenir...--> 
+      <div class="PiedDePage">  
+        <div class="PositionLogo">
+          <span class="fas fa-hands-helping"></span>
+        </div>
+        <h2>Devenir partenaire</h2>
+      </div>
+
+      <!--fin du footer-->
+      <h3>Mentions légales</h3>
+      <h3>Contact</h3>
+
+      </footer>
+    </div>
+  </body>
+</html>
