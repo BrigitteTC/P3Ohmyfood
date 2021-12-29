@@ -213,13 +213,24 @@ Le champ de saisie
   box-shadow: 5px 5px 10px var(--OmbreArticle); /* Décalage horizontal, décalage vertical, force du dégradé, couleur*/
 }
 
-.Bouton a:link {
+/* les liens du bouton*/
+.Bouton a {
+  /* init*/
   text-decoration: none;
   color: white;
 }
+.Bouton a:link {
+  /* non visité*/
+  text-decoration: none; /* pas souligné au repos*/
+  color: white;
+}
+
+.Bouton a:hover {
+  color: blue; /*au survol*/
+}
 
 /*--------------------------------------------------------------------------*/
-/* Liens*/
+/* Liens articles (fonctionnement et Restaurants*/
 
 .LienArticle a:link {
   /* lien au repos*/
@@ -338,15 +349,13 @@ Le champ de saisie
   display: flex;
   flex-direction: column; /* vertical: photo et en dessous la description*/
 
-  justify-content: space-around; /* disposition avec des espaces entre chaque item et au bord*/
+  justify-content: space-between; /* disposition  sur la largeur*/
 
   box-sizing: border-box; /*  bordure et le remplissage dans la valeur définie pour la largeur et la hauteur*/
 
   background-color: white; /*sur fond blanc*/
 
-  /* Marges internes et externes*/
-  margin: 20px;
-  /*padding: 2%; /* marge interne = petit bord blanc au bord de l'image*/
+  margin: 20px; /* marge entre chaque restau*/
 
   /* On arrondit les angles*/
   border-radius: var(--RadiusCard); /* Tous les angles arrondis*/
@@ -364,10 +373,16 @@ Le champ de saisie
   box-sizing: border-box; /*  bordure et le remplissage dans la valeur définie pour la largeur et la hauteur*/
 }
 
+.RestaurantNom {
+  width: 70%; /* Occupe 70% de la largeur*/
+  padding-left: 5%; /* petit décalage / bord*/
+}
+
 .RestaurantCoeur {
   margin: auto; /* centré*/
-  /*color: white;   Ne s'affiche plus*/
-  border: 2px black;
+
+  /*color: red; /*Ne s'affiche plus*/
+  /* border: solid 2px black; /* la bordure affiche un carré autour du coeur*/
 }
 
 .RestaurantImg {
