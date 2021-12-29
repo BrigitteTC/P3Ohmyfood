@@ -323,9 +323,6 @@ Le champ de saisie
 .FonctDesc {
   position: absolute;
   left: 30%; /*Position / bord gauche*/
-
-  color: black;
-  text-decoration: none; /*Pas de soulignement*/
 }
 
 /*---------------------------------------*/
