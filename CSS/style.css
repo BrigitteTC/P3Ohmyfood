@@ -213,6 +213,11 @@ Le champ de saisie
   box-shadow: 5px 5px 10px var(--OmbreArticle); /* Décalage horizontal, décalage vertical, force du dégradé, couleur*/
 }
 
+.Bouton a:link {
+  text-decoration: none;
+  color: white;
+}
+
 /*--------------------------------------------------------------------------*/
 /* Liens*/
 
@@ -224,7 +229,6 @@ Le champ de saisie
 
 /* le lien au survol*/
 .LienArticle a:hover {
-  text-decoration: underline; /* texte souligné*/
   color: blue; /*bleu*/
 }
 
