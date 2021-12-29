@@ -40,6 +40,8 @@ body {
   font-family: "Roboto", sans-serif;
 
   color: black; /*Couleur du texte: noir*/
+
+  margin: 0; /* supprime la marge pour chrome*/
 }
 
 /* Balises sémantiques */
