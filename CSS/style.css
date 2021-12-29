@@ -214,6 +214,21 @@ Le champ de saisie
 }
 
 /*--------------------------------------------------------------------------*/
+/* Liens*/
+
+.LienArticle a:link {
+  /* lien au repos*/
+  text-decoration: none; /*lien pas souligné*/
+  color: black; /* couleur du lien au repos = noir*/
+}
+
+/* le lien au survol*/
+.LienArticle a:hover {
+  text-decoration: underline; /* texte souligné*/
+  color: blue; /*bleu*/
+}
+
+/*--------------------------------------------------------------------------*/
 /*fonctionnement*/
 
 .Fonctionnement {
@@ -227,19 +242,6 @@ Le champ de saisie
   display: flex;
   flex-direction: column; /* Les boutons les uns au dessus des autres*/
   box-sizing: border-box;
-}
-
-/* Lien sur chaque article*/
-
-.LienArticle a:link {
-  /* lien au repos*/
-  text-decoration: none; /*lien pas souligné*/
-  color: black; /* couleur du lien au repos = noir*/
-}
-
-.LienArticle a hover {
-  /* Ajout d'une ombre*/
-  box-shadow: 5px 5px 10px blue; /* Décalage horizontal, décalage vertical, force du dégradé, couleur*/
 }
 
 /* Article avec le numéro l'icone et la description*/
@@ -260,12 +262,12 @@ Le champ de saisie
   box-shadow: 5px 5px 10px var(--OmbreArticle); /* Décalage horizontal, décalage vertical, force du dégradé, couleur*/
 }
 
+.FondItem1_2 {
+  background-color: var(--FondGris);
+}
 /* Les couleurs de fond de chaque item*/
 .FondItem3 {
   background-color: var(--CouleurItem3);
-}
-.FondItem1_2 {
-  background-color: var(--FondGris);
 }
 
 /* Le numéro*/
@@ -377,22 +379,8 @@ Le champ de saisie
 
 /* Les liens sur les items restaurant*/
 
-.LienArticle a:link {
-  /* lien au repos*/
-  text-decoration: none; /*lien pas souligné*/
-  color: black; /* couleur du lien au repos = noir*/
-}
-
-/* le lien au survol*/
-.LienArticle a:hover {
-  text-decoration: underline; /* texte souligné*/
-  color: blue; /*bleu*/
-}
-
 /* Effets supplémentaires au survol   */
 .RestaurantItem:hover {
-  /* survol de l'item*/
-
   /* Ajout d'une ombre  */
   box-shadow: 5px 5px 5px blue; /* Décalage horizontal, décalage vertical, force du dégradé, couleur*/
 } /* */
