@@ -204,6 +204,7 @@ Le champ de saisie
     var(--CouleurSecondaire)
   );
 
+  border: none; /* Pas de bordure*/
   padding: 0 20px 0 20px; /* Espace gauche et droite sur le texte du bouton  haut | droit | bas | gauche */
 
   border-radius: 15px; /* Coins arrondis*/
@@ -316,8 +317,8 @@ Le champ de saisie
   color: var(--CouleurPrimaire);
 }
 
-/* La description*/
-.FonctDescr {
+/* La Description*/
+.FonctDesc {
   position: absolute;
   left: 30%; /*Position / bord gauche*/
 
@@ -329,6 +330,7 @@ Le champ de saisie
 /* Liste des restaurants*/
 /*---------------------------------------*/
 
+/* L'ensemble image + texte + coeur*/
 .RestaurantItem {
   display: flex;
   flex-direction: column; /* vertical: photo et en dessous la description*/
@@ -339,11 +341,9 @@ Le champ de saisie
 
   background-color: white; /*sur fond blanc*/
 
-  /* Marges internet et externes*/
+  /* Marges internes et externes*/
   margin: 20px;
   /*padding: 2%; /* marge interne = petit bord blanc au bord de l'image*/
-
-  /*border: 2px solid blue; /*Ajout d'une bordure pour alignement avec le pourtour*/
 
   /* On arrondit les angles*/
   border-radius: var(--RadiusCard); /* Tous les angles arrondis*/
@@ -353,21 +353,12 @@ Le champ de saisie
 }
 
 .RestaurantDesc {
-  /* le nom lieu puis le petit icone coeur à côté*/
+  /* le nom , le lieu puis le petit icone coeur à côté*/
   display: flex;
   flex-direction: row; /*horizontal*/
   justify-content: space-around; /* disposition avec des espaces entre chaque item et au bord*/
 
   box-sizing: border-box; /*  bordure et le remplissage dans la valeur définie pour la largeur et la hauteur*/
-}
-
-.RestaurantNom a:link {
-  text-decoration: none; /*Texte pas souligné*/
-}
-
-.RestaurantCoeur a:link {
-  /*le lien au repos n'est pas souligné*/
-  text-decoration: none;
 }
 
 .RestaurantCoeur {
@@ -383,6 +374,28 @@ Le champ de saisie
   /* On arrondit les angles en haut*/
   border-radius: var(--RadiusCard) var(--RadiusCard) 0 0; /* Top left / Top right / Bottom right / Bottom left*/
 }
+
+/* Les liens sur les items restaurant*/
+
+.LienArticle a:link {
+  /* lien au repos*/
+  text-decoration: none; /*lien pas souligné*/
+  color: black; /* couleur du lien au repos = noir*/
+}
+
+/* le lien au survol*/
+.LienArticle a:hover {
+  text-decoration: underline; /* texte souligné*/
+  color: blue; /*bleu*/
+}
+
+/* Effets supplémentaires au survol   */
+.RestaurantItem:hover {
+  /* survol de l'item*/
+
+  /* Ajout d'une ombre  */
+  box-shadow: 5px 5px 5px blue; /* Décalage horizontal, décalage vertical, force du dégradé, couleur*/
+} /* */
 
 /*--------------------------------------------------*/
 /*Footer                                            */
