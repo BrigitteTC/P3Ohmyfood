@@ -1,0 +1,36 @@
+/*------------------------------------------------------
+Fichier SCSS:
+    Tailles et graisses
+
+Creation: 30/12/2021
+Auteur: BTC
+---------------------------------------------------------*/
+
+/* Balises sémantiques */
+h1 {
+  font-size: 20px;
+  font-weight: 800;
+}
+h2 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+h6 {
+  font-size: 2px; /* tout petit pour rester caché dans une section où il faut une balise h1/h6*/
+}
+
+p {
+  font-size: 12px;
+  font-weight: 400;
+}

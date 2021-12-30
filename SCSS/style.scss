@@ -1,0 +1,104 @@
+/*-------------------------------------------------
+Feuille de style en scss
+
+Creation: 30/12/2021
+Auteur: BTC
+
+---------------------------------------------------*/
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* Importation partiels*/
+@import "couleur";
+@import "taille";
+
+/*Header*/
+/*--------------------------*/
+
+header {
+  display: flex;
+  flex-direction: column; /* en vertical*/
+  align-items: center;
+
+  /* Le logo du site*/
+  .SiteLogo {
+    align-items: center;
+    width: 60%; /* Largeur/ container*/
+    height: 40px; /*Hauteur forcée en pixels*/
+  }
+
+  /*-----------------------------------------------------------------------------------*/
+
+  /*Section de recherche avec son formulaire*/
+  .Recherche {
+    /* la section recherche contient 2 elts le h6 caché et le bloc RechercheItem*/
+
+    display: flex;
+    flex-direction: column; /*RechercheItem puis h6*/
+
+    justify-content: center;
+    box-sizing: border-box;
+
+    width: 100%;
+
+    background-color: var(--FondGrisFonce);
+
+    margin: 20px auto 0 auto; /* haut | droit | bas | gauche */
+  }
+
+  /* 2 parties pour le champ de recherche
+le logo
+Le champ de saisie
+*/
+
+  .RechercheItem {
+    /* l'ensemble logo + saisie*/
+    display: flex;
+    flex-direction: row; /*Horizontal*/
+
+    justify-content: center; /* l'ensemble centré*/
+    box-sizing: border-box;
+
+    /*Taille*/
+    width: 100%; /*Affichage sur toute la largeur*/
+    height: 50px; /*Hauteur forcée en pixels*/
+
+    /* Bordure solid, grise  en haut du champ de recherche*/
+    border-top: 5px solid $CouleurBordure; /* bordure en haut du champde recherche*/
+  }
+
+  .RechercheLogo {
+    display: flex; /* pour centrer le petit logo*/
+    margin-right: 2%; /* Séparation avec le champ de saisie*/
+  }
+
+  .RechercheChamp {
+    /*Champ de la recherche utilisateur*/
+
+    height: 100%;
+    margin-right: 2%; /* séparation avec le logo*/
+
+    background-color: $FondGrisFonce;
+  }
+
+  .RechercheChamp p {
+    /*Champ de la recherche utilisateur*/
+    height: 100%;
+
+    text-align: center;
+
+    margin: 0;
+  }
+
+  .saisie {
+    color: black; /* couleur texte de saisie*/
+    background-color: $FondGrisFonce; /* fond du champ de saisie (sinon reste en blanc*/
+
+    height: 100%;
+
+    border: none; /* supprime la bordure du champ de saisie*/
+  }
+}
