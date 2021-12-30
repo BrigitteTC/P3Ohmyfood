@@ -14,6 +14,7 @@ Auteur: BTC
 /* Importation partiels*/
 @import "couleur";
 @import "taille";
+@import "general";
 
 /*Header*/
 /*--------------------------*/
@@ -44,7 +45,7 @@ header {
 
     width: 100%;
 
-    background-color: var(--FondGrisFonce);
+    background-color: $FondGrisFonce;
 
     margin: 20px auto 0 auto; /* haut | droit | bas | gauche */
   }
@@ -110,7 +111,7 @@ Le champ de saisie
   display: flex;
   flex-direction: column; /*vertical*/
   box-sizing: border-box;
-  background-color: var(--FondGris);
+  background-color: $FondGris;
 
   align-items: center; /* centré*/
 
@@ -120,16 +121,16 @@ Le champ de saisie
 }
 
 .Bouton {
-  color: white; /* texte en blanc*/
-  background-color: var(--FondGris);
+  color: $CouleurTexteBouton; /* texte en blanc*/
+  background-color: $FondGris;
 
   height: 50px; /* Hauteur forcée en pixels*/
 
   /* Fond dégradé pour le bouton du bas vers le haut*/
   background-image: linear-gradient(
     to top,
-    var(--CouleurPrimaire),
-    var(--CouleurSecondaire)
+    $CouleurPrimaire,
+    $CouleurSecondaire
   );
 
   border: none; /* Pas de bordure*/
@@ -138,7 +139,7 @@ Le champ de saisie
   border-radius: 15px; /* Coins arrondis*/
 
   /* petite ombre*/
-  box-shadow: 5px 5px 10px var(--OmbreArticle); /* Décalage horizontal, décalage vertical, force du dégradé, couleur*/
+  box-shadow: 5px 5px 10px $OmbreArticle; /* Décalage horizontal, décalage vertical, force du dégradé, couleur*/
 }
 
 /*le bouton au survol*/
@@ -189,18 +190,18 @@ Le champ de saisie
 
   margin: 20px; /* Marge / ecran et bouton suivant*/
 
-  border-radius: var(--RadiusCard); /* coins arrondis*/
+  border-radius: $RadiusCard; /* coins arrondis*/
 
   /* Ajout d'une ombre*/
-  box-shadow: 5px 5px 10px var(--OmbreArticle); /* Décalage horizontal, décalage vertical, force du dégradé, couleur*/
+  box-shadow: 5px 5px 10px $OmbreArticle; /* Décalage horizontal, décalage vertical, force du dégradé, couleur*/
 }
 
 .FondItem1_2 {
-  background-color: var(--FondGris);
+  background-color: $FondGris;
 }
 /* Les couleurs de fond de chaque item*/
 .FondItem3 {
-  background-color: var(--CouleurItem3);
+  background-color: $CouleurItem3;
 }
 
 /* Le numéro*/
@@ -219,9 +220,9 @@ Le champ de saisie
   text-decoration: none; /*Pas de soulignement*/
   color: white; /* texte en blanc*/
 
-  background-color: var(--CouleurPrimaire);
+  background-color: $CouleurPrimaire;
 
-  border-radius: var(--RadiusRond); /* Le numéro dans un rond*/
+  border-radius: $RadiusRond; /* Le numéro dans un rond*/
 }
 
 .FonctNum p {
@@ -249,7 +250,7 @@ Le champ de saisie
 
 /* couleur de l'icone 3*/
 .CouleurIconeItem3 {
-  color: var(--CouleurPrimaire);
+  color: $CouleurPrimaire;
 }
 
 /* La Description*/
@@ -276,10 +277,10 @@ Le champ de saisie
   margin: 20px; /* marge entre chaque restau*/
 
   /* On arrondit les angles*/
-  border-radius: var(--RadiusCard); /* Tous les angles arrondis*/
+  border-radius: $RadiusCard; /* Tous les angles arrondis*/
 
   /* Ajout d'une ombre*/
-  box-shadow: 5px 5px 10px var(--OmbreArticle); /* Décalage horizontal, décalage vertical, force du dégradé, couleur*/
+  box-shadow: 5px 5px 10px $OmbreArticle; /* Décalage horizontal, décalage vertical, force du dégradé, couleur*/
 }
 
 .RestaurantDesc {
@@ -308,7 +309,7 @@ Le champ de saisie
   height: 300px;
 
   /* On arrondit les angles en haut*/
-  border-radius: var(--RadiusCard) var(--RadiusCard) 0 0; /* Top left / Top right / Bottom right / Bottom left*/
+  border-radius: $RadiusCard $RadiusCard 0 0; /* Top left / Top right / Bottom right / Bottom left*/
 }
 
 /* Les liens sur les items restaurant*/
@@ -324,13 +325,13 @@ Le champ de saisie
 /*--------------------------------------------------*/
 
 footer {
-  color: white; /*texte en blanc*/
-  background-color: black; /*Sur fond noir*/
+  color: $CouleurTexteFooter; /*texte en blanc*/
+  background-color: $CouleurFooter; /*Sur fond noir*/
   padding: 20px;
 }
 
 footer h1 {
-  font-family: Shrikhand; /* Font family pou r le logo*/
+  font-family: Shrikhand; /* Font family pour le logo*/
 }
 
 .PiedDePage {
