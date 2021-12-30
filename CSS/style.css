@@ -196,6 +196,9 @@ Le champ de saisie
 
 .Bouton {
   color: white; /* texte en blanc*/
+  background-color: var(--FondGris);
+
+  height: 50px; /* Hauteur forcée en pixels*/
 
   /* Fond dégradé pour le bouton du bas vers le haut*/
   background-image: linear-gradient(
@@ -213,20 +216,10 @@ Le champ de saisie
   box-shadow: 5px 5px 10px var(--OmbreArticle); /* Décalage horizontal, décalage vertical, force du dégradé, couleur*/
 }
 
-/* les liens du bouton*/
-.Bouton a {
-  /* init*/
-  text-decoration: none;
-  color: white;
-}
-.Bouton a:link {
-  /* non visité*/
-  text-decoration: none; /* pas souligné au repos*/
-  color: white;
-}
-
-.Bouton a:hover {
-  color: blue; /*au survol*/
+/*le bouton au survol*/
+.Bouton:hover {
+  /* Ajout d'une ombre  */
+  box-shadow: 5px 5px 5px blue; /* Décalage horizontal, décalage vertical, force du dégradé, couleur*/
 }
 
 /*--------------------------------------------------------------------------*/
