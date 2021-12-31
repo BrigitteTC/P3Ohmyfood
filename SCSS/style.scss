@@ -134,7 +134,7 @@ Le champ de saisie
   border: none; /* Pas de bordure*/
   padding: 0 20px 0 20px; /* Espace gauche et droite sur le texte du bouton  haut | droit | bas | gauche */
 
-  border-radius: 15px; /* Coins arrondis*/
+  border-radius: $RadiusRond; /* Coins arrondis*/
 
   /* petite ombre*/
   box-shadow: 5px 5px 10px $OmbreArticle; /* Décalage horizontal, décalage vertical, force du dégradé, couleur*/
