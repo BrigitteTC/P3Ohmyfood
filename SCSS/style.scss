@@ -21,9 +21,7 @@ Auteur: BTC
 /*--------------------------*/
 
 header {
-  display: flex;
-  flex-direction: column; /* en vertical*/
-  align-items: center;
+  @include M_flex_box(column, center); /* Elts en vertical et centrés*/
 
   /* Le logo du site*/
   .SiteLogo {
@@ -37,12 +35,7 @@ header {
   /*Section de recherche avec son formulaire*/
   .Recherche {
     /* la section recherche contient 2 elts le h6 caché et le bloc RechercheItem*/
-
-    display: flex;
-    flex-direction: column; /*RechercheItem puis h6*/
-
-    justify-content: center;
-    box-sizing: border-box;
+    @include M_flex_box(column, center); /* Elts en vertical et centrés*/
 
     width: 100%;
 
@@ -58,11 +51,7 @@ Le champ de saisie
 
   .RechercheItem {
     /* l'ensemble logo + saisie*/
-    display: flex;
-    flex-direction: row; /*Horizontal*/
-
-    justify-content: center; /* l'ensemble centré*/
-    box-sizing: border-box;
+    @include M_flex_box(row, center); /* Elts en horizontal et centrés*/
 
     /*Taille*/
     width: 100%; /*Affichage sur toute la largeur*/
@@ -96,7 +85,7 @@ Le champ de saisie
   }
 
   .saisie {
-    color: black; /* couleur texte de saisie*/
+    color: $CouleurTexte; /* couleur texte de saisie*/
     background-color: $FondGrisFonce; /* fond du champ de saisie (sinon reste en blanc*/
 
     height: 100%;
@@ -109,9 +98,8 @@ Le champ de saisie
 
 /*Promesse*/
 .Promesse {
-  display: flex;
-  flex-direction: column; /*vertical*/
-  box-sizing: border-box;
+  @include M_flex_box(column, center); /* Elts en vertical et centrés*/
+
   background-color: $FondGris;
 
   align-items: center; /* centré*/
@@ -167,23 +155,21 @@ Le champ de saisie
 /*fonctionnement*/
 
 .Fonctionnement {
-  display: flex;
-  flex-direction: column; /* vertical: Le titre puis la liste */
-  box-sizing: border-box;
+  /* ensemble Titre + liste de fonctionnement*/
+  @include M_flex_box(column, center); /* Elts en vertical et centrés*/
 }
 
 /* La liste des items de fonctionnement*/
 .FonctListe {
-  display: flex;
-  flex-direction: column; /* Les boutons les uns au dessus des autres*/
-  box-sizing: border-box;
+  @include M_flex_box(
+    column,
+    center
+  ); //* Les boutons les uns au dessus des autres*/
 }
 
 /* Article avec le numéro l'icone et la description*/
 .FonctItem {
-  display: flex;
-  flex-direction: row; /* Horizontal*/
-  box-sizing: border-box;
+  @include M_flex_box(row, center); /*horizontal*/
 
   position: relative; /* Permet de positionner les elts à l'intérieur*/
 
@@ -266,14 +252,13 @@ Le champ de saisie
 
 /* L'ensemble image + texte + coeur*/
 .RestaurantItem {
-  display: flex;
-  flex-direction: column; /* vertical: photo et en dessous la description*/
+  @include M_flex_box(
+    column,
+    space-between
+  ); /* vertical: photo et en dessous la description*/
+  /* disposition  sur la largeur*/
 
-  justify-content: space-between; /* disposition  sur la largeur*/
-
-  box-sizing: border-box; /*  bordure et le remplissage dans la valeur définie pour la largeur et la hauteur*/
-
-  background-color: white; /*sur fond blanc*/
+  background-color: $CouleurFondRestaurants; /*sur fond blanc*/
 
   margin: 20px; /* marge entre chaque restau*/
 
@@ -286,11 +271,8 @@ Le champ de saisie
 
 .RestaurantDesc {
   /* le nom , le lieu puis le petit icone coeur à côté*/
-  display: flex;
-  flex-direction: row; /*horizontal*/
-  justify-content: space-around; /* disposition avec des espaces entre chaque item et au bord*/
-
-  box-sizing: border-box; /*  bordure et le remplissage dans la valeur définie pour la largeur et la hauteur*/
+  /* Horizontal et disposition avec des espaces entre chaque item et au bord*/
+  @include M_flex_box(row, space-around);
 }
 
 .RestaurantNom {
@@ -300,9 +282,6 @@ Le champ de saisie
 
 .RestaurantCoeur {
   margin: auto; /* centré*/
-
-  /*color: red; /*Ne s'affiche plus*/
-  /* border: solid 2px black; /* la bordure affiche un carré autour du coeur*/
 }
 
 .RestaurantImg {
@@ -336,6 +315,5 @@ footer h1 {
 }
 
 .PiedDePage {
-  display: flex;
-  flex-direction: row;
+  @include M_flex_box(row, start);
 }
