@@ -164,94 +164,89 @@ header {
 .Fonctionnement {
   /* ensemble Titre + liste de fonctionnement*/
   @include M_flex_box(column, center); /* Elts en vertical et centrés*/
-}
+  margin: 20px;
 
-/* La liste des items de fonctionnement*/
-.FonctListe {
-  @include M_flex_box(
-    column,
-    center
-  ); //* Les boutons les uns au dessus des autres*/
-}
+  /* La liste des items de fonctionnement*/
+  .FonctListe {
+    @include M_flex_box(
+      column,
+      center
+    ); //* Les boutons les uns au dessus des autres*/
 
-/* Article avec le numéro l'icone et la description*/
-.FonctItem {
-  @include M_flex_box(row, center); /*horizontal*/
+    /* Article avec le numéro l'icone et la description*/
+    .FonctItem {
+      @include M_flex_box(row, center); /*horizontal*/
+      position: relative; /* Permet de positionner les elts à l'intérieur*/
+      height: $HauteurFonctItem; /*Hauteur forcée en pixels*/
 
-  position: relative; /* Permet de positionner les elts à l'intérieur*/
+      margin: 10px 0; /* Marge entre chaque bouton*/
 
-  height: 60px; /*Hauteur forcée en pixels*/
+      border-radius: $RadiusCard; /* coins arrondis*/
 
-  margin: 20px; /* Marge / ecran et bouton suivant*/
+      /* Ajout d'une ombre*/
+      @include M_Affichage_Ombre;
 
-  border-radius: $RadiusCard; /* coins arrondis*/
+      .FondItem1_2 {
+        background-color: $FondGris;
+      }
+      /* Les couleurs de fond de chaque item*/
+      .FondItem3 {
+        background-color: $CouleurItem3;
+      }
 
-  /* Ajout d'une ombre*/
-  @include M_Affichage_Ombre;
-}
+      /* Le numéro*/
+      .FonctNum {
+        display: flex;
 
-.FondItem1_2 {
-  background-color: $FondGris;
-}
-/* Les couleurs de fond de chaque item*/
-.FondItem3 {
-  background-color: $CouleurItem3;
-}
+        position: absolute;
 
-/* Le numéro*/
-.FonctNum {
-  display: flex;
+        /* Carré de 30 pixels de côté qui dépasse de la moitié à gauche*/
+        left: -15px; /* dépasse à gauche*/
+        top: 15px; /* position / haut*/
 
-  position: absolute;
+        height: 30px; /* Hauteur largeur fornée en px*/
 
-  /* Carré de 30 pixels de côté qui dépasse de la moitié à gauche*/
-  left: -15px; /* dépasse à gauche*/
-  top: 15px; /* position / haut*/
+        width: 30px;
 
-  height: 30px; /* Hauteur largeur fornée en px*/
-  width: 30px;
+        text-decoration: none; /*Pas de soulignement*/
+        color: white; /* texte en blanc*/
 
-  text-decoration: none; /*Pas de soulignement*/
-  color: white; /* texte en blanc*/
+        background-color: $CouleurPrimaire;
 
-  background-color: $CouleurPrimaire;
+        border-radius: $RadiusRond; /* Le numéro dans un rond*/
+        p {
+          /* Le numéro dans son rond*/
 
-  border-radius: $RadiusRond; /* Le numéro dans un rond*/
-}
+          margin: auto; /* Permet de centrer le logo*/
+        }
+      }
 
-.FonctNum p {
-  /* Le numéro dans son rond*/
+      /* Le petit icone du fonctionnement*/
+      .FonctIcone {
+        position: absolute;
+        left: 10%; /* Position / bord gauche*/
+        top: 20px;
+      }
 
-  margin: auto; /* Permet de centrer le logo*/
-}
+      /* couleur de l'icone 1 et 2*/
+      .CouleurIconeItem12 {
+        color: black;
+      }
 
-/* Le petit icone du fonctionnement*/
-.FonctIcone {
-  margin: auto;
-  height: 40px;
-  width: 40px;
+      /* couleur de l'icone 3*/
+      .CouleurIconeItem3 {
+        color: $CouleurPrimaire;
+      }
 
-  position: absolute;
-  left: 10%; /* Position / bord gauche*/
-  top: 20px;
-  bottom: auto;
-}
-
-/* couleur de l'icone 1 et 2*/
-.CouleurIconeItem12 {
-  color: black;
-}
-
-/* couleur de l'icone 3*/
-.CouleurIconeItem3 {
-  color: $CouleurPrimaire;
-}
-
-/* La Description*/
-.FonctDesc {
-  position: absolute;
-  left: 30%; /*Position / bord gauche*/
-}
+      /* La Description*/
+      .FonctDesc {
+        position: absolute;
+        left: 30%; /*Position / bord gauche*/
+        top: 20px; /*Position / bord sup*/
+      }
+    } /* Fin FonctItem*/
+  } /* fin FonctList*/
+} /* fin Fonctionnement*/
 
 /*---------------------------------------*/
 /* Liste des restaurants*/
