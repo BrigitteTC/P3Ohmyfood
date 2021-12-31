@@ -55,53 +55,51 @@ header {
   border-top: $HauteurRechercheBordure solid $CouleurBordure; /* bordure en haut du champde recherche*/
 
   margin: 20px auto 0 auto; /* haut | droit | bas | gauche */
-}
 
-/* 2 parties pour le champ de recherche
-le logo
-Le champ de saisie
-*/
+  /* 2 parties pour le champ de recherche
+    le logo
+    Le champ de saisie*/
 
-.RechercheItem {
-  /* l'ensemble logo + saisie*/
-  @include M_flex_box(row, center); /* Elts en horizontal et centrés*/
-  width: 100%; /*Affichage sur toute la largeur -> Permet de centrer l'ensemble*/
-  height: $HauteurRecherche; /*Hauteur forcée en pixels*/
-}
+  .RechercheItem {
+    /* l'ensemble logo + champ de saisie*/
+    @include M_flex_box(row, center); /* Elts en horizontal et centrés*/
+    width: 100%; /*Affichage sur toute la largeur -> Permet de centrer l'ensemble*/
+    height: $HauteurRecherche; /*Hauteur forcée en pixels*/
 
-.RechercheLogo {
-  display: flex; /* pour centrer le petit logo*/
-  padding: 20px;
+    .RechercheLogo {
+      display: flex; /* pour centrer le petit logo*/
+      padding: 20px;
 
-  margin-right: 2%; /* Séparation avec le champ de saisie*/
-}
+      margin-right: 2%; /* Séparation avec le champ de saisie*/
+    }
 
-.RechercheChamp {
-  /*Champ de la recherche utilisateur*/
+    .RechercheChamp {
+      /*Champ de la recherche utilisateur*/
 
-  height: 100%;
-  margin-left: 2%; /* séparation avec le logo*/
+      height: 100%;
+      margin-left: 2%; /* séparation avec le logo*/
 
-  background-color: $FondGrisFonce;
-}
+      background-color: $FondGrisFonce;
+      p {
+        /*Champ de la recherche utilisateur*/
+        height: 100%;
 
-.RechercheChamp p {
-  /*Champ de la recherche utilisateur*/
-  height: 100%;
+        text-align: center;
 
-  text-align: center;
+        margin: 0;
+      }
 
-  margin: 0;
-}
+      .saisie {
+        color: $CouleurTexte; /* couleur texte de saisie*/
+        background-color: $FondGrisFonce; /* fond du champ de saisie (sinon reste en blanc*/
 
-.saisie {
-  color: $CouleurTexte; /* couleur texte de saisie*/
-  background-color: $FondGrisFonce; /* fond du champ de saisie (sinon reste en blanc*/
+        height: 100%;
 
-  height: 100%;
-
-  border: none; /* supprime la bordure du champ de saisie*/
-}
+        border: none; /* supprime la bordure du champ de saisie*/
+      }
+    } /*fin RechercheChamp*/
+  } /*Fin RechercheItem*/
+} /*fin .Recherche*/
 
 /*--------------------------------------------------------------------------*/
 
@@ -134,7 +132,7 @@ Le champ de saisie
   border: none; /* Pas de bordure*/
   padding: 0 20px 0 20px; /* Espace gauche et droite sur le texte du bouton  haut | droit | bas | gauche */
 
-  border-radius: $RadiusRond; /* Coins arrondis*/
+  border-radius: 50px; /* Coins arrondis*/
 
   /* petite ombre*/
   box-shadow: 5px 5px 10px $OmbreArticle; /* Décalage horizontal, décalage vertical, force du dégradé, couleur*/
