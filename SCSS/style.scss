@@ -253,6 +253,21 @@ header {
 /* Liste des restaurants*/
 /*---------------------------------------*/
 
+/* ensemble Titre + liste des restaurants*/
+.Restaurants {
+  @include M_flex_box(column, center); /* vertical: Titre + liste*/
+  background-color: $CouleurFondRestaurants; /*sur fond blanc*/
+}
+
+/* Le Titre*/
+.TitreRestaurants {
+  margin: 20px;
+}
+
+/*Liste des restaurants*/
+.RestaurantsListe {
+  margin: 20px;
+}
 /* L'ensemble image + texte + coeur*/
 .RestaurantItem {
   @include M_flex_box(
@@ -261,7 +276,7 @@ header {
   ); /* vertical: photo et en dessous la description*/
   /* disposition  sur la largeur*/
 
-  background-color: $CouleurFondRestaurants; /*sur fond blanc*/
+  background-color: $CouleurFondDescRestaurants; /*sur fond blanc*/
 
   margin: 20px; /* marge entre chaque restau*/
 

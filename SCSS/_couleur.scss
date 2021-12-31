@@ -23,8 +23,10 @@ $CouleurBordure: rgb(221, 221, 221);
 
 $OmbreArticle: rgb(212, 208, 208); /* Couleur de l'ombre de l'article*/
 
-$CouleurFooter: black;
-$CouleurTexteFooter: white;
-$CouleurFondRestaurants: white; /* Fond d'écran pour description restaurants*/
+$CouleurFondRestaurants: $FondGris; /* Fond d'écran pour description restaurants*/
+$CouleurFondDescRestaurants: white; /* Fond d'écran pour description restaurants*/
 
 $CouleurNumFt: white; /* Numéro du fonctionnement*/
+
+$CouleurFooter: black;
+$CouleurTexteFooter: white;
