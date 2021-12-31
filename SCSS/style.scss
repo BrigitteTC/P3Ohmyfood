@@ -24,11 +24,7 @@ header {
   @include M_flex_box(column, center); /* Elts en vertical et centrés*/
 
   /* Le logo du site*/
-  .SiteLogo {
-    align-items: center;
-    width: 60%; /* Largeur/ container*/
-    height: 40px; /*Hauteur forcée en pixels*/
-  }
+  @include M_Affichage_Logo;
 
   /*-----------------------------------------------------------------------------------*/
 

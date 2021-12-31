@@ -6,13 +6,14 @@ Creation: 31/12/2021
 Auteur: BTC
 ---------------------------------------------------------*/
 
+/*---------------------------------------------------------*/
 /* Mixin pour déclarer une boite flex
-Nom: flex_box
+Nom: M_flex_box
 Fonction: Déclarer une boite flex_box avec sesparamètres principaux
-Parametres
-$direction: row pour hirizontal et column pour vertical
-$aligmenent: Organisation des items
-/* Alignement « géométrique » */
+Parametres:
+    $direction: row pour hirizontal et column pour vertical
+    $aligmenent: Organisation des items
+        /* Alignement « géométrique » */
 /* justify-content: center;     /* Éléments groupés au centre */
 /*  justify-content: start;      /* Éléments groupés au début */
 /*  justify-content: end;        /* Éléments groupés à la fin */
@@ -27,22 +28,23 @@ $aligmenent: Organisation des items
 /* Alignement normal */
 /*  justify-content: normal;
 
-/* Alignement distribué */
+        /* Alignement distribué */
 /* justify-content: space-between; /* Les éléments sont répartis équitablement
-                                   Le bord du premier est aligné sur le
-                                   début du conteneur et la fin du dernier
-                                   est alignée sur la fin du conteneur */
+                                        Le bord du premier est aligné sur le
+                                        début du conteneur et la fin du dernier
+                                        est alignée sur la fin du conteneur */
 /* justify-content: space-around;  /* Les éléments sont répartis équitablement
-                                   À chaque extrémité, entre le bord du
-                                   conteneur et le premier/dernier élément
-                                   on a la moitié de l'espace appliqué entre
-                                   chaque élément */
+                                        À chaque extrémité, entre le bord du
+                                        conteneur et le premier/dernier élément
+                                        on a la moitié de l'espace appliqué entre
+                                        chaque élément */
 /* justify-content: space-evenly;  /* Les éléments sont répartis équitablement
-                                   Tous les éléments sont séparés par le même
-                                   espace */
+                                        Tous les éléments sont séparés par le même
+                                        espace */
 /* justify-content: stretch;       /* Les éléments sont répartis équitablement et
-                                   les éléments dimensionnés avec 'auto' sont
-                                   étirés afin de remplir le conteneur */
+                                        les éléments dimensionnés avec 'auto' sont
+                                        étirés afin de remplir le conteneur */
+/*---------------------------------------------------------*/
 
 @mixin M_flex_box($direction, $alignement) {
   display: flex;
@@ -50,4 +52,18 @@ $aligmenent: Organisation des items
 
   justify-content: $alignement; /* Alignement voir desc params*/
   box-sizing: border-box;
+}
+
+/*---------------------------------------------------------*/
+/* Mixin pour affichage du logo
+Nom: M_Affichage_Logo
+Fonction: Affiche le logo "Ohmyfood" en tête de l'écran
+Parametres:
+    aucun
+
+/*---------------------------------------------------------*/
+
+@mixin M_Affichage_Logo {
+  height: $HauteurOhmyfood; /*Hauteur forcée en pixels*/
+  padding: 10px 20%; /* Espace intérieur Haut/bas et Gauche/droite*/
 }
