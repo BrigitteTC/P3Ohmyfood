@@ -25,69 +25,75 @@ header {
 
   /* Le logo du site*/
   @include M_Affichage_Logo;
+}
 
-  /*-----------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------*/
 
-  /*Section de recherche avec son formulaire*/
-  .Recherche {
-    /* la section recherche contient 2 elts le h6 caché et le bloc RechercheItem*/
-    @include M_flex_box(column, center); /* Elts en vertical et centrés*/
+/*Section de recherche avec son formulaire*/
+.Recherche {
+  /* la section recherche contient 2 elts le h6 caché et le bloc RechercheItem*/
+  @include M_flex_box(column, center); /* Elts en vertical et centrés*/
 
-    width: 100%;
+  display: flex;
+  flex-direction: column; /*RechercheItem puis h6*/
 
-    background-color: $FondGrisFonce;
+  justify-content: center;
+  box-sizing: border-box;
 
-    margin: 20px auto 0 auto; /* haut | droit | bas | gauche */
-  }
+  width: 100%;
 
-  /* 2 parties pour le champ de recherche
+  background-color: $FondGrisFonce;
+
+  margin: 20px auto 0 auto; /* haut | droit | bas | gauche */
+}
+
+/* 2 parties pour le champ de recherche
 le logo
 Le champ de saisie
 */
 
-  .RechercheItem {
-    /* l'ensemble logo + saisie*/
-    @include M_flex_box(row, center); /* Elts en horizontal et centrés*/
+.RechercheItem {
+  /* l'ensemble logo + saisie*/
+  @include M_flex_box(row, center); /* Elts en horizontal et centrés*/
 
-    /*Taille*/
-    width: 100%; /*Affichage sur toute la largeur*/
-    height: 50px; /*Hauteur forcée en pixels*/
+  /*Taille*/
+  width: 100%; /*Affichage sur toute la largeur*/
+  height: 50px; /*Hauteur forcée en pixels*/
 
-    /* Bordure solid, grise  en haut du champ de recherche*/
-    border-top: 5px solid $CouleurBordure; /* bordure en haut du champde recherche*/
-  }
+  /* Bordure solid, grise  en haut du champ de recherche*/
+  border-top: 5px solid $CouleurBordure; /* bordure en haut du champde recherche*/
+}
 
-  .RechercheLogo {
-    display: flex; /* pour centrer le petit logo*/
-    margin-right: 2%; /* Séparation avec le champ de saisie*/
-  }
+.RechercheLogo {
+  display: flex; /* pour centrer le petit logo*/
+  margin-right: 2%; /* Séparation avec le champ de saisie*/
+}
 
-  .RechercheChamp {
-    /*Champ de la recherche utilisateur*/
+.RechercheChamp {
+  /*Champ de la recherche utilisateur*/
 
-    height: 100%;
-    margin-right: 2%; /* séparation avec le logo*/
+  height: 100%;
+  margin-right: 2%; /* séparation avec le logo*/
 
-    background-color: $FondGrisFonce;
-  }
+  background-color: $FondGrisFonce;
+}
 
-  .RechercheChamp p {
-    /*Champ de la recherche utilisateur*/
-    height: 100%;
+.RechercheChamp p {
+  /*Champ de la recherche utilisateur*/
+  height: 100%;
 
-    text-align: center;
+  text-align: center;
 
-    margin: 0;
-  }
+  margin: 0;
+}
 
-  .saisie {
-    color: $CouleurTexte; /* couleur texte de saisie*/
-    background-color: $FondGrisFonce; /* fond du champ de saisie (sinon reste en blanc*/
+.saisie {
+  color: $CouleurTexte; /* couleur texte de saisie*/
+  background-color: $FondGrisFonce; /* fond du champ de saisie (sinon reste en blanc*/
 
-    height: 100%;
+  height: 100%;
 
-    border: none; /* supprime la bordure du champ de saisie*/
-  }
+  border: none; /* supprime la bordure du champ de saisie*/
 }
 
 /*--------------------------------------------------------------------------*/
