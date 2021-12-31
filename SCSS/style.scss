@@ -173,6 +173,15 @@ header {
       center
     ); //* Les boutons les uns au dessus des autres*/
 
+    /* Les couleurs de fond de chaque item*/
+    .FondItem1_2 {
+      background-color: $FondGris;
+    }
+
+    .FondItem3 {
+      background-color: $CouleurItem3;
+    }
+
     /* Article avec le numéro l'icone et la description*/
     .FonctItem {
       @include M_flex_box(row, center); /*horizontal*/
@@ -186,30 +195,22 @@ header {
       /* Ajout d'une ombre*/
       @include M_Affichage_Ombre;
 
-      .FondItem1_2 {
-        background-color: $FondGris;
-      }
-      /* Les couleurs de fond de chaque item*/
-      .FondItem3 {
-        background-color: $CouleurItem3;
-      }
-
       /* Le numéro*/
       .FonctNum {
         display: flex;
 
         position: absolute;
 
-        /* Carré de 30 pixels de côté qui dépasse de la moitié à gauche*/
-        left: -15px; /* dépasse à gauche*/
-        top: 15px; /* position / haut*/
+        /* Carré de la taille = moitié du container de côté qui dépasse de la moitié à gauche*/
+        left: -$HauteurFonctItem/4; /* dépasse à gauche de la moitié de l'icone =le quart du container*/
+        top: $HauteurFonctItem/4; /* position / haut*/
 
-        height: 30px; /* Hauteur largeur fornée en px*/
+        height: $HauteurFonctItem/2; /* Hauteur largeur fornée en px de la moitié de la hauteur du container*/
 
-        width: 30px;
+        width: $HauteurFonctItem/2;
 
         text-decoration: none; /*Pas de soulignement*/
-        color: white; /* texte en blanc*/
+        color: $CouleurNumFt; /* texte en blanc*/
 
         background-color: $CouleurPrimaire;
 
@@ -225,7 +226,7 @@ header {
       .FonctIcone {
         position: absolute;
         left: 10%; /* Position / bord gauche*/
-        top: 20px;
+        top: $PositionFonctElt; /*Position / bord sup*/
       }
 
       /* couleur de l'icone 1 et 2*/
@@ -242,7 +243,7 @@ header {
       .FonctDesc {
         position: absolute;
         left: 30%; /*Position / bord gauche*/
-        top: 20px; /*Position / bord sup*/
+        top: $PositionFonctElt; /*Position / bord sup*/
       }
     } /* Fin FonctItem*/
   } /* fin FonctList*/
