@@ -120,7 +120,7 @@ header {
   color: $CouleurTexteBouton; /* texte en blanc*/
   background-color: $FondGris;
 
-  height: 50px; /* Hauteur forcée en pixels*/
+  height: $HauteurBouton; /* Hauteur forcée en pixels*/
 
   /* Fond dégradé pour le bouton du bas vers le haut*/
   background-image: linear-gradient(
@@ -132,10 +132,10 @@ header {
   border: none; /* Pas de bordure*/
   padding: 0 20px 0 20px; /* Espace gauche et droite sur le texte du bouton  haut | droit | bas | gauche */
 
-  border-radius: 50px; /* Coins arrondis*/
+  border-radius: $RadiusRond; /* Coins arrondis*/
 
   /* petite ombre*/
-  box-shadow: 5px 5px 10px $OmbreArticle; /* Décalage horizontal, décalage vertical, force du dégradé, couleur*/
+  @include M_Affichage_Ombre;
 }
 
 /*le bouton au survol*/
@@ -187,7 +187,7 @@ header {
   border-radius: $RadiusCard; /* coins arrondis*/
 
   /* Ajout d'une ombre*/
-  box-shadow: 5px 5px 10px $OmbreArticle; /* Décalage horizontal, décalage vertical, force du dégradé, couleur*/
+  @include M_Affichage_Ombre;
 }
 
 .FondItem1_2 {
@@ -273,7 +273,7 @@ header {
   border-radius: $RadiusCard; /* Tous les angles arrondis*/
 
   /* Ajout d'une ombre*/
-  box-shadow: 5px 5px 10px $OmbreArticle; /* Décalage horizontal, décalage vertical, force du dégradé, couleur*/
+  @include M_Affichage_Ombre;
 }
 
 .RestaurantDesc {

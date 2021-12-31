@@ -67,3 +67,17 @@ Parametres:
   height: $HauteurOhmyfood; /*Hauteur forcée en pixels*/
   padding: 10px 20%; /* Espace intérieur Haut/bas et Gauche/droite*/
 }
+
+/*---------------------------------------------------------*/
+/*---------------------------------------------------------*/
+/* Mixin pour affichage d'une ombre 
+Nom: M_Affichage_Ombre
+Fonction: Affiche une ombre sur un elt
+Parametres:
+    aucun
+
+/*---------------------------------------------------------*/
+
+@mixin M_Affichage_Ombre {
+  box-shadow: 5px 5px 10px $OmbreArticle; /* Décalage horizontal, décalage vertical, force du dégradé, couleur*/
+}
