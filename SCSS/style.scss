@@ -17,6 +17,18 @@ Auteur: BTC
 @import "general";
 @import "mixins";
 
+/*Infos générales body*/
+body {
+  font-family: "Roboto", sans-serif;
+
+  color: $CouleurTexte; /*Couleur du texte: noir*/
+
+  margin: 0; /* supprime la marge pour chrome*/
+}
+.logo {
+  margin: auto; /*Permet de centrer l'icone sur son container*/
+}
+
 /*Header*/
 /*--------------------------*/
 
@@ -34,15 +46,13 @@ header {
   /* la section recherche contient 2 elts le h6 caché et le bloc RechercheItem*/
   @include M_flex_box(column, center); /* Elts en vertical et centrés*/
 
-  display: flex;
-  flex-direction: column; /*RechercheItem puis h6*/
-
-  justify-content: center;
-  box-sizing: border-box;
-
-  width: 100%;
+  /*Taille*/
+  width: 100%; /*Affichage sur toute la largeur*/
 
   background-color: $FondGrisFonce;
+
+  /* Bordure solid, grise  en haut du champ de recherche*/
+  border-top: $HauteurRechercheBordure solid $CouleurBordure; /* bordure en haut du champde recherche*/
 
   margin: 20px auto 0 auto; /* haut | droit | bas | gauche */
 }
@@ -55,17 +65,14 @@ Le champ de saisie
 .RechercheItem {
   /* l'ensemble logo + saisie*/
   @include M_flex_box(row, center); /* Elts en horizontal et centrés*/
-
-  /*Taille*/
-  width: 100%; /*Affichage sur toute la largeur*/
-  height: 50px; /*Hauteur forcée en pixels*/
-
-  /* Bordure solid, grise  en haut du champ de recherche*/
-  border-top: 5px solid $CouleurBordure; /* bordure en haut du champde recherche*/
+  width: 100%; /*Affichage sur toute la largeur -> Permet de centrer l'ensemble*/
+  height: $HauteurRecherche; /*Hauteur forcée en pixels*/
 }
 
 .RechercheLogo {
   display: flex; /* pour centrer le petit logo*/
+  padding: 20px;
+
   margin-right: 2%; /* Séparation avec le champ de saisie*/
 }
 
@@ -73,7 +80,7 @@ Le champ de saisie
   /*Champ de la recherche utilisateur*/
 
   height: 100%;
-  margin-right: 2%; /* séparation avec le logo*/
+  margin-left: 2%; /* séparation avec le logo*/
 
   background-color: $FondGrisFonce;
 }
