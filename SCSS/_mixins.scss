@@ -65,7 +65,14 @@ Parametres:
 
 @mixin M_Affichage_Logo {
   height: $HauteurOhmyfood; /*Hauteur forcée en pixels*/
-  padding: 10px 20%; /* Espace intérieur Haut/bas et Gauche/droite*/
+  padding: 20px 20%; /* Espace intérieur Haut/bas et Gauche/droite*/
+
+  /* Media query pour tablettes et desktop:
+   On arrange les marges*/
+  @media screen and (min-width: 768px) {
+    padding: 20px 30%; /* Espace intérieur Haut/bas et Gauche/droite*/
+    margin: 20px;
+  }
 }
 
 /*---------------------------------------------------------*/
