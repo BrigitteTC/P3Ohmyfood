@@ -321,12 +321,21 @@ header {
       } /* */
     } /* Fin restaurant Item*/
 
+    /* Media query pour tablesttes et desktop:
+    Les items les uns à côté des autres*/
     @media screen and (min-width: 768px) {
       @include M_flex_box(
         row,
         space-around
       ); /* horizontal: les items les uns à côté des autres*/
-    }
+
+      .RestaurantArticle {
+        flex-basis: 25%; /* Taille par defaut / container*/
+        box-sizing: border-box; /*  bordure et le remplissage dans la valeur définie pour la largeur et la hauteur*/
+        padding: 0% 1.5%; /* Marges internes gauche/droite*/
+        margin: 20px 0 20px 0; /* MArges externes /* haut | droit | bas | gauche */
+      }
+    } /* Fin media query*/
   } /* Fin Restaurant liste*/
 } /*Fin .REstaurant*/
 
