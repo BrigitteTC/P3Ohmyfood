@@ -141,7 +141,7 @@ header {
 /*le bouton au survol*/
 .Bouton:hover {
   /* Ajout d'une ombre  */
-  box-shadow: 5px 5px 5px blue; /* Décalage horizontal, décalage vertical, force du dégradé, couleur*/
+  box-shadow: 5px 5px 5px $CouleurLienSurvol; /* Décalage horizontal, décalage vertical, force du dégradé, couleur*/
 }
 
 /*--------------------------------------------------------------------------*/
@@ -150,12 +150,12 @@ header {
 .LienArticle a:link {
   /* lien au repos*/
   text-decoration: none; /*lien pas souligné*/
-  color: black; /* couleur du lien au repos = noir*/
+  color: $CouleurLienRepos; /* couleur du lien au repos */
 }
 
 /* le lien au survol*/
 .LienArticle a:hover {
-  color: blue; /*bleu*/
+  color: $CouleurLienSurvol; /*couleur du lien au survol*/
 }
 
 /*--------------------------------------------------------------------------*/
@@ -179,7 +179,7 @@ header {
     }
 
     .FondItem3 {
-      background-color: $CouleurItem3;
+      background-color: $CouleurFondItem3;
     }
 
     /* Article avec le numéro l'icone et la description*/
@@ -231,7 +231,7 @@ header {
 
       /* couleur de l'icone 1 et 2*/
       .CouleurIconeItem12 {
-        color: black;
+        color: $CouleurTexte;
       }
 
       /* couleur de l'icone 3*/
@@ -315,7 +315,7 @@ header {
 /* Effets supplémentaires au survol   */
 .RestaurantItem:hover {
   /* Ajout d'une ombre  */
-  box-shadow: 5px 5px 5px blue; /* Décalage horizontal, décalage vertical, force du dégradé, couleur*/
+  box-shadow: 5px 5px 5px $CouleurLienSurvol; /* Décalage horizontal, décalage vertical, force du dégradé, couleur*/
 } /* */
 
 /*--------------------------------------------------*/
