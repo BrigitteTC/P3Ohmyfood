@@ -265,6 +265,10 @@ header {
 
   /*Liste des restaurants*/
   .RestaurantsListe {
+    @include M_flex_box(
+      column,
+      center
+    ); /* vertical: les items les uns au dessous des autres*/
     margin: 20px;
 
     /* L'ensemble image + texte + coeur*/
@@ -316,6 +320,13 @@ header {
         box-shadow: 5px 5px 5px $CouleurLienSurvol; /* Décalage horizontal, décalage vertical, force du dégradé, couleur*/
       } /* */
     } /* Fin restaurant Item*/
+
+    @media screen and (min-width: 768px) {
+      @include M_flex_box(
+        row,
+        space-around
+      ); /* horizontal: les items les uns à côté des autres*/
+    }
   } /* Fin Restaurant liste*/
 } /*Fin .REstaurant*/
 
