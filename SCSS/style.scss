@@ -257,66 +257,67 @@ header {
 .Restaurants {
   @include M_flex_box(column, center); /* vertical: Titre + liste*/
   background-color: $CouleurFondRestaurants; /*sur fond blanc*/
-}
 
-/* Le Titre*/
-.TitreRestaurants {
-  margin: 20px;
-}
+  /* Le Titre*/
+  .TitreRestaurants {
+    margin: 20px;
+  }
 
-/*Liste des restaurants*/
-.RestaurantsListe {
-  margin: 20px;
-}
-/* L'ensemble image + texte + coeur*/
-.RestaurantItem {
-  @include M_flex_box(
-    column,
-    space-between
-  ); /* vertical: photo et en dessous la description*/
-  /* disposition  sur la largeur*/
+  /*Liste des restaurants*/
+  .RestaurantsListe {
+    margin: 20px;
 
-  background-color: $CouleurFondDescRestaurants; /*sur fond blanc*/
+    /* L'ensemble image + texte + coeur*/
+    .RestaurantItem {
+      @include M_flex_box(
+        column,
+        space-between
+      ); /* vertical: photo et en dessous la description*/
+      /* disposition  sur la largeur*/
 
-  margin: 20px; /* marge entre chaque restau*/
+      background-color: $CouleurFondDescRestaurants; /*sur fond blanc*/
 
-  /* On arrondit les angles*/
-  border-radius: $RadiusCard; /* Tous les angles arrondis*/
+      margin: 20px; /* marge entre chaque restau*/
 
-  /* Ajout d'une ombre*/
-  @include M_Affichage_Ombre;
-}
+      /* On arrondit les angles*/
+      border-radius: $RadiusCard; /* Tous les angles arrondis*/
 
-.RestaurantDesc {
-  /* le nom , le lieu puis le petit icone coeur à côté*/
-  /* Horizontal et disposition avec des espaces entre chaque item et au bord*/
-  @include M_flex_box(row, space-around);
-}
+      /* Ajout d'une ombre*/
+      @include M_Affichage_Ombre;
 
-.RestaurantNom {
-  width: 70%; /* Occupe 70% de la largeur*/
-  padding-left: 5%; /* petit décalage / bord*/
-}
+      .RestaurantDesc {
+        /* le nom , le lieu puis le petit icone coeur à côté*/
+        /* Horizontal et disposition avec des espaces entre chaque item et au bord*/
+        @include M_flex_box(row, space-around);
 
-.RestaurantCoeur {
-  margin: auto; /* centré*/
-}
+        .RestaurantNom {
+          width: 70%; /* Occupe 70% de la largeur*/
+          padding-left: 5%; /* petit décalage / bord*/
+        }
 
-.RestaurantImg {
-  width: 100%; /* 100% du container*/
-  height: 300px;
+        .RestaurantCoeur {
+          margin: auto; /* centré*/
+        }
+      } /* fin RestautantDesc*/
 
-  /* On arrondit les angles en haut*/
-  border-radius: $RadiusCard $RadiusCard 0 0; /* Top left / Top right / Bottom right / Bottom left*/
-}
+      .RestaurantImg {
+        width: 100%; /* 100% du container*/
+        height: 300px;
 
-/* Les liens sur les items restaurant*/
+        /* On arrondit les angles en haut*/
+        border-radius: $RadiusCard $RadiusCard 0 0; /* Top left / Top right / Bottom right / Bottom left*/
+      }
 
-/* Effets supplémentaires au survol   */
-.RestaurantItem:hover {
-  /* Ajout d'une ombre  */
-  box-shadow: 5px 5px 5px $CouleurLienSurvol; /* Décalage horizontal, décalage vertical, force du dégradé, couleur*/
-} /* */
+      /* Les liens sur les items restaurant*/
+
+      /* Effets supplémentaires au survol   */
+      .RestaurantItem:hover {
+        /* Ajout d'une ombre  */
+        box-shadow: 5px 5px 5px $CouleurLienSurvol; /* Décalage horizontal, décalage vertical, force du dégradé, couleur*/
+      } /* */
+    } /* Fin restaurant Item*/
+  } /* Fin Restaurant liste*/
+} /*Fin .REstaurant*/
 
 /*--------------------------------------------------*/
 /*Footer                                            */
