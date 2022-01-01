@@ -281,6 +281,8 @@ header {
 
       background-color: $CouleurFondDescRestaurants; /*sur fond blanc*/
 
+      height: $HauteurRestaurantItem;
+
       margin: 20px; /* marge entre chaque restau*/
 
       /* On arrondit les angles*/
@@ -293,6 +295,7 @@ header {
         /* le nom , le lieu puis le petit icone coeur à côté*/
         /* Horizontal et disposition avec des espaces entre chaque item et au bord*/
         @include M_flex_box(row, space-around);
+        margin: 20px;
 
         .RestaurantNom {
           width: 70%; /* Occupe 70% de la largeur*/
@@ -306,7 +309,7 @@ header {
 
       .RestaurantImg {
         width: 100%; /* 100% du container*/
-        height: 300px;
+        height: $HauteurRestaurantImg;
 
         /* On arrondit les angles en haut*/
         border-radius: $RadiusCard $RadiusCard 0 0; /* Top left / Top right / Bottom right / Bottom left*/
@@ -332,8 +335,8 @@ header {
       .RestaurantArticle {
         flex-basis: 25%; /* Taille par defaut / container*/
         box-sizing: border-box; /*  bordure et le remplissage dans la valeur définie pour la largeur et la hauteur*/
-        padding: 0% 1.5%; /* Marges internes gauche/droite*/
-        margin: 20px 0 20px 0; /* MArges externes /* haut | droit | bas | gauche */
+        /*padding: 0% 1.5%; /* Marges internes gauche/droite*/
+        /* margin: 20px 0 20px 0; /* MArges externes /* haut | droit | bas | gauche */
       }
     } /* Fin media query*/
   } /* Fin Restaurant liste*/

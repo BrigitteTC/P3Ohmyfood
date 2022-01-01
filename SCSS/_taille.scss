@@ -13,12 +13,12 @@ h1 {
 }
 h2 {
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 800;
 }
 
 h3 {
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 800;
 }
 
 h4 {
@@ -52,3 +52,7 @@ $HauteurBouton: 50px; /* Hauteur des boutons*/
 /* Fonctionnement*/
 $HauteurFonctItem: 60px; /* Hauteur de chaque item de fonctionnement*/
 $PositionFonctElt: 20px; /*Position de chaqye elt par rapport au bord haut du container*/
+
+/*Restaurants*/
+$HauteurRestaurantItem: 400px; /* Hauteur item restaurat avec image + description*/
+$HauteurRestaurantImg: 300px; /* Hauteur des images des restaurants*/
