@@ -54,7 +54,7 @@ header {
   /* Bordure solid, grise  en haut du champ de recherche*/
   border-top: $HauteurRechercheBordure solid $CouleurBordure; /* bordure en haut du champde recherche*/
 
-  margin: 20px auto 0 auto; /* haut | droit | bas | gauche */
+  margin: $TailleEspaceStandard auto 0 auto; /* haut | droit | bas | gauche */
 
   /* 2 parties pour le champ de recherche
     le logo
@@ -68,7 +68,7 @@ header {
 
     .RechercheLogo {
       display: flex; /* pour centrer le petit logo*/
-      padding: 20px;
+      padding: $TailleEspaceStandard;
 
       margin-right: 2%; /* Séparation avec le champ de saisie*/
     }
@@ -113,7 +113,7 @@ header {
 
   width: 100%;
 
-  padding: 20px 0 20px 0; /* Espace  haut et bas  haut | droit | bas | gauche */
+  padding: $TailleEspaceStandard 0 $TailleEspaceStandard 0; /* Espace  haut et bas  haut | droit | bas | gauche */
 }
 
 .Bouton {
@@ -130,7 +130,7 @@ header {
   );
 
   border: none; /* Pas de bordure*/
-  padding: 0 20px 0 20px; /* Espace gauche et droite sur le texte du bouton  haut | droit | bas | gauche */
+  padding: 0 $TailleEspaceStandard 0 $TailleEspaceStandard; /* Espace gauche et droite sur le texte du bouton  haut | droit | bas | gauche */
 
   border-radius: $RadiusRond; /* Coins arrondis*/
 
@@ -164,7 +164,7 @@ header {
 .Fonctionnement {
   /* ensemble Titre + liste de fonctionnement*/
   @include M_flex_box(column, center); /* Elts en vertical et centrés*/
-  margin: 20px;
+  margin: $TailleEspaceStandard;
 
   /* La liste des items de fonctionnement*/
   .FonctListe {
@@ -260,7 +260,7 @@ header {
 
   /* Le Titre*/
   .TitreRestaurants {
-    margin: 20px;
+    margin: $TailleEspaceStandard;
   }
 
   /*Liste des restaurants*/
@@ -269,7 +269,7 @@ header {
       column,
       center
     ); /* vertical: les items les uns au dessous des autres*/
-    margin: 20px;
+    margin: $TailleEspaceStandard;
 
     /* L'ensemble image + texte + coeur*/
     .RestaurantItem {
@@ -283,7 +283,7 @@ header {
 
       height: $HauteurRestaurantItem;
 
-      margin: 20px; /* marge entre chaque restau*/
+      margin: $TailleEspaceStandard; /* marge entre chaque restau*/
 
       /* On arrondit les angles*/
       border-radius: $RadiusCard; /* Tous les angles arrondis*/
@@ -314,10 +314,10 @@ header {
         /* Le popup 'Nouveau"*/
         .Popup {
           position: absolute; /* Fixe la position de l'elt*/
-          top: 20px;
+          top: $TailleEspaceStandard;
           left: 70%;
 
-          height: 20px;
+          height: $TailleEspaceStandard;
           width: 20%;
 
           z-index: 2; /* Place le popup devant l'image*/
@@ -334,7 +334,7 @@ header {
         /* le nom , le lieu puis le petit icone coeur à côté*/
         /* Horizontal et disposition avec des espaces entre chaque item et au bord*/
         @include M_flex_box(row, space-around);
-        margin: 20px;
+        margin: $TailleEspaceStandard;
 
         .RestaurantNom {
           width: 70%; /* Occupe 70% de la largeur*/
@@ -366,8 +366,6 @@ header {
       .RestaurantArticle {
         flex-basis: 25%; /* Taille par defaut / container*/
         box-sizing: border-box; /*  bordure et le remplissage dans la valeur définie pour la largeur et la hauteur*/
-        /*padding: 0% 1.5%; /* Marges internes gauche/droite*/
-        /* margin: 20px 0 20px 0; /* MArges externes /* haut | droit | bas | gauche */
 
         .RestaurantItem {
           height: $HauteurRestaurantItemD;
