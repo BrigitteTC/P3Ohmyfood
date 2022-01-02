@@ -320,7 +320,7 @@ header {
           height: 20px;
           width: 20%;
 
-          z-index: 10; /* Place le popup devant l'image*/
+          z-index: 2; /* Place le popup devant l'image*/
           color: green;
           background-color: $CouleurTertiaire;
           padding: 5px;
@@ -384,13 +384,16 @@ header {
 footer {
   color: $CouleurTexteFooter; /*texte en blanc*/
   background-color: $CouleurFooter; /*Sur fond noir*/
-  padding: 20px;
-}
+  * {
+    padding: 5px; /* Espace entre chaque elt*/
+  }
 
-footer h1 {
-  font-family: Shrikhand; /* Font family pour le logo*/
-}
+  h3 {
+    font-family: Shrikhand; /* Font family pour le logo*/
+  }
 
-.PiedDePage {
-  @include M_flex_box(row, start);
-}
+  .PiedDePage {
+    @include M_flex_box(row, flex-start);
+    align-items: center; /*centrer la boîte verticalement*/
+  }
+} /*Fin du footer*/
