@@ -26,7 +26,7 @@ body {
   margin: 0; /* supprime la marge pour chrome*/
 }
 .logo {
-  margin: auto; /*Permet de centrer l'icone sur son container*/
+  margin: auto; /*Permet de centrer un icone sur son container*/
 }
 
 /*Header*/
@@ -109,20 +109,21 @@ header {
 
   background-color: $FondGris;
 
-  align-items: center; /* centré*/
+  align-items: center; /* centré verticalement*/
 
   width: 100%;
 
   padding: $TailleEspaceStandard 0 $TailleEspaceStandard 0; /* Espace  haut et bas  haut | droit | bas | gauche */
 }
 
+/* Affichage du bouton*/
+
 .Bouton {
   color: $CouleurTexteBouton; /* texte en blanc*/
-  background-color: $FondGris;
 
   height: $HauteurBouton; /* Hauteur forcée en pixels*/
 
-  /* Fond dégradé pour le bouton du bas vers le haut*/
+  /* Fond dégradé pour le bouton du haut vers le bas*/
   background-image: linear-gradient(
     to top,
     $CouleurPrimaire,
@@ -137,7 +138,6 @@ header {
   /* petite ombre*/
   @include M_AffichageOmbre;
 }
-
 /*le bouton au survol*/
 .Bouton:hover {
   /* Ajout d'une ombre  */
@@ -301,7 +301,7 @@ header {
         /*L'image du restaurant*/
         .RestaurantImg {
           position: absolute; /* Fixe la position de l'elt*/
-          top: 0px;
+
           width: 100%; /* 100% du container*/
           height: $HauteurRestaurantImg;
 
@@ -314,8 +314,8 @@ header {
         /* Le popup 'Nouveau"*/
         .Popup {
           position: absolute; /* Fixe la position de l'elt*/
-          top: $TailleEspaceStandard;
-          left: 70%;
+          top: $TailleEspaceStandard; /* Position par rapport au haut du container*/
+          left: 70%; /* Position par rapport à la gauche du container*/
 
           height: $TailleEspaceStandard;
           width: 20%;
@@ -345,15 +345,14 @@ header {
           margin: auto; /* centré*/
         }
       } /* fin RestautantDesc*/
-
-      /* Les liens sur les items restaurant*/
-
-      /* Effets supplémentaires au survol   */
-      .RestaurantItem:hover {
-        /* Ajout d'une ombre  */
-        box-shadow: 5px 5px 5px $CouleurLienSurvol; /* Décalage horizontal, décalage vertical, force du dégradé, couleur*/
-      } /* */
     } /* Fin restaurant Item*/
+
+    /* Les liens sur les items restaurant*/
+    /* Effets supplémentaires au survol   */
+    .RestaurantItem:hover {
+      /* Ajout d'une ombre  */
+      box-shadow: 5px 5px 5px $CouleurLienSurvol; /* Décalage horizontal, décalage vertical, force du dégradé, couleur*/
+    } /* */
 
     /* Media query pour tablesttes et desktop:
     Les items les uns à côté des autres*/

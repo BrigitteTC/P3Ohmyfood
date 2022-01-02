@@ -56,7 +56,7 @@ Parametres:
 
 /*---------------------------------------------------------*/
 /* Mixin pour affichage du logo
-Nom: M_Affichage_Logo
+Nom: M_AffichageLogo
 Fonction: Affiche le logo "Ohmyfood" en tête de l'écran
 Parametres:
     aucun
@@ -78,7 +78,7 @@ Parametres:
 /*---------------------------------------------------------*/
 /*---------------------------------------------------------*/
 /* Mixin pour affichage d'une ombre 
-Nom: M_Affichage_Ombre
+Nom: M_AffichageOmbre
 Fonction: Affiche une ombre sur un elt
 Parametres:
     aucun
@@ -87,4 +87,18 @@ Parametres:
 
 @mixin M_AffichageOmbre {
   box-shadow: 5px 5px 10px $OmbreArticle; /* Décalage horizontal, décalage vertical, force du dégradé, couleur*/
+}
+
+/*---------------------------------------------------------*/
+/* Mixin pour affichage d'un bouton
+Nom: M_AffichageBouton
+Fonction: Affiche un bouton avec couleurs dégradées et bords arrondis
+Parametres:
+    Couleur du texte
+    Couleur fond haut
+    Couleur fond bas
+
+/*---------------------------------------------------------*/
+
+@mixin M_AffichageBouton($texte, $FondHaut, $FondBas) {
 }
