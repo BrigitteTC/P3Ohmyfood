@@ -182,7 +182,7 @@ header {
       background-color: $CouleurFondItem3;
     }
 
-    /* Article avec le numéro l'icone et la description*/
+    /* Ensemble  avec le numéro l'icone et la description*/
     .FonctItem {
       @include M_flex_box(row, center); /*horizontal*/
       position: relative; /* Permet de positionner les elts à l'intérieur*/
@@ -291,6 +291,45 @@ header {
       /* Ajout d'une ombre*/
       @include M_AffichageOmbre;
 
+      /*L'image avec son popup*/
+      .PopupImg {
+        @include M_flex_box(row, center); /*horizontal*/
+        position: relative; /* Permet de placer les elts à l'interieur du container*/
+
+        height: $HauteurRestaurantImg;
+
+        /*L'image du restaurant*/
+        .RestaurantImg {
+          position: absolute; /* Fixe la position de l'elt*/
+          top: 0px;
+          width: 100%; /* 100% du container*/
+          height: $HauteurRestaurantImg;
+
+          z-index: 1; /* Place le popup devant l'image*/
+
+          /* On arrondit les angles en haut*/
+          border-radius: $RadiusCard $RadiusCard 0 0; /* Top left / Top right / Bottom right / Bottom left*/
+        }
+
+        /* Le popup 'Nouveau"*/
+        .Popup {
+          position: absolute; /* Fixe la position de l'elt*/
+          top: 20px;
+          left: 70%;
+
+          height: 20px;
+          width: 20%;
+
+          z-index: 10; /* Place le popup devant l'image*/
+          color: green;
+          background-color: $CouleurTertiaire;
+          padding: 5px;
+          p {
+            text-align: center;
+          }
+        }
+      }
+
       .RestaurantDesc {
         /* le nom , le lieu puis le petit icone coeur à côté*/
         /* Horizontal et disposition avec des espaces entre chaque item et au bord*/
@@ -306,14 +345,6 @@ header {
           margin: auto; /* centré*/
         }
       } /* fin RestautantDesc*/
-
-      .RestaurantImg {
-        width: 100%; /* 100% du container*/
-        height: $HauteurRestaurantImg;
-
-        /* On arrondit les angles en haut*/
-        border-radius: $RadiusCard $RadiusCard 0 0; /* Top left / Top right / Bottom right / Bottom left*/
-      }
 
       /* Les liens sur les items restaurant*/
 
