@@ -326,7 +326,7 @@ header {
 
     /* Media query pour tablesttes et desktop:
     Les items les uns à côté des autres*/
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $TailleEcranDesktop) {
       @include M_flex_box(
         row,
         space-around
@@ -337,7 +337,11 @@ header {
         box-sizing: border-box; /*  bordure et le remplissage dans la valeur définie pour la largeur et la hauteur*/
         /*padding: 0% 1.5%; /* Marges internes gauche/droite*/
         /* margin: 20px 0 20px 0; /* MArges externes /* haut | droit | bas | gauche */
-      }
+
+        .RestaurantItem {
+          height: $HauteurRestaurantItemD;
+        }
+      } /* Fin RestaurantArticle*/
     } /* Fin media query*/
   } /* Fin Restaurant liste*/
 } /*Fin .REstaurant*/

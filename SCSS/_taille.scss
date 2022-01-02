@@ -35,6 +35,9 @@ p {
   font-weight: 400;
 }
 
+/* Taille du passage de sortie du mode tel*/
+$TailleEcranDesktop: 900px;
+
 /* Taille des images, logos*/
 
 $HauteurOhmyfood: 50px; /* Hauteur du logo forcée en pixels*/
@@ -54,5 +57,6 @@ $HauteurFonctItem: 60px; /* Hauteur de chaque item de fonctionnement*/
 $PositionFonctElt: 20px; /*Position de chaqye elt par rapport au bord haut du container*/
 
 /*Restaurants*/
-$HauteurRestaurantItem: 400px; /* Hauteur item restaurat avec image + description*/
+$HauteurRestaurantItem: 400px; /* Smartphone: Hauteur item restaurat avec image + description*/
+$HauteurRestaurantItemD: 450px; /* Desktop: Hauteur item restaurat avec image + description*/
 $HauteurRestaurantImg: 300px; /* Hauteur des images des restaurants*/
