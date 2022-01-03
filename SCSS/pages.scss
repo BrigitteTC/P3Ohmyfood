@@ -46,8 +46,46 @@ main {
       center
     ); /* vertical: Titre + la liste des plats*/
 
+    .PlatsTitre {
+      border-bottom: solid 2px $CouleurTertiaire; /* Petite bordure au dessous*/
+    }
+
     .PlatsDescr {
       @include M_flex_box(row, space-around); /* description et prix à côté*/
+      position: relative; /* Permet de fixer les elts*/
+
+      /* Taille*/
+      height: $HauteurPlatDescr; /* hauteur de l'ensemble description + prix*/
+      background-color: $CouleurFondDescRestaurants; /* Couleur de fond*/
+      margin: $TailleEspaceStandard; /* Marge entre chaque plat et son prix*/
+
+      border-radius: $RadiusCard; /* On   rrondit les angles*/
+
+      .PlatsNom {
+        /* Le nom et description du plat à gauche*/
+        position: absolute; /* position fixe*/
+        left: 10%; /* Position /bord gauche*/
+        align-items: center;
+      }
+
+      .PlatsPrix {
+        position: absolute; /* position fixe*/
+        left: 90%; /* Position /bord gauche*/
+        align-items: flex-start;
+      }
+
+      .PlatsOK {
+        display: flex; /* Permet de centrer le petit icone*/
+        position: absolute; /* position fixe*/
+        left: 90%; /* Position /bord gauche*/
+
+        height: $HauteurPlatDescr; /* hauteur de l'ensemble description + prix*/
+        width: 10%;
+        align-items: flex-start;
+        background-color: $CouleurTertiaire;
+
+        border-radius: 0 $RadiusCard $RadiusCard 0; /* On   rrondit les angles à droite*/
+      }
     }
   }
 }
