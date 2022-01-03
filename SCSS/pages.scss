@@ -17,13 +17,14 @@ $PagePrincipale: "false";
 @import "mixins";
 
 main {
+  @include M_flex_box(column, center); /* vertical et elts centrés*/
   background-color: $FondGris; /* Sur fond gris*/
+  margin: $TailleEspaceStandard; /* Marge avec le header et le footer*/
 
   /* Le titre de la page du restaurant avec son image et son nom*/
   .TitrePage {
     @include M_flex_box(column, center); /* vertical: Image + description*/
     height: $HauteurRestaurantItem;
-    max-width: $TailleEcranDesktop;
 
     .TitreImg {
       height: $HauteurRestaurantImg;
@@ -91,8 +92,14 @@ main {
         background-color: $CouleurTertiaire; /* Sur fond vert*/
         color: white;
 
-        border-radius: 0 $RadiusCard $RadiusCard 0; /* On   rrondit les angles à droite*/
+        border-radius: 0 $RadiusCard $RadiusCard 0; /* On   arrondit les angles à droite*/
+        display: none; /* Caché jusqu'à nouvel ordre*/
       }
-    }
+    } /*fin PlatsDescr*/
+  } /*Fin Plats*/
+
+  .Bouton {
+    width: 40%;
+    margin: auto;
   }
-}
+} /* fin du main*/
