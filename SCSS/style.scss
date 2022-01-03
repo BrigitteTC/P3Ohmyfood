@@ -28,6 +28,7 @@ body {
 
   margin: 0; /* supprime la marge pour chrome*/
 }
+
 .logo {
   margin: auto; /*Permet de centrer un icone sur son container*/
 }
@@ -48,10 +49,6 @@ header {
     .SiteImg {
       /* Le logo du site*/
       @include M_AffichageLogo;
-    }
-    /* La flèche de retour pour les pages restaurant*/
-    .FlecheRetour {
-      @include M_AffichageRetour;
     }
   }
 }

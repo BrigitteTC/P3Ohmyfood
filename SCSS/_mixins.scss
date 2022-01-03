@@ -76,26 +76,6 @@ Parametres:
 }
 
 /*---------------------------------------------------------*/
-/* Mixin pour affichage de la flèche de retour à la page principale
-Nom: M_AffichageRetour
-Fonction: Affiche le la flêche de retour depuis les pages des restaurants vers la page principale
-Parametres:
-    aucun
-
-Algorithme:
-  Affiche l'elt seulement si on est sur une page restaurant
-
-/*---------------------------------------------------------*/
-
-@mixin M_AffichageRetour {
-  @if $PagePrincipale== "true" {
-    display: none;
-  } @else {
-    display: block;
-  }
-}
-
-/*---------------------------------------------------------*/
 /*---------------------------------------------------------*/
 /* Mixin pour affichage d'une ombre 
 Nom: M_AffichageOmbre
