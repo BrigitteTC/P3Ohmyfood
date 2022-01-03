@@ -19,26 +19,36 @@ $PagePrincipale: "false";
 main {
   @include M_flex_box(column, center); /* vertical et elts centrés*/
   background-color: $FondGris; /* Sur fond gris*/
-  margin: $TailleEspaceStandard; /* Marge avec le header et le footer*/
+  margin-bottom: $TailleEspaceStandard; /* Marge avec  le footer*/
 
   /* Le titre de la page du restaurant avec son image et son nom*/
   .TitrePage {
-    @include M_flex_box(column, center); /* vertical: Image + description*/
-    height: $HauteurRestaurantItem;
+    @include M_flex_box(column, start); /* vertical: Image + description*/
+
+    height: $HauteurRestaurantImg;
 
     .TitreImg {
+      z-index: 1; /* Description devant l'image*/
       height: $HauteurRestaurantImg;
     }
 
     .TitreDesc {
       @include M_flex_box(row, space-between); /* horizontal : nom + coeur*/
+
+      top: 250px; /* Tout en bas = en bas de l'image*/
+      z-index: 2; /* Description devant l'image*/
+      /*padding: 0 $TailleEspaceStandard; /* Espace gauche/droite*/
+
+      /*On arrondit les angles en haut*/
+      border-radius: $RadiusCard;
+
       h1 {
-        font-family: Shrikhand;
+        font-family: Shrikhand; /* police caracteres*/
       }
-      padding: $TailleEspaceStandard; /* Espace */
     }
   }
 
+  /*-------------------------------------------*/
   /* Les plats*/
 
   .Plats {
@@ -65,7 +75,7 @@ main {
       background-color: $CouleurFondDescRestaurants; /* Couleur de fond*/
       margin: $TailleEspaceStandard; /* Marge entre chaque plat et son prix*/
 
-      border-radius: $RadiusCard; /* On   rrondit les angles*/
+      border-radius: $RadiusCard; /* On   arrondit les angles*/
 
       .PlatsNom {
         /* Le nom et description du plat à gauche*/
