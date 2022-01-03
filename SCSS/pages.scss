@@ -23,24 +23,39 @@ main {
 
   /* Le titre de la page du restaurant avec son image et son nom*/
   .TitrePage {
-    @include M_flex_box(column, start); /* vertical: Image + description*/
+    @include M_flex_box(row, center); /* vertical: Image + description*/
+    position: relative; /* Permet de placer les elts à l'interieur du container*/
 
-    height: $HauteurRestaurantImg;
+    height: $HauteurRestaurantImg; /* Hauteur = celle de l'image*/
+
+    margin-bottom: 30px;
 
     .TitreImg {
-      z-index: 1; /* Description devant l'image*/
+      position: absolute; /* Fixe la position de l'elt*/
+      width: 100%; /* 100% du container*/
+
       height: $HauteurRestaurantImg;
+      z-index: 1; /* Description devant l'image: Image: 1 Description: 2*/
     }
 
     .TitreDesc {
+      position: absolute; /* Fixe la position de l'elt*/
+      top: $HauteurRestaurantImg - 50px; /* Position par rapport au haut du container*/
+      left: 0; /* Position par rapport à la gauche du container*/
+
+      /*Taille*/
+      height: 100px;
+      width: 100%;
+
       @include M_flex_box(row, space-between); /* horizontal : nom + coeur*/
 
-      top: 250px; /* Tout en bas = en bas de l'image*/
       z-index: 2; /* Description devant l'image*/
-      /*padding: 0 $TailleEspaceStandard; /* Espace gauche/droite*/
 
-      /*On arrondit les angles en haut*/
-      border-radius: $RadiusCard;
+      background-color: $FondGris; /* Fond d'écran*/
+      padding: $TailleEspaceStandard; /* Espace gauche/droite*/
+
+      /* On arrondit les angles */
+      border-radius: $RadiusRond;
 
       h1 {
         font-family: Shrikhand; /* police caracteres*/
