@@ -43,7 +43,7 @@ body {
 
 header {
   .SiteLogo {
-    @include M_flex_box(row, center); /* Elts en horizontal et au début*/
+    @include M_flex_box(row, center); /* Elts en horizontal et centrés*/
     align-items: center; /*centrer  les elts verticalement*/
 
     .SiteImg {

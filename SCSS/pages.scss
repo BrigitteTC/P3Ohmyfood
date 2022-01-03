@@ -15,3 +15,13 @@ $PagePrincipale: "false";
 @import "taille";
 @import "general";
 @import "mixins";
+
+/* Le titre de la page du restaurant avec son image et son nom*/
+.TitrePage {
+  @include M_flex_box(column, center); /* vertical: Image + description*/
+  height: $HauteurRestaurantItem;
+
+  .TitreImg {
+    height: $HauteurRestaurantImg;
+  }
+}
