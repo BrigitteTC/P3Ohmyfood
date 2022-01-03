@@ -17,6 +17,9 @@ Auteur: BTC
 @import "general";
 @import "mixins";
 
+/* Variable pour page principale*/
+$PagePrincipale: true;
+
 /*Infos générales body*/
 body {
   font-family: "Roboto", sans-serif;
@@ -29,21 +32,26 @@ body {
   margin: auto; /*Permet de centrer un icone sur son container*/
 }
 
+/* Class pour cacher un texte*/
+.Transparent {
+  color: transparent;
+}
+
 /*Header*/
 /*--------------------------*/
 
 header {
   .SiteLogo {
-    @include M_flex_box(row, flex-start); /* Elts en horizontal et au début*/
+    @include M_flex_box(row, center); /* Elts en horizontal et au début*/
     align-items: center; /*centrer  les elts verticalement*/
 
     .SiteImg {
       /* Le logo du site*/
       @include M_AffichageLogo;
     }
-    /* La flèche de retour pour le spages restaurant*/
+    /* La flèche de retour pour les pages restaurant*/
     .FlecheRetour {
-      align-items: center;
+      @include M_AffichageRetour;
     }
   }
 }
