@@ -47,7 +47,12 @@ main {
     ); /* vertical: Titre + la liste des plats*/
 
     .PlatsTitre {
-      border-bottom: solid 2px $CouleurTertiaire; /* Petite bordure au dessous*/
+      margin: $TailleEspaceStandard; /* Petite marge standard*/
+      font-weight: 400; /* On affine un peu la police*/
+      p {
+        color: $CouleurTertiaire; /* On colorie le petit souligné*/
+        font-weight: 800; /* On grossit le trait*/
+      }
     }
 
     .PlatsDescr {
@@ -80,9 +85,11 @@ main {
         left: 90%; /* Position /bord gauche*/
 
         height: $HauteurPlatDescr; /* hauteur de l'ensemble description + prix*/
-        width: 10%;
+        width: 10%; /* Largeur jusqu'au bord droit*/
+
         align-items: flex-start;
-        background-color: $CouleurTertiaire;
+        background-color: $CouleurTertiaire; /* Sur fond vert*/
+        color: white;
 
         border-radius: 0 $RadiusCard $RadiusCard 0; /* On   rrondit les angles à droite*/
       }
