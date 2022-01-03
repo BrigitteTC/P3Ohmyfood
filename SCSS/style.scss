@@ -33,10 +33,19 @@ body {
 /*--------------------------*/
 
 header {
-  @include M_flex_box(column, center); /* Elts en vertical et centrés*/
+  .SiteLogo {
+    @include M_flex_box(row, flex-start); /* Elts en horizontal et au début*/
+    align-items: center; /*centrer  les elts verticalement*/
 
-  /* Le logo du site*/
-  @include M_AffichageLogo;
+    .SiteImg {
+      /* Le logo du site*/
+      @include M_AffichageLogo;
+    }
+    /* La flèche de retour pour le spages restaurant*/
+    .FlecheRetour {
+      align-items: center;
+    }
+  }
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -390,7 +399,8 @@ footer {
   }
 
   .PiedDePage {
+    /* Comprend l'icone et sa description*/
     @include M_flex_box(row, flex-start);
-    align-items: center; /*centrer la boîte verticalement*/
+    align-items: center; /*centrer  les elts verticalement*/
   }
 } /*Fin du footer*/
