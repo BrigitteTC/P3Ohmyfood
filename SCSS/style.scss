@@ -166,6 +166,12 @@ header {
 
   &:hover {
     transform: scale(1.15);
+    /* Fond dégradé pour le bouton du haut vers le bas*/
+    background-image: linear-gradient(
+      to top,
+      $CouleurSecondaire,
+      $CouleurSecondaire
+    );
   }
 }
 
