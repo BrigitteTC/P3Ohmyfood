@@ -55,11 +55,11 @@ header {
       /* Le logo du site*/
       @include M_AffichageLogo;
     }
-
-    .Logo a:link {
-      text-decoration: none; /* Fleche pas souliguée au repos*/
-    }
   }
+}
+
+.Logo a:link {
+  text-decoration: none; /* Fleche pas souliguée au repos*/
 }
 
 /*-----------------------------------------------------------------------------------*/
