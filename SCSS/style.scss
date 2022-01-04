@@ -47,7 +47,6 @@ body {
 /*--------------------------*/
 
 header {
-  margin: 10%;
   .SiteLogo {
     @include M_flex_box(row, center); /* Elts en horizontal et centrés*/
     align-items: center; /*centrer  les elts verticalement*/
