@@ -178,11 +178,6 @@ header {
   color: $CouleurLienRepos; /* couleur du lien au repos */
 }
 
-/* le lien au survol*/
-.LienArticle a:hover {
-  color: $CouleurLienSurvol; /*couleur du lien au survol*/
-}
-
 /*--------------------------------------------------------------------------*/
 /*fonctionnement*/
 
@@ -368,6 +363,20 @@ header {
 
         .RestaurantCoeur {
           margin: auto; /* centré*/
+
+          transition: all 450ms;
+
+          &:hover {
+            transform: scale(1.13);
+            /* Fond dégradé pour l'elt  du haut vers le bas*/
+            /*background-image: linear-gradient(
+              to top,
+              $CouleurPrimaire,
+              $CouleurSecondaire
+            );*/ /*???????????????ne ft pas?????????????????*/
+
+            color: $CouleurPrimaire; /* couleur changée au survol*/
+          }
         }
       } /* fin RestautantDesc*/
     } /* Fin restaurant Item*/
