@@ -419,4 +419,9 @@ footer {
     @include M_flex_box(row, flex-start);
     align-items: center; /*centrer  les elts verticalement*/
   }
+
+  a:link {
+    text-decoration: none; /* pas souligné*/
+    color: $CouleurTexteFooter; /*texte de la couleur des copains*/
+  }
 } /*Fin du footer*/
