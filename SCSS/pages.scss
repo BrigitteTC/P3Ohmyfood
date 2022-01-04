@@ -19,13 +19,13 @@ $PagePrincipale: "false";
 main {
   @include M_flex_box(column, center); /* vertical et elts centrés*/
   background-color: $FondGris; /* Sur fond gris*/
-  padding-bottom: $TailleEspaceStandard; /* Marge avec  le footer*/
+  padding-bottom: $TailleEspaceStandardPx; /* Marge avec  le footer*/
 
   /* Media query pour tablettes et desktop:
    On arrange les marges*/
   @media screen and (min-width: $TailleEcranDesktop) {
-    padding: 20px 20%; /* Espace intérieur Haut/bas et Gauche/droite*/
-    /*margin: $TailleEspaceStandard;*/
+    padding: $TailleEspaceStandardPx $TailleEspaceStandardPourcent; /* Espace intérieur Haut/bas et Gauche/droite*/
+    /*margin: $TailleEspaceStandardPx;*/
   }
 
   /* Le titre de la page du restaurant avec son image et son nom*/
@@ -59,7 +59,7 @@ main {
       z-index: 2; /* Description devant l'image*/
 
       background-color: $FondGris; /* Fond d'écran*/
-      padding: $TailleEspaceStandard; /* Espace gauche/droite*/
+      padding: $TailleEspaceStandardPourcent; /* Espace gauche/droite*/
 
       /* On arrondit les angles */
       border-radius: $RadiusRond;
@@ -80,7 +80,7 @@ main {
     ); /* vertical: Titre + la liste des plats*/
 
     .PlatsTitre {
-      margin: $TailleEspaceStandard; /* Petite marge standard*/
+      margin: $TailleEspaceStandardPx; /* Petite marge standard*/
       font-weight: 400; /* On affine un peu la police*/
       p {
         color: $CouleurTertiaire; /* On colorie le petit souligné*/
@@ -95,7 +95,7 @@ main {
       /* Taille*/
       height: $HauteurPlatDescr; /* hauteur de l'ensemble description + prix*/
       background-color: $CouleurFondDescRestaurants; /* Couleur de fond*/
-      margin: $TailleEspaceStandard; /* Marge entre chaque plat et son prix*/
+      margin: $TailleEspaceStandardPx; /* Marge entre chaque plat et son prix*/
 
       border-radius: $RadiusCard; /* On   arrondit les angles*/
 

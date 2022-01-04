@@ -36,7 +36,8 @@ p {
 }
 
 /*Marges*/
-$TailleEspaceStandard: 20px; /* Marge ou padding standard appliquée sur les elts*/
+$TailleEspaceStandardPx: 20px; /* Marge ou padding standard appliquée sur les elts en px*/
+$TailleEspaceStandardPourcent: 20%; /* Marge ou padding standard appliquée sur les elts en %*/
 
 /* Taille du passage de sortie du mode tel*/
 $TailleEcranDesktop: 900px;
