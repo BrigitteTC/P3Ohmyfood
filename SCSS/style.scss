@@ -29,6 +29,11 @@ body {
   margin: 0; /* supprime la marge pour chrome*/
 }
 
+/* Classes générales*/
+/* Positionnne un petit icone*/
+.PositionLogo {
+  display: flex;
+}
 .Logo {
   margin: auto; /*Permet de centrer un icone sur son container*/
 }
@@ -42,6 +47,7 @@ body {
 /*--------------------------*/
 
 header {
+  margin: 10%;
   .SiteLogo {
     @include M_flex_box(row, center); /* Elts en horizontal et centrés*/
     align-items: center; /*centrer  les elts verticalement*/
@@ -49,6 +55,10 @@ header {
     .SiteImg {
       /* Le logo du site*/
       @include M_AffichageLogo;
+    }
+
+    .Logo a:link {
+      text-decoration: none; /* Fleche pas souliguée au repos*/
     }
   }
 }
