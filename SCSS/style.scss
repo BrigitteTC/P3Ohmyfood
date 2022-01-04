@@ -157,11 +157,16 @@ header {
 
   /* petite ombre*/
   @include M_AffichageOmbre;
-}
-/*le bouton au survol*/
-.Bouton:hover {
-  /* Ajout d'une ombre  */
-  box-shadow: 5px 5px 5px $CouleurLienSurvol; /* Décalage horizontal, décalage vertical, force du dégradé, couleur*/
+
+  /* Transition pour faire grossir le bouton au survol*/
+
+  transform: scale(1);
+
+  transition: transform 400ms;
+
+  &:hover {
+    transform: scale(1.15);
+  }
 }
 
 /*--------------------------------------------------------------------------*/
