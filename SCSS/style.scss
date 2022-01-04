@@ -50,7 +50,7 @@ header {
   .SiteLogo {
     @include M_flex_box(row, center); /* Elts en horizontal et centrés*/
     align-items: center; /*centrer  les elts verticalement*/
-    padding: 0 30px; /* Espace horizontal ppur que la fleche soir décalée du bord*/
+    padding: 0 40px; /* Espace horizontal ppur que la fleche soir décalée du bord*/
 
     .SiteImg {
       /* Le logo du site*/
@@ -60,6 +60,14 @@ header {
 }
 
 .Logo a:link {
+  text-decoration: none; /* Fleche pas souliguée au repos*/
+}
+
+.PositionLogo a:link {
+  text-decoration: none; /* Fleche pas souliguée au repos*/
+}
+
+.Logo {
   text-decoration: none; /* Fleche pas souliguée au repos*/
 }
 
