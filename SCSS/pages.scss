@@ -96,13 +96,13 @@ main {
         /* Le nom et description du plat à gauche*/
         position: absolute; /* position fixe*/
         left: 10%; /* Position /bord gauche*/
-        align-items: center;
+        align-items: end; /*placé en bas du container  ??????????? ne ft pas?????????????????*/
       }
 
       .PlatsPrix {
         position: absolute; /* position fixe*/
         left: 90%; /* Position /bord gauche*/
-        align-items: flex-start;
+        align-items: end; /*placé en bas du container    ??????????? ne ft pas?????????????????*/
       }
 
       .PlatsOK {
@@ -113,9 +113,9 @@ main {
         height: $HauteurPlatDescr; /* hauteur de l'ensemble description + prix*/
         width: 10%; /* Largeur jusqu'au bord droit*/
 
-        align-items: flex-start;
+        color: $CouleurOK; /* Couleur du petit icone*/
+
         background-color: $CouleurTertiaire; /* Sur fond vert*/
-        color: white;
 
         border-radius: 0 $RadiusCard $RadiusCard 0; /* On   arrondit les angles à droite*/
         display: none; /* Caché jusqu'à nouvel ordre*/
@@ -124,7 +124,7 @@ main {
   } /*Fin Plats*/
 
   .Bouton {
-    width: 40%;
+    width: 40%; /* Largeur du bouton*/
     margin: auto;
   }
 } /* fin du main*/
