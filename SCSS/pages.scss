@@ -19,7 +19,14 @@ $PagePrincipale: "false";
 main {
   @include M_flex_box(column, center); /* vertical et elts centrés*/
   background-color: $FondGris; /* Sur fond gris*/
-  margin-bottom: $TailleEspaceStandard; /* Marge avec  le footer*/
+  padding-bottom: $TailleEspaceStandard; /* Marge avec  le footer*/
+
+  /* Media query pour tablettes et desktop:
+   On arrange les marges*/
+  @media screen and (min-width: $TailleEcranDesktop) {
+    padding: 20px 20%; /* Espace intérieur Haut/bas et Gauche/droite*/
+    /*margin: $TailleEspaceStandard;*/
+  }
 
   /* Le titre de la page du restaurant avec son image et son nom*/
   .TitrePage {
