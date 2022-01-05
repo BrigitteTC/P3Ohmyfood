@@ -165,7 +165,7 @@ header {
   transition: transform 400ms;
 
   &:hover {
-    transform: scale(1.15); /* Augmentatino de la taille du bouton*/
+    transform: scale(1.15); /* Augmentation de la taille du bouton*/
 
     opacity: 0.4; /* eclaircit*/
     /* Augmentation de l'ombre   */
@@ -368,18 +368,18 @@ header {
         .RestaurantCoeur {
           margin: auto; /* centré*/
 
-          transition: all 450ms;
+          transform: scale(1);
+
+          transition: transform 450ms;
 
           &:hover {
-            transform: scale(1.13);
-            /* Fond dégradé pour l'elt  du haut vers le bas*/
-            /*background-image: linear-gradient(
-              to top,
+            transform: scale(2); /* Change taille du coeur*/
+
+            /* Change la couleur du coeur au survol : ?????????ne ft pas?????????????????*/
+            background-image: linear-gradient(
               $CouleurPrimaire,
               $CouleurSecondaire
-            );*/ /*???????????????ne ft pas?????????????????*/
-
-            color: $CouleurPrimaire; /* couleur changée au survol*/
+            );
           }
         }
       } /* fin RestautantDesc*/
