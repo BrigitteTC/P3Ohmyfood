@@ -382,6 +382,25 @@ header {
             );
           }
         }
+
+        /* Classe coeur avec l'image pmg*/
+        .CoeurImg {
+          margin: auto; /* centré*/
+
+          transform: scale(1);
+
+          transition: transform 450ms;
+
+          &:hover {
+            transform: scale(2); /* Change taille du coeur*/
+
+            /* Change la couleur du coeur au survol : ?????????ne ft pas?????????????????*/
+            background-image: linear-gradient(
+              $CouleurPrimaire,
+              $CouleurSecondaire
+            );
+          }
+        }
       } /* fin RestautantDesc*/
     } /* Fin restaurant Item*/
 
