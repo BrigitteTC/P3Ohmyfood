@@ -285,6 +285,25 @@ header {
   /* Le Titre*/
   .TitreRestaurants {
     margin: $TailleEspaceStandard;
+    @include M_flex_box(row, space-between); /* horizontal: Titre + spinner*/
+    position: relative;
+
+    .spin {
+      position: absolute; /* Fixe la position du petit rond qui va tourner*/
+
+      top: 20px;
+      left: 90%;
+      animation: spin 3s linear 3s;
+    }
+
+    @keyframes spin {
+      from {
+        transform: translate3d(-50%, -50%, 0) rotate(0deg);
+      }
+      to {
+        transform: translate3d(-50%, -50%, 0) rotate(360deg);
+      }
+    }
   }
 
   /*Liste des restaurants*/
