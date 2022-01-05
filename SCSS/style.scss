@@ -165,13 +165,11 @@ header {
   transition: transform 400ms;
 
   &:hover {
-    transform: scale(1.15);
-    /* Fond dégradé pour le bouton du haut vers le bas*/
-    background-image: linear-gradient(
-      to top,
-      $CouleurSecondaire,
-      $CouleurSecondaire
-    );
+    transform: scale(1.15); /* Augmentatino de la taille du bouton*/
+
+    opacity: 0.4; /* eclaircit*/
+    /* Augmentation de l'ombre   */
+    box-shadow: 20px 10px 20px black; /* Décalage horizontal, décalage vertical, force du dégradé, couleur*/
   }
 }
 
