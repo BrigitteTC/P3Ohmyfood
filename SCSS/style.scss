@@ -291,17 +291,19 @@ header {
     .spin {
       position: absolute; /* Fixe la position du petit rond qui va tourner*/
 
+      /* Position en haut à droite de la partie resto*/
       top: 20px;
       left: 90%;
-      animation: spin 3s linear 3s;
+      animation-name: spin;
+      animation-duration: 3s;
     }
 
     @keyframes spin {
       from {
-        transform: translate3d(-50%, -50%, 0) rotate(0deg);
+        transform: rotate(0deg);
       }
       to {
-        transform: translate3d(-50%, -50%, 0) rotate(360deg);
+        transform: rotate(360deg);
       }
     }
   }
