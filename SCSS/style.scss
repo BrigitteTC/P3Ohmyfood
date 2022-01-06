@@ -288,14 +288,27 @@ header {
     @include M_flex_box(row, space-between); /* horizontal: Titre + spinner*/
     position: relative;
 
-    .spin {
+    .Chargement {
       position: absolute; /* Fixe la position du petit rond qui va tourner*/
 
+      /* Taille*/
+      height: 20px;
+      width: 20px;
+
+      /* coloriage + mise en rond*/
+      border: 10px solid $CouleurPrimaire;
+      border-top: 10px solid $CouleurSecondaire;
+      border-bottom: 10px solid $CouleurTertiaire;
+      border-radius: $RadiusRond;
+
       /* Position en haut à droite de la partie resto*/
-      top: 20px;
-      left: 90%;
+      top: 0;
+      left: 80%;
+
+      /*Animation*/
       animation-name: spin;
-      animation-duration: 3s;
+
+      animation-duration: 5s;
     }
 
     @keyframes spin {
@@ -305,6 +318,43 @@ header {
       to {
         transform: rotate(360deg);
       }
+    }
+
+    @keyframes disparition {
+      from {
+        transform: scale(1);
+        opacity: 1; /* Objet apparent*/
+      }
+      to {
+        transform: scale(0);
+        opacity: 1; /* disparition de l'objet*/
+      }
+    }
+
+    /* Le petit rond disparait après avoir tourné*/
+    .Disparition {
+      position: absolute; /* Fixe la position du petit rond qui va tourner*/
+
+      /* Taille*/
+      height: 20px;
+      width: 20px;
+
+      /* coloriage + mise en rond*/
+      border: 10px solid $CouleurPrimaire;
+      border-top: 10px solid $CouleurSecondaire;
+      border-bottom: 10px solid $CouleurTertiaire;
+      border-radius: $RadiusRond;
+
+      /* Position en haut à droite de la partie resto*/
+      top: 0;
+      left: 50%;
+
+      /*animation*/
+      animation-name: disparition;
+
+      animation-duration: 3s;
+
+      animation: disparition 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
     }
   }
 
