@@ -352,7 +352,7 @@ header {
       /*animation*/
       animation-name: disparition;
 
-      animation-duration: 3s;
+      animation-delay: 3s;
 
       animation: disparition 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
     }
