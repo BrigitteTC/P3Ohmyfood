@@ -444,13 +444,13 @@ header {
           transition: transform 450ms;
 
           &:hover {
-            transform: scale(2); /* Change taille du coeur*/
+            /* transform: scale(2); /* Change taille du coeur*/
+
+            /* -webkit-background-clip: text; /* intérieur du coeur*/
+            -webkit-text-fill-color: transparent;
 
             /* Change la couleur du coeur au survol : ?????????ne ft pas?????????????????*/
-            background-image: linear-gradient(
-              $CouleurPrimaire,
-              $CouleurSecondaire
-            );
+            background: linear-gradient($CouleurPrimaire, $CouleurSecondaire);
           }
         }
 
