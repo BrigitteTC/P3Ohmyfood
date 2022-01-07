@@ -446,7 +446,7 @@ header {
           &:hover {
             /* transform: scale(2); /* Change taille du coeur*/
 
-            /* -webkit-background-clip: text; /* intérieur du coeur*/
+            background-clip: text; /* intérieur du coeur*/
             -webkit-text-fill-color: transparent;
 
             /* Change la couleur du coeur au survol : ?????????ne ft pas?????????????????*/

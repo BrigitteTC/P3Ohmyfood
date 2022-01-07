@@ -89,46 +89,67 @@ main {
       }
     }
 
-    .PlatsDescr {
-      @include M_flex_box(row, space-around); /* description et prix à côté*/
-      position: relative; /* Permet de fixer les elts*/
+    .PlatsListe {
+      /* Liste des plats*/
+      @include M_flex_box(column, center); /* vertical:  la liste des plats*/
 
-      /* Taille*/
-      height: $HauteurPlatDescr; /* hauteur de l'ensemble description + prix*/
-      background-color: $CouleurFondDescRestaurants; /* Couleur de fond*/
-      margin: $TailleEspaceStandard; /* Marge entre chaque plat et son prix*/
+      .PlatsDescr {
+        @include M_flex_box(
+          column,
+          space-around
+        ); /* Nom du plat puis en dessous: détail et prix à côté*/
+        position: relative; /* Permet de fixer les elts*/
 
-      border-radius: $RadiusCard; /* On   arrondit les angles*/
-
-      .PlatsNom {
-        /* Le nom et description du plat à gauche*/
-        position: absolute; /* position fixe*/
-        left: 10%; /* Position /bord gauche*/
-        align-items: end; /*placé en bas du container  ??????????? ne ft pas?????????????????*/
-      }
-
-      .PlatsPrix {
-        position: absolute; /* position fixe*/
-        left: 90%; /* Position /bord gauche*/
-        align-items: end; /*placé en bas du container    ??????????? ne ft pas?????????????????*/
-      }
-
-      .PlatsOK {
-        display: flex; /* Permet de centrer le petit icone*/
-        position: absolute; /* position fixe*/
-        left: 90%; /* Position /bord gauche*/
-
+        /* Taille*/
         height: $HauteurPlatDescr; /* hauteur de l'ensemble description + prix*/
-        width: 10%; /* Largeur jusqu'au bord droit*/
+        background-color: $CouleurFondDescRestaurants; /* Couleur de fond*/
+        margin: $TailleEspaceStandard; /* Marge entre chaque plat et son prix*/
 
-        color: $CouleurOK; /* Couleur du petit icone*/
+        border-radius: $RadiusCard; /* On   arrondit les angles*/
 
-        background-color: $CouleurTertiaire; /* Sur fond vert*/
+        .PlatsNom {
+          /* Le nom du plat*/
+          position: absolute; /* position fixe*/
+          top: 0; /* Tout en haut du container*/
+          left: 10%; /* Position /bord gauche*/
+        }
 
-        border-radius: 0 $RadiusCard $RadiusCard 0; /* On   arrondit les angles à droite*/
-        display: none; /* Caché jusqu'à nouvel ordre*/
-      }
-    } /*fin PlatsDescr*/
+        .PlatsDetailEtPrix {
+          /* L'ensemble détail du plat et son prix*/
+          @include M_flex_box(
+            row,
+            space-around
+          ); /* description et prix à côté*/
+          position: relative; /* Permet de fixer les elts*/
+
+          .PlatsDetails {
+            /* Le nom et description du plat à gauche*/
+            position: absolute; /* position fixe*/
+            left: 10%; /* Position /bord gauche*/
+          }
+
+          .PlatsPrix {
+            position: absolute; /* position fixe*/
+            left: 90%; /* Position /bord gauche*/
+          }
+        }
+        .PlatsOK {
+          display: flex; /* Permet de centrer le petit icone*/
+          position: absolute; /* position fixe*/
+          left: 90%; /* Position /bord gauche*/
+
+          height: $HauteurPlatDescr; /* hauteur de l'ensemble description + prix*/
+          width: 10%; /* Largeur jusqu'au bord droit*/
+
+          color: $CouleurOK; /* Couleur du petit icone*/
+
+          background-color: $CouleurTertiaire; /* Sur fond vert*/
+
+          border-radius: 0 $RadiusCard $RadiusCard 0; /* On   arrondit les angles à droite*/
+          display: none; /* Caché jusqu'à nouvel ordre*/
+        }
+      } /*fin PlatsDescr*/
+    } /*Fin PlatsListe*/
   } /*Fin Plats*/
 
   .Bouton {
