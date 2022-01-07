@@ -169,7 +169,7 @@ header {
 
     opacity: 0.4; /* eclaircit*/
     /* Augmentation de l'ombre   */
-    box-shadow: 20px 10px 20px black; /* Décalage horizontal, décalage vertical, force du dégradé, couleur*/
+    box-shadow: 10px 10px 20px $CouleurLienSurvol; /* Décalage horizontal, décalage vertical, force du dégradé, couleur*/
   }
 }
 
