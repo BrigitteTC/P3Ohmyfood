@@ -445,6 +445,7 @@ header {
             z-index: 1; /*le vide devant et le plein derriere*/
 
             &:hover {
+              display: block;
               @include gradient-animation(
                 $CouleurPrimaire,
                 $CouleurSecondaire,
