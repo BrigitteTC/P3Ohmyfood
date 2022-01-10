@@ -438,7 +438,22 @@ header {
 
         .RestaurantCoeur {
           display: flex; /* pour centrer le coeur*/
-          .awesome-gradient {
+          .CoeurPlein {
+            margin: auto; /* centré*/
+
+            &:hover {
+              @include gradient-animation(
+                $CouleurPrimaire,
+                $CouleurSecondaire,
+                1s,
+                "\f230"
+              );
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
+          }
+
+          .CoeurVide {
             margin: auto; /* centré*/
 
             &:hover {
