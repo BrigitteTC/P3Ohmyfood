@@ -128,3 +128,42 @@ Parametres:
   transform: translate3d(-50%, -50%, 0);
   will-change: transform;
 }
+
+/*---------------------------------------------------------*/
+/* Mixin pour remplissage objet par un gradient
+Nom: M_gradient-animation
+Fonction: Affiche un bouton avec couleurs dégradées et bords arrondis
+Parametres:
+    Couleur du texte
+    Couleur fond haut
+    Couleur fond bas
+
+/*---------------------------------------------------------*/
+
+@mixin gradient-animation($start, $end, $transTime, $content) {
+  background-size: 100%;
+  background-image: linear-gradient($start, $end);
+  position: relative;
+  z-index: 100;
+
+  &:after {
+    background-image: linear-gradient($end, $start);
+    content: $content;
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    z-index: -100;
+    transition: opacity $transTime;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &:hover {
+    &:after {
+      opacity: 1;
+    }
+  }
+}
