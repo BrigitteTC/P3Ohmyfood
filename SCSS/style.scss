@@ -430,8 +430,10 @@ header {
         /* Horizontal et disposition avec des espaces entre chaque item et au bord*/
         @include M_flex_box(row, space-around);
         margin: $TailleEspaceStandard;
+        display: relative; /* Permet de fixer la taille des elts à l'intérieur*/
 
         .RestaurantNom {
+          display: absolute;
           width: 70%; /* Occupe 70% de la largeur*/
           padding-left: 5%; /* petit décalage / bord*/
         }
@@ -452,25 +454,6 @@ header {
             );
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-          }
-        }
-
-        /* Classe coeur avec l'image pmg*/
-        .CoeurImg {
-          margin: auto; /* centré*/
-
-          transform: scale(1);
-
-          transition: transform 450ms;
-
-          &:hover {
-            transform: scale(2); /* Change taille du coeur*/
-
-            /* Change la couleur du coeur au survol : ?????????ne ft pas?????????????????*/
-            background-image: linear-gradient(
-              $CouleurPrimaire,
-              $CouleurSecondaire
-            );
           }
         }
       } /* fin RestautantDesc*/
