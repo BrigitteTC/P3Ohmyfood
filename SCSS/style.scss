@@ -430,26 +430,27 @@ header {
         /* Horizontal et disposition avec des espaces entre chaque item et au bord*/
         @include M_flex_box(row, space-around);
         margin: $TailleEspaceStandard;
-        display: relative; /* Permet de fixer la taille des elts à l'intérieur*/
 
         .RestaurantNom {
-          display: absolute;
           width: 70%; /* Occupe 70% de la largeur*/
           padding-left: 5%; /* petit décalage / bord*/
         }
 
         .RestaurantCoeur {
-          margin: auto; /* centré*/
+          display: flex; /* pour centrer le coeur*/
+          .awesome-gradient {
+            margin: auto; /* centré*/
 
-          &:hover {
-            @include gradient-animation(
-              $CouleurPrimaire,
-              $CouleurSecondaire,
-              1s,
-              "\f230"
-            );
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            &:hover {
+              @include gradient-animation(
+                $CouleurPrimaire,
+                $CouleurSecondaire,
+                1s,
+                "\f230"
+              );
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
           }
         }
       } /* fin RestautantDesc*/
