@@ -433,13 +433,16 @@ header {
 
         .RestaurantNom {
           width: 70%; /* Occupe 70% de la largeur*/
-          padding-left: 5%; /* petit décalage / bord*/
+          padding-left: 0; /* petit décalage / bord*/
         }
 
         .RestaurantCoeur {
           display: flex; /* pour centrer le coeur*/
+          position: relative;
           .CoeurPlein {
-            margin: auto; /* centré*/
+            position: absolute;
+            left: 70%;
+            z-index: 1; /*le vide devant et le plein derriere*/
 
             &:hover {
               @include gradient-animation(
@@ -450,11 +453,14 @@ header {
               );
               -webkit-background-clip: text;
               -webkit-text-fill-color: transparent;
+              z-index: 10; /* Passe devant*/
             }
           }
 
           .CoeurVide {
-            margin: auto; /* centré*/
+            position: absolute;
+            left: 70%;
+            z-index: 2; /*le vide devant et le plein derriere*/
 
             &:hover {
               @include gradient-animation(
