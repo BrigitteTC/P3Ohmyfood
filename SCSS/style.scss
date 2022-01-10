@@ -441,10 +441,6 @@ header {
         .RestaurantCoeur {
           margin: auto; /* centré*/
 
-          transform: scale(1);
-
-          transition: transform 450ms;
-
           &:hover {
             @include gradient-animation(
               $CouleurPrimaire,
