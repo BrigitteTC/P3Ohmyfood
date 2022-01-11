@@ -160,13 +160,7 @@ header {
 
   /* Transition pour faire grossir le bouton au survol*/
 
-  transform: scale(1);
-
-  transition: transform 400ms;
-
   &:hover {
-    transform: scale(1.15); /* Augmentation de la taille du bouton*/
-
     opacity: 0.4; /* eclaircit*/
     /* Augmentation de l'ombre   */
     box-shadow: 10px 10px 20px $CouleurLienSurvol; /* Décalage horizontal, décalage vertical, force du dégradé, couleur*/
