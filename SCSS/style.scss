@@ -454,14 +454,12 @@ header {
             left: 70%;
             z-index: 2; /* Sera derriere le coeur plein au survol*/
 
-            opacity: 1; /*visible  (0 invisible et 1: visible)*/
-
             &:hover + .CoeurPlein {
               /* Le survol du coeur vide fera apparaitre le coeur plein*/
               position: absolute;
               left: 70%;
               z-index: 3; /* Passe devant*/
-
+              /*gradient pour colorer le coeur plein */
               @include gradient-animation(
                 $CouleurPrimaire,
                 $CouleurSecondaire,
