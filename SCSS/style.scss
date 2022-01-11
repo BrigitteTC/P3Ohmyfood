@@ -435,35 +435,33 @@ header {
           width: 70%; /* Occupe 70% de la largeur*/
           padding-left: 0; /* petit décalage / bord*/
         }
+        /* Le coeur*/
 
         .RestaurantCoeur {
           display: flex; /* pour centrer le coeur*/
           position: relative;
-          .CoeurPlein {
+
+          .CoeurPosition {
+            /* On positionne le coeur plein qui n'apparaitra qu'au survol*/
             position: absolute;
             left: 70%;
-            z-index: 1; /*le vide devant et le plein derriere*/
-
-            &:hover {
-              display: block;
-              @include gradient-animation(
-                $CouleurPrimaire,
-                $CouleurSecondaire,
-                1s,
-                "\f230"
-              );
-              -webkit-background-clip: text;
-              -webkit-text-fill-color: transparent;
-              z-index: 10; /* Passe devant*/
-            }
+            color: transparent;
           }
 
           .CoeurVide {
+            /* On positionnne le coeur vide*/
             position: absolute;
             left: 70%;
-            z-index: 2; /*le vide devant et le plein derriere*/
+            z-index: 2; /* Sera derriere le coeur plein au survol*/
 
-            &:hover {
+            opacity: 1; /*visible  (0 invisible et 1: visible)*/
+
+            &:hover + .CoeurPlein {
+              /* Le survol du coeur vide fera apparaitre le coeur plein*/
+              position: absolute;
+              left: 70%;
+              z-index: 3; /* Passe devant*/
+
               @include gradient-animation(
                 $CouleurPrimaire,
                 $CouleurSecondaire,
