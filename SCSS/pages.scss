@@ -114,7 +114,8 @@ main {
 
       /* Apparition des menus*/
       &__load {
-        animation: ApparitionMenu $anim-dur forwards;
+        /*animation: ApparitionMenu $anim-dur forwards;*/
+        animation: ApparitionMenu $anim-dur ease;
         @for $i from 1 through 4 {
           &--#{$i} {
             animation-delay: $anim-delay * $i;
