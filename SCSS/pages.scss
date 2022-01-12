@@ -74,6 +74,25 @@ main {
   /*-------------------------------------------*/
   /* Les plats*/
 
+  $anim-dur: 1000ms;
+  $anim-delay: $anim-dur / 5;
+
+  /* Apparition des menus après un delay*/
+  @keyframes ApparitionMenu {
+    0% {
+      transform: translateY(9999px);
+      opacity: 0;
+    }
+    95% {
+      transform: translateY(0);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
   .Plats {
     @include M_flex_box(
       column,
@@ -92,6 +111,16 @@ main {
     .PlatsListe {
       /* Liste des plats*/
       @include M_flex_box(column, center); /* vertical:  la liste des plats*/
+
+      /* Apparition des menus*/
+      &__load {
+        animation: ApparitionMenu $anim-dur forwards;
+        @for $i from 1 through 4 {
+          &--#{$i} {
+            animation-delay: $anim-delay * $i;
+          }
+        }
+      }
 
       .PlatsDescr {
         @include M_flex_box(
