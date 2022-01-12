@@ -71,6 +71,7 @@ Apparition de la page d'accueil après un spinner
     margin-left: auto;
     margin-right: auto;
 
+    /*animation*/
     animation: spin 3s 0s, Disparition 3s 0s both; /* rotation pendant 3s  puis disparition.  
                                                     le both sert à avoir la même propriete à 0 et 100%*/
   }
