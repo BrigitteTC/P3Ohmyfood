@@ -50,8 +50,8 @@ Apparition de la page d'accueil après un spinner
   @include M_flex_box(column, center); /* Elts en vertical et centrés*/
   position: relative;
 
-  .PageAccueil__Chargement {
-    /* .Chargement__spin {*/
+  /* Le spinner en attendant le chargement*/
+  &__Chargement {
     position: absolute; /* Fixe la position du petit rond qui va tourner*/
 
     /* Taille*/
@@ -65,16 +65,19 @@ Apparition de la page d'accueil après un spinner
     border-left: 10px solid $CouleurSecondaire;
     border-radius: $RadiusRond;
 
-    /* Position au milieu*/
+    /* Position au milieu à 200px du haut*/
     top: 200px;
     left: 50%;
+    margin-left: auto;
+    margin-right: auto;
 
     animation: spin 3s 0s, Disparition 3s 0s both; /* rotation pendant 3s  puis disparition.  
                                                     le both sert à avoir la même propriete à 0 et 100%*/
   }
 
-  .PageAccueil__Accueil {
-    animation: Apparition 0ms 2000ms both; /* Apparition au bout de 3s de la page*/
+  /* La page d'accueil*/
+  &__Accueil {
+    animation: Apparition 0ms 2000ms both; /* Apparition au bout de 2s de la page*/
   }
 }
 
@@ -88,7 +91,7 @@ Apparition de la page d'accueil après un spinner
   }
 }
 
-/* Apparition de la page d'accueil après un delay*/
+/* Apparition de la page d'accueil après un delay par translate*/
 @keyframes Apparition {
   from {
     transform: translateX(-9999px);
@@ -98,7 +101,7 @@ Apparition de la page d'accueil après un spinner
   }
 }
 
-/* Diaparition du spiner après avoir tourné*/
+/* Disparition du spiner après avoir tourné*/
 @keyframes Disparition {
   100%,
   0% {
