@@ -94,6 +94,50 @@ main {
     }
   }
 
+  /*Keyframe pour faire apparaite la coche OK au survol*/
+  @keyframes K_TranslateMenuOK {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    25% {
+      transform: scale(0.5);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  /*Keyframe pour faire tournicoter la coche OK au survol*/
+  @keyframes K_RotateMenuOK {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    25% {
+      transform: scale(0.5);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  /*Keyframe pour translater le prix au survol*/
+  @keyframes K_TranslatePrix {
+    0% {
+      transform: translateX(0);
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
   .Plats {
     @include M_flex_box(
       column,
@@ -177,7 +221,7 @@ main {
           background-color: $CouleurTertiaire; /* Sur fond vert*/
 
           border-radius: 0 $RadiusCard $RadiusCard 0; /* On   arrondit les angles à droite*/
-          display: none; /* Caché jusqu'à nouvel ordre*/
+          opacity: 0; /* Caché jusqu'à nouvel ordre*/
         }
       } /*fin PlatsDescr*/
     } /*Fin PlatsListe*/
