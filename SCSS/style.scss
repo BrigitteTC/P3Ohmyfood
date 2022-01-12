@@ -48,31 +48,32 @@ Apparition de la page d'accueil après un spinner
 --------------------------------------------------------*/
 .PageAccueil {
   @include M_flex_box(column, center); /* Elts en vertical et centrés*/
+  position: relative;
 
   .PageAccueil__Chargement {
     /* .Chargement__spin {*/
     position: absolute; /* Fixe la position du petit rond qui va tourner*/
 
     /* Taille*/
-    height: 100px;
-    width: 100px;
+    height: 50px;
+    width: 50px;
 
     /* coloriage + mise en rond*/
     border: 10px solid $CouleurPrimaire;
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
-    border-left: 10px solid $CouleurPrimaire;
+    border-left: 10px solid $CouleurSecondaire;
     border-radius: $RadiusRond;
 
     /* Position au milieu*/
-    top: 50%;
+    top: 200px;
     left: 50%;
 
-    animation: spin 3s, Disparition 3s 0s both; /* rotation pendant 3s  puis disparition. */
+    animation: spin 3s 0s, Disparition 3s 0s both; /* rotation pendant 3s  puis disparition. */
   }
 
   .PageAccueil__Accueil {
-    animation: Apparition 0ms 3s both; /* Apparition au bout de 3s de la page*/
+    animation: Apparition 0ms 2000ms both; /* Apparition au bout de 3s de la page*/
   }
 }
 
@@ -109,19 +110,19 @@ Apparition de la page d'accueil après un spinner
     border: 10px solid $CouleurPrimaire;
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
-    border-left: 10px solid $CouleurPrimaire;
+    border-left: 10px solid $CouleurSecondaire;
   }
   50% {
     border: 10px solid $CouleurPrimaire;
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
-    border-left: 10px solid $CouleurPrimaire;
+    border-left: 10px solid $CouleurSecondaire;
   }
   75% {
     border: 10px solid $CouleurPrimaire;
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
-    border-left: 10px solid $CouleurPrimaire;
+    border-left: 10px solid $CouleurSecondaire;
   }
 }
 
