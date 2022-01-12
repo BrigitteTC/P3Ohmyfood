@@ -73,6 +73,11 @@ main {
 
   /*-------------------------------------------*/
   /* Les plats*/
+  /*-------------------------------------------*/
+
+  /*-------------------------------------------*/
+  /* Keyframes relatives aux menus*/
+  /*-------------------------------------------*/
 
   $anim-dur: 1000ms; /* Durée de l'animation pour apparition des plats*/
   $anim-delay: $anim-dur / 5; /* délay d'apparition de l'animation*/
@@ -141,6 +146,18 @@ main {
       transform: translateX(10%);
       opacity: 1;
     }
+  }
+
+  /*------------------------------------------
+  Liens sur les menus
+  -------------------------------------------*/
+
+  /* Couleur des liens fixée*/
+  a:link,
+  a:hover,
+  a:focus,
+  a:active {
+    color: $CouleurLienRepos;
   }
 
   .Plats {
