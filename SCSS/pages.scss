@@ -152,14 +152,6 @@ main {
   Liens sur les menus
   -------------------------------------------*/
 
-  /* Couleur des liens fixée*/
-  a:link,
-  a:hover,
-  a:focus,
-  a:active {
-    color: $CouleurLienRepos;
-  }
-
   .Plats {
     @include M_flex_box(
       column,
@@ -182,7 +174,7 @@ main {
       /* Apparition des menus*/
       &__load {
         /*animation: ApparitionMenu $anim-dur forwards;*/
-        animation: ApparitionMenu $anim-dur ease;
+        animation: ApparitionMenu $anim-dur ease forwards; /*forwards: la valeur gardée est la dernièe*/
         @for $i from 1 through 4 {
           &--#{$i} {
             animation-delay: $anim-delay * $i;
@@ -203,6 +195,8 @@ main {
         margin: $TailleEspaceStandard; /* Marge entre chaque plat et son prix*/
 
         border-radius: $RadiusCard; /* On   arrondit les angles*/
+
+        opacity: 0; /* invisible dans la page. N'apparaitra qu'avec l'animation*/
 
         .PlatsNom {
           /* Le nom du plat*/
