@@ -69,7 +69,8 @@ Apparition de la page d'accueil après un spinner
     top: 200px;
     left: 50%;
 
-    animation: spin 3s 0s, Disparition 3s 0s both; /* rotation pendant 3s  puis disparition. */
+    animation: spin 3s 0s, Disparition 3s 0s both; /* rotation pendant 3s  puis disparition.  
+                                                    le both sert à avoir la même propriete à 0 et 100%*/
   }
 
   .PageAccueil__Accueil {
@@ -89,10 +90,10 @@ Apparition de la page d'accueil après un spinner
 
 /* Apparition de la page d'accueil après un delay*/
 @keyframes Apparition {
-  0% {
+  from {
     transform: translateX(-9999px);
   }
-  100% {
+  to {
     transform: translateX(0);
   }
 }
@@ -102,23 +103,15 @@ Apparition de la page d'accueil après un spinner
   100%,
   0% {
     border: 10px solid transparent;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-left: 10px solid transparent;
   }
-  25% {
+  5% {
     border: 10px solid $CouleurPrimaire;
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
     border-left: 10px solid $CouleurSecondaire;
   }
-  50% {
-    border: 10px solid $CouleurPrimaire;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-left: 10px solid $CouleurSecondaire;
-  }
-  75% {
+
+  95% {
     border: 10px solid $CouleurPrimaire;
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
