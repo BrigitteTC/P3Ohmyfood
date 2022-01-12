@@ -43,6 +43,14 @@ body {
   color: transparent;
 }
 
+/* Couleur des liens fixée*/
+a:link,
+a:hover,
+a:focus,
+a:active {
+  color: $CouleurLienRepos;
+}
+
 /*-------------------------------------------------------
 Apparition de la page d'accueil après un spinner
 --------------------------------------------------------*/
