@@ -97,15 +97,15 @@ main {
   /*Keyframe pour faire apparaite la coche OK au survol*/
   @keyframes K_TranslateMenuOK {
     0% {
-      transform: scale(0);
+      transform: translateX(9999px);
       opacity: 0;
     }
     25% {
-      transform: scale(0.5);
+      transform: translateX(9999px);
       opacity: 1;
     }
     100% {
-      transform: scale(1);
+      transform: translateX(0);
       opacity: 1;
     }
   }
@@ -113,15 +113,15 @@ main {
   /*Keyframe pour faire tournicoter la coche OK au survol*/
   @keyframes K_RotateMenuOK {
     0% {
-      transform: scale(0);
+      transform: rotate(0deg);
       opacity: 0;
     }
     25% {
-      transform: scale(0.5);
+      transform: rotate(0deg);
       opacity: 1;
     }
     100% {
-      transform: scale(1);
+      transform: rotate(360deg);
       opacity: 1;
     }
   }
@@ -132,8 +132,13 @@ main {
       transform: translateX(0);
       opacity: 0;
     }
+    25% {
+      transform: translateX(0);
+      opacity: 1;
+    }
 
     100% {
+      transform: translateX(10%);
       opacity: 1;
     }
   }
