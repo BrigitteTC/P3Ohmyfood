@@ -74,10 +74,11 @@ main {
   /*-------------------------------------------*/
   /* Les plats*/
 
-  $anim-dur: 1000ms;
-  $anim-delay: $anim-dur / 5;
+  $anim-dur: 1000ms; /* Durée de l'animation pour apparition des plats*/
+  $anim-delay: $anim-dur / 5; /* délay d'apparition de l'animation*/
 
   /* Apparition des menus après un delay*/
+  /* On fait apparaitre le menu avant son arrivee*/
   @keyframes ApparitionMenu {
     0% {
       transform: translateY(9999px);
