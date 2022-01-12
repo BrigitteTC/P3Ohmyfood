@@ -68,12 +68,21 @@ Apparition de la page d'accueil après un spinner
     top: 50%;
     left: 50%;
 
-    animation: spin 3s 0s, disparition 3s 0s both; /* rotation pendant 3s  puis disparition. 
-                    both = param indispensable poru que l'element disparaisse à la fin*/
+    animation: spin 3s, Disparition 3s 0s both; /* rotation pendant 3s  puis disparition. */
   }
 
   .PageAccueil__Accueil {
     animation: Apparition 0ms 3s both; /* Apparition au bout de 3s de la page*/
+  }
+}
+
+/* Silence on tourne*/
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 
@@ -88,7 +97,7 @@ Apparition de la page d'accueil après un spinner
 }
 
 /* Diaparition du spiner après avoir tourné*/
-@keyframes disparition {
+@keyframes Disparition {
   100%,
   0% {
     border: 10px solid transparent;
