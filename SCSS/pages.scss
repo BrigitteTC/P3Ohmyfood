@@ -42,6 +42,8 @@ main {
       position: absolute; /* Fixe la position de l'elt*/
       width: 100%; /* 100% du container*/
 
+      object-fit: cover; /* Moins tordu*/
+
       height: $HauteurRestaurantImg;
       z-index: 1; /* Description devant l'image: Image: 1 Description: 2*/
     }
@@ -68,6 +70,31 @@ main {
       h1 {
         font-family: Shrikhand; /* police caracteres*/
       }
+
+      /* Gestion des coeurs*/
+      .RestaurantCoeur {
+        display: flex; /* pour centrer le coeur*/
+        position: relative;
+
+        .CoeurPosition {
+          /* On positionne le coeur plein qui n'apparaitra qu'au survol*/
+          position: absolute;
+          left: $PositionCoeurResto;
+          color: transparent;
+        }
+
+        .CoeurVide {
+          /* On positionnne le coeur vide*/
+          position: absolute;
+          left: $PositionCoeurResto;
+          z-index: 2; /* Sera derriere le coeur plein au survol*/
+
+          &:hover + .CoeurPlein {
+            /* Le survol du coeur vide fera apparaitre le coeur plein*/
+            @include M_RemplissageCoeurSurvol($PositionCoeurResto);
+          }
+        }
+      } /*Fin RestaurantCoeur*/
     }
   }
 

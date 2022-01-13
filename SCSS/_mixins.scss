@@ -167,3 +167,28 @@ Parametres:
     }
   }
 }
+
+/*---------------------------------------------------------*/
+/* Mixin pour remplissage coeur vide au survol
+Nom: M_RemplissageCoeurSurvol
+Fonction: REmplit au coeur plein au survol
+Parametres:
+  Position absolue par rapport au bord gauche en %
+
+/*---------------------------------------------------------*/
+
+@mixin M_RemplissageCoeurSurvol($position) {
+  /* Le survol du coeur vide fera apparaitre le coeur plein*/
+  position: absolute;
+  left: $position;
+  z-index: 3; /* Passe devant*/
+  /*gradient pour colorer le coeur plein */
+  @include gradient-animation(
+    $CouleurPrimaire,
+    $CouleurSecondaire,
+    1s,
+    "\f230"
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
