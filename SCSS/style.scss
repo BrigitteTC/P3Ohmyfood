@@ -421,6 +421,8 @@ header {
           width: 100%; /* 100% du container*/
           height: $HauteurRestaurantImg;
 
+          object-fit: cover; /* pour que l'image soit moins tordue*/
+
           z-index: 1; /* Place le popup devant l'image*/
 
           /* On arrondit les angles en haut*/
