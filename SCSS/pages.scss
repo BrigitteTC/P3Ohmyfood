@@ -72,7 +72,7 @@ main {
       }
 
       /* Gestion des coeurs*/
-      .RestaurantCoeur {
+      .TitreDescCoeur {
         display: flex; /* pour centrer le coeur*/
         position: relative;
 
@@ -94,7 +94,7 @@ main {
             @include M_RemplissageCoeurSurvol($PositionCoeurResto);
           }
         }
-      } /*Fin RestaurantCoeur*/
+      } /*Fin TitreDescCoeur*/
     }
   }
 
