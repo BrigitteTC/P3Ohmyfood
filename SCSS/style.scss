@@ -281,19 +281,21 @@ header {
     ); //* Les boutons les uns au dessus des autres*/
 
     /* Les couleurs de fond de chaque item*/
-    .FondItem1_2 {
+    /* .FondItem1_2 {
       background-color: $FondGris;
     }
 
     .FondItem3 {
       background-color: $CouleurFondItem3;
-    }
+    }*/
 
     /* Ensemble  avec le numéro l'icone et la description*/
     .FonctItem {
       @include M_flex_box(row, center); /*horizontal*/
       position: relative; /* Permet de positionner les elts à l'intérieur*/
       height: $HauteurFonctItem; /*Hauteur forcée en pixels*/
+
+      background-color: $FondGris;
 
       margin: 10px 0; /* Marge entre chaque bouton*/
 
@@ -334,15 +336,16 @@ header {
         position: absolute;
         left: 10%; /* Position / bord gauche*/
         top: $PositionFonctElt; /*Position / bord sup*/
-      }
-
-      /* couleur de l'icone 1 et 2*/
-      .CouleurIconeItem12 {
         color: $CouleurTexte;
+
+        /* couleur de l'icone 1 et 2*/
+        /*.CouleurIconeItem12 {
+        color: $CouleurTexte;
+      }*/
       }
 
       /* couleur de l'icone 3*/
-      .CouleurIconeItem3 {
+      .FonctIcone--Item3 {
         color: $CouleurPrimaire;
       }
 
@@ -353,6 +356,10 @@ header {
         top: $PositionFonctElt; /*Position / bord sup*/
       }
     } /* Fin FonctItem*/
+
+    .FonctItem--Item3 {
+      background-color: $CouleurFondItem3;
+    }
   } /* fin FonctList*/
 } /* fin Fonctionnement*/
 
