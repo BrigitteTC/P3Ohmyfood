@@ -234,6 +234,19 @@ main {
 
         opacity: 0; /* invisible dans la page. N'apparaitra qu'avec l'animation*/
 
+        /* Animation au survol du plat*/
+        &:hover ~ .PlatsPrix {
+          animation: K_TranslatePrix $anim-dur ease forwards; /*forwards: la valeur gardée est la dernièe*/
+        }
+
+        &:hover ~ .PlatsOK {
+          opacity: 1;
+          animation: K_TranslateMenuOK $anim-dur ease forwards; /*forwards: la valeur gardée est la dernièe*/
+        }
+        &:hover ~ .PlatsOK {
+          animation: K_RotateMenuOK $anim-dur ease forwards; /*forwards: la valeur gardée est la dernièe*/
+        }
+
         .PlatsNom {
           /* Le nom du plat*/
           position: absolute; /* position fixe*/
