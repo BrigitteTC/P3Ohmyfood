@@ -118,7 +118,7 @@ main {
 
   /* Apparition des menus après un delay*/
   /* On fait apparaitre le menu avant son arrivee*/
-  @keyframes ApparitionMenu {
+  @keyframes K_ApparitionMenu {
     0% {
       transform: translateY(9999px);
       opacity: 0;
@@ -208,7 +208,7 @@ main {
       /* Apparition des menus*/
       &__load {
         /*animation: ApparitionMenu $anim-dur forwards;*/
-        animation: ApparitionMenu $anim-dur ease forwards; /*forwards: la valeur gardée est la dernièe*/
+        animation: K_ApparitionMenu $anim-dur ease forwards; /*forwards: la valeur gardée est la dernièe*/
         @for $i from 1 through 4 {
           &--#{$i} {
             animation-delay: $anim-delay * $i;
