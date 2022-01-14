@@ -123,10 +123,7 @@ main {
       transform: translateY(9999px);
       opacity: 0;
     }
-    95% {
-      transform: translateY(0);
-      opacity: 0;
-    }
+
     100% {
       transform: translateY(0);
       opacity: 1;
