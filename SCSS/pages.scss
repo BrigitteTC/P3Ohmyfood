@@ -82,22 +82,27 @@ main {
           display: flex; /* pour centrer le coeur*/
           position: relative;
 
-          .CoeurPosition {
+          .CoeurPlein {
             /* On positionne le coeur plein qui n'apparaitra qu'au survol*/
-            position: absolute;
-            left: $PositionCoeurResto;
-            color: transparent;
+            /* Le survol du coeur vide fera apparaitre le coeur plein*/
+
+            opacity: 0;
           }
 
           .CoeurVide {
             /* On positionnne le coeur vide*/
             position: absolute;
-            left: $PositionCoeurResto;
+
             z-index: 2; /* Sera derriere le coeur plein au survol*/
 
+            &:hover {
+              opacity: 0;
+            }
+
             &:hover + .CoeurPlein {
-              /* Le survol du coeur vide fera apparaitre le coeur plein*/
-              @include M_RemplissageCoeurSurvol($PositionCoeurResto);
+              @include M_RemplissageCoeurSurvol;
+
+              opacity: 1;
             }
           }
         } /*Fin TitreDescCoeur*/

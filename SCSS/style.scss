@@ -480,7 +480,7 @@ header {
 
             &:hover + .CoeurPlein {
               /* Le survol du coeur vide fera apparaitre le coeur plein*/
-              @include M_RemplissageCoeurSurvol($PositionCoeurAccueil);
+              @include M_RemplissageCoeurSurvol;
             }
           }
         } /*Fin RestaurantCoeur*/

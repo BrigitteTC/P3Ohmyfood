@@ -173,15 +173,11 @@ Parametres:
 Nom: M_RemplissageCoeurSurvol
 Fonction: REmplit au coeur plein au survol
 Parametres:
-  Position absolue par rapport au bord gauche en %
+  Aucun
 
 /*---------------------------------------------------------*/
 
-@mixin M_RemplissageCoeurSurvol($position) {
-  /* Le survol du coeur vide fera apparaitre le coeur plein*/
-  position: absolute;
-  left: $position;
-  z-index: 3; /* Passe devant*/
+@mixin M_RemplissageCoeurSurvol {
   /*gradient pour colorer le coeur plein */
   @include gradient-animation(
     $CouleurPrimaire,
