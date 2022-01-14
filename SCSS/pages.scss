@@ -29,7 +29,7 @@ main {
     /*margin: $TailleEspaceStandard;*/
   }
 
-  /* Le titre de la page du restaurant avec son image et son nom*/
+  /* Le titre de la page du restaurant avec son image ,son nom et son petit coeur*/
   .TitrePage {
     @include M_flex_box(row, center); /* vertical: Image + description*/
     position: relative; /* Permet de placer les elts à l'interieur du container*/
@@ -38,7 +38,8 @@ main {
 
     margin-bottom: 30px;
 
-    .TitreImg {
+    /* L'image*/
+    .TitrePageImg {
       position: absolute; /* Fixe la position de l'elt*/
       width: 100%; /* 100% du container*/
 
@@ -48,7 +49,9 @@ main {
       z-index: 1; /* Description devant l'image: Image: 1 Description: 2*/
     }
 
-    .TitreDesc {
+    /* Le nom et le coeur*/
+
+    .TitrePageDesc {
       position: absolute; /* Fixe la position de l'elt*/
       top: $HauteurRestaurantImg - 50px; /* Position par rapport au haut du container*/
       left: 0; /* Position par rapport à la gauche du container*/
@@ -57,46 +60,50 @@ main {
       height: 100px;
       width: 100%;
 
-      @include M_flex_box(row, space-between); /* horizontal : nom + coeur*/
-
       z-index: 2; /* Description devant l'image*/
 
-      background-color: $FondGris; /* Fond d'écran*/
-      padding: $TailleEspaceStandard; /* Espace gauche/droite*/
+      .TitreDesc {
+        @include M_flex_box(row, space-between); /* horizontal : nom + coeur*/
 
-      /* On arrondit les angles */
-      border-radius: $RadiusRond;
+        background-color: $FondGris; /* Fond d'écran*/
+        padding: $TailleEspaceStandard; /* Espace gauche/droite*/
 
-      h1 {
-        font-family: Shrikhand; /* police caracteres*/
-      }
+        /* On arrondit les angles */
+        border-radius: $RadiusRond;
 
-      /* Gestion des coeurs*/
-      .TitreDescCoeur {
-        display: flex; /* pour centrer le coeur*/
-        position: relative;
-
-        .CoeurPosition {
-          /* On positionne le coeur plein qui n'apparaitra qu'au survol*/
-          position: absolute;
-          left: $PositionCoeurResto;
-          color: transparent;
-        }
-
-        .CoeurVide {
-          /* On positionnne le coeur vide*/
-          position: absolute;
-          left: $PositionCoeurResto;
-          z-index: 2; /* Sera derriere le coeur plein au survol*/
-
-          &:hover + .CoeurPlein {
-            /* Le survol du coeur vide fera apparaitre le coeur plein*/
-            @include M_RemplissageCoeurSurvol($PositionCoeurResto);
+        .TitreDescNom {
+          h1 {
+            font-family: Shrikhand; /* police caracteres*/
           }
-        }
-      } /*Fin TitreDescCoeur*/
-    }
-  }
+        } /*fin  .TitreDescNom */
+
+        /* Gestion des coeurs*/
+        .TitreDescCoeur {
+          display: flex; /* pour centrer le coeur*/
+          position: relative;
+
+          .CoeurPosition {
+            /* On positionne le coeur plein qui n'apparaitra qu'au survol*/
+            position: absolute;
+            left: $PositionCoeurResto;
+            color: transparent;
+          }
+
+          .CoeurVide {
+            /* On positionnne le coeur vide*/
+            position: absolute;
+            left: $PositionCoeurResto;
+            z-index: 2; /* Sera derriere le coeur plein au survol*/
+
+            &:hover + .CoeurPlein {
+              /* Le survol du coeur vide fera apparaitre le coeur plein*/
+              @include M_RemplissageCoeurSurvol($PositionCoeurResto);
+            }
+          }
+        } /*Fin TitreDescCoeur*/
+      } /* fin TitreDesc*/
+    } /*/* fin TitrePageDesc*/
+  } /* fin   .TitrePage*/
 
   /*-------------------------------------------*/
   /* Les plats*/
