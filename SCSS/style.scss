@@ -519,6 +519,7 @@ header {
 /*--------------------------------------------------*/
 
 footer {
+  padding: $TailleEspaceStandard; /* ajout espace autout du padding*/
   color: $CouleurTexteFooter; /*texte en blanc*/
   background-color: $CouleurFooter; /*Sur fond noir*/
   * {
