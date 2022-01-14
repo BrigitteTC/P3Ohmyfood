@@ -459,33 +459,33 @@ header {
           padding-left: 0; /* petit décalage / bord*/
         }
         /* Le coeur*/
+
+        /* Gestion des coeurs*/
+        .RestaurantCoeur {
+          display: flex; /* pour centrer le coeur*/
+          position: relative;
+
+          .CoeurPosition {
+            /* On positionne le coeur plein qui n'apparaitra qu'au survol*/
+            position: absolute;
+            left: $PositionCoeurAccueil;
+            color: transparent;
+          }
+
+          .CoeurVide {
+            /* On positionnne le coeur vide*/
+            position: absolute;
+            left: $PositionCoeurAccueil;
+            z-index: 2; /* Sera derriere le coeur plein au survol*/
+
+            &:hover + .CoeurPlein {
+              /* Le survol du coeur vide fera apparaitre le coeur plein*/
+              @include M_RemplissageCoeurSurvol($PositionCoeurAccueil);
+            }
+          }
+        } /*Fin RestaurantCoeur*/
       } /* fin RestautantDesc*/
     } /* Fin restaurant Item*/
-
-    /* Gestion des coeurs*/
-    .RestaurantCoeur {
-      display: flex; /* pour centrer le coeur*/
-      position: relative;
-
-      .CoeurPosition {
-        /* On positionne le coeur plein qui n'apparaitra qu'au survol*/
-        position: absolute;
-        left: $PositionCoeurAccueil;
-        color: transparent;
-      }
-
-      .CoeurVide {
-        /* On positionnne le coeur vide*/
-        position: absolute;
-        left: $PositionCoeurAccueil;
-        z-index: 2; /* Sera derriere le coeur plein au survol*/
-
-        &:hover + .CoeurPlein {
-          /* Le survol du coeur vide fera apparaitre le coeur plein*/
-          @include M_RemplissageCoeurSurvol($PositionCoeurAccueil);
-        }
-      }
-    } /*Fin RestaurantCoeur*/
 
     /* Les liens sur les items restaurant*/
     /* Effets supplémentaires au survol   */
