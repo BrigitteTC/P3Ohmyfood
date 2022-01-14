@@ -519,11 +519,27 @@ header {
 /*--------------------------------------------------*/
 
 footer {
+  /* Les liens*/
+
+  a:link {
+    text-decoration: none; /* pas souligné*/
+    color: $CouleurTexteFooter; /*texte de la couleur des copains*/
+  }
+
+  a:hover {
+    color: $CouleurTexteFooter; /*texte de la couleur des copains*/
+  }
+
+  a:visited {
+    color: $CouleurTexteFooter; /*texte de la couleur des copains*/
+  }
+
+  /* mis e en page*/
   padding: $TailleEspaceStandard; /* ajout espace autout du padding*/
   color: $CouleurTexteFooter; /*texte en blanc*/
   background-color: $CouleurFooter; /*Sur fond noir*/
   * {
-    padding: 5px; /* Espace entre chaque elt*/
+    padding: 1px; /* Espace entre chaque elt*/
   }
 
   h3 {
@@ -534,10 +550,5 @@ footer {
     /* Comprend l'icone et sa description*/
     @include M_flex_box(row, flex-start);
     align-items: center; /*centrer  les elts verticalement*/
-  }
-
-  a:link {
-    text-decoration: none; /* pas souligné*/
-    color: $CouleurTexteFooter; /*texte de la couleur des copains*/
   }
 } /*Fin du footer*/
