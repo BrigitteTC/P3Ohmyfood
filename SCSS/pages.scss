@@ -53,7 +53,7 @@ main {
 
     .TitrePageDesc {
       position: absolute; /* Fixe la position de l'elt*/
-      top: $HauteurRestaurantImg - 50px; /* Position par rapport au haut du container*/
+      top: $HauteurRestaurantImg - 30px; /* Position par rapport au haut du container*/
       left: 0; /* Position par rapport à la gauche du container*/
 
       /*Taille*/
@@ -63,7 +63,7 @@ main {
       z-index: 2; /* Description devant l'image*/
 
       .TitreDesc {
-        @include M_flex_box(row, space-between); /* horizontal : nom + coeur*/
+        @include M_flex_box(row, space-around); /* horizontal : nom + coeur*/
 
         background-color: $FondGris; /* Fond d'écran*/
         padding: $TailleEspaceStandard; /* Espace gauche/droite*/
