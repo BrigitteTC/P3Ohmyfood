@@ -76,39 +76,39 @@ main {
             font-family: Shrikhand; /* police caracteres*/
           }
         } /*fin  .TitreDescNom */
-
-        /* Gestion des coeurs*/
-        .TitreDescCoeur {
-          display: flex; /* pour centrer le coeur*/
-          position: relative;
-
-          .CoeurPlein {
-            /* On positionne le coeur plein qui n'apparaitra qu'au survol*/
-            /* Le survol du coeur vide fera apparaitre le coeur plein*/
-
-            opacity: 0;
-          }
-
-          .CoeurVide {
-            /* On positionnne le coeur vide*/
-            position: absolute;
-
-            z-index: 2; /* Sera derriere le coeur plein au survol*/
-
-            &:hover {
-              opacity: 0;
-            }
-
-            &:hover + .CoeurPlein {
-              @include M_RemplissageCoeurSurvol;
-
-              opacity: 1;
-            }
-          }
-        } /*Fin TitreDescCoeur*/
       } /* fin TitreDesc*/
     } /*/* fin TitrePageDesc*/
   } /* fin   .TitrePage*/
+
+  /* Gestion des coeurs*/
+  .TitreDescCoeur {
+    display: flex; /* pour centrer le coeur*/
+    position: relative;
+
+    .CoeurPlein {
+      /* On positionne le coeur plein qui n'apparaitra qu'au survol*/
+      /* Le survol du coeur vide fera apparaitre le coeur plein*/
+
+      opacity: 0;
+    }
+
+    .CoeurVide {
+      /* On positionnne le coeur vide*/
+      position: absolute;
+
+      z-index: 2; /* Sera derriere le coeur plein au survol*/
+
+      &:hover {
+        opacity: 0;
+      }
+
+      &:hover + .CoeurPlein {
+        @include M_RemplissageCoeurSurvol;
+
+        opacity: 1;
+      }
+    }
+  } /*Fin TitreDescCoeur*/
 
   /*-------------------------------------------*/
   /* Les plats*/
