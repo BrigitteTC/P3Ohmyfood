@@ -210,6 +210,8 @@ Fonction: REmplit au coeur plein au survol
 Parametres:
   Aucun
 
+  REmarque: Les 2 instructions webkit-background-clip sont indispensables 
+    Pour ne remplir que l'intérieur du coeur.
 /*---------------------------------------------------------*/
 
 @mixin M_RemplissageCoeurSurvol {
