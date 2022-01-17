@@ -140,7 +140,7 @@ Parametres:
 
 /*---------------------------------------------------------*/
 
-@mixin gradient-animationOld($start, $end, $transTime, $content) {
+@mixin gradient-animation_Over($start, $end, $transTime, $content) {
   background-size: 100%;
   background-image: linear-gradient($start, $end);
   position: relative;
@@ -177,6 +177,7 @@ Parametres:
     Couleur fond haut
     Couleur fond bas
 
+    Remarque: le after est indispensable pour fixer l'image.
 /*---------------------------------------------------------*/
 
 @mixin gradient-animation($start, $end, $transTime, $content) {
@@ -201,8 +202,9 @@ Parametres:
     -webkit-text-fill-color: transparent;
   }
 }
+
 /*---------------------------------------------------------*/
-/* Mixin pour remplissage coeur vide au survol
+/* Mixin pour remplissage coeur au survol
 Nom: M_RemplissageCoeurSurvol
 Fonction: REmplit au coeur plein au survol
 Parametres:
