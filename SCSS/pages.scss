@@ -8,9 +8,6 @@ Auteur: BTC
 04/01/22  9h47
 ---------------------------------------------------*/
 
-/* Variable indique page principale = index ou page restaurant*/
-$PagePrincipale: "false";
-
 /* Importation partiels*/
 @import "couleur";
 @import "taille";
@@ -80,36 +77,6 @@ main {
     } /*/* fin TitrePageDesc*/
   } /* fin   .TitrePage*/
 
-  /* Gestion des coeurs*/
-  .TitreDescCoeur {
-    display: flex; /* pour centrer le coeur*/
-    position: relative;
-
-    .CoeurPlein {
-      /* On positionne le coeur plein qui n'apparaitra qu'au survol*/
-      /* Le survol du coeur vide fera apparaitre le coeur plein*/
-
-      opacity: 0;
-    }
-
-    .CoeurVide {
-      /* On positionnne le coeur vide*/
-      position: absolute;
-
-      z-index: 2; /* Sera derriere le coeur plein au survol*/
-
-      &:hover {
-        opacity: 0;
-      }
-
-      &:hover + .CoeurPlein {
-        @include M_RemplissageCoeurSurvol;
-
-        opacity: 1;
-      }
-    }
-  } /*Fin TitreDescCoeur*/
-
   /*-------------------------------------------*/
   /* Les plats*/
   /*-------------------------------------------*/
@@ -171,16 +138,10 @@ main {
   @keyframes K_TranslatePrix {
     0% {
       transform: translateX(0);
-      opacity: 0;
-    }
-    25% {
-      transform: translateX(0);
-      opacity: 1;
     }
 
     100% {
       transform: translateX(10%);
-      opacity: 1;
     }
   }
 
@@ -209,7 +170,7 @@ main {
 
       /* Apparition des menus*/
       &__load {
-        /*animation: ApparitionMenu $anim-dur forwards;*/
+        /*animation: arrivéé des menus par le bas et en douceue avec "ease"*/
         animation: K_ApparitionMenu $anim-dur ease forwards; /*forwards: la valeur gardée est la dernièe*/
         @for $i from 1 through 4 {
           &--#{$i} {
@@ -234,8 +195,12 @@ main {
 
         opacity: 0; /* invisible dans la page. N'apparaitra qu'avec l'animation*/
 
+        &:hover {
+          color: red;
+        }
+
         /* Animation au survol du plat*/
-        &:hover ~ .PlatsPrix {
+        &:hover + .PlatsPrix {
           animation: K_TranslatePrix $anim-dur ease forwards; /*forwards: la valeur gardée est la dernièe*/
         }
 

@@ -70,13 +70,13 @@ a:active {
     z-index: 2; /* Sera derriere le coeur plein au survol*/
 
     &:hover {
-      opacity: 0;
+      opacity: 0; /* Le coeur vide disparait*/
     }
 
     &:hover + .CoeurPlein {
       @include M_RemplissageCoeurSurvol;
 
-      opacity: 1;
+      opacity: 1; /* le coeur plein coloré apparait*/
     }
   }
 } /*Fin RestaurantCoeur*/
