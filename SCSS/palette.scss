@@ -236,7 +236,8 @@ main {
 
           /* l'animatin rotate ft à moitié
             tout l'élement tourne*/
-          animation: K_TranslateMenuOK 1s ease forwards;
+          animation: K_TranslateMenuOK 1s ease forwards,
+            K_RotateMenuOK 1s ease forwards;
         }
       } /*fin PlatsDescr*/
 
