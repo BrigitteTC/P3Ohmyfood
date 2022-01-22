@@ -214,58 +214,33 @@ main {
             column,
             space-around
           ); /* Nom du plat puis en dessous: détail et prix à côté*/
-          position: relative; /* Permet de fixer les elts*/
 
-          /* Taille*/
-          height: $HauteurPlatDescr; /* hauteur de l'ensemble description + prix*/
-          background-color: $CouleurFondDescRestaurants; /* Couleur de fond*/
-          margin: $TailleEspaceStandard; /* Marge entre chaque plat et son prix*/
-
-          border-radius: $RadiusCard; /* On   arrondit les angles*/
-
-          opacity: 0; /* invisible dans la page. N'apparaitra qu'avec l'animation*/
-
-          &:hover {
-            color: red;
-          }
-
-          /* Animation au survol du plat*/
-          &:hover + .PlatsPrix {
-            animation: K_TranslatePrix $anim-dur ease forwards; /*forwards: la valeur gardée est la dernièe*/
-          }
-
-          &:hover ~ .PlatsOK {
-            opacity: 1;
-            animation: K_TranslateMenuOK $anim-dur ease forwards; /*forwards: la valeur gardée est la dernièe*/
-          }
-          &:hover ~ .PlatsOK {
-            animation: K_RotateMenuOK $anim-dur ease forwards; /*forwards: la valeur gardée est la dernièe*/
-          }
+          width: 100%; /* Occupe 100% de la largeur*/
 
           .PlatsNom {
             /* Le nom du plat*/
-            position: absolute; /* position fixe*/
-            top: 0; /* Tout en haut du container*/
-            left: 10%; /* Position /bord gauche*/
+
+            margin-left: 10%; /* Position /bord gauche*/
+            text-overflow: ellipsis;
           }
 
           .PlatsDetailEtPrix {
             /* L'ensemble détail du plat et son prix*/
             @include M_flex_box(
               row,
-              space-around
+              space-between
             ); /* description et prix à côté*/
-            position: relative; /* Permet de fixer les elts*/
 
             .PlatsDetails {
               /* Le nom et description du plat à gauche*/
-              position: absolute; /* position fixe*/
-              left: 10%; /* Position /bord gauche*/
+
+              margin-left: 10%; /* Position /bord gauche*/
+              text-overflow: ellipsis; /* Affichera ... si le texte ne tient plus dans la case*/
             }
 
             .PlatsPrix {
-              position: absolute; /* position fixe*/
-              left: 90%; /* Position /bord gauche*/
+              text-decoration: none;
+              margin-right: 10%;
             }
           }
         } /*fin PlatsDescr*/
