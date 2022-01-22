@@ -105,15 +105,14 @@ main {
   /*Keyframe pour faire apparaite la coche OK au survol*/
   @keyframes K_TranslateMenuOK {
     0% {
-      transform: translateX(9999px);
+      transform: translateX(0);
+      width: 0%;
       opacity: 0;
     }
-    25% {
-      transform: translateX(9999px);
-      opacity: 1;
-    }
+
     100% {
-      transform: translateX(0);
+      transform: translateX(-10%);
+      width: 10%;
       opacity: 1;
     }
   }
@@ -124,27 +123,45 @@ main {
       transform: rotate(0deg);
       opacity: 0;
     }
-    25% {
-      transform: rotate(0deg);
-      opacity: 1;
-    }
+
     100% {
       transform: rotate(360deg);
       opacity: 1;
     }
   }
 
-  /*Keyframe pour translater le prix au survol*/
+  /*Keyframe pour doubler de volume*/
+  @keyframes K_Double {
+    0% {
+      transform: scale(1);
+    }
+
+    100% {
+      transform: scale(2);
+    }
+  }
+
+  /*Keyframe pour translater le prix  de la droite vers la gauche*/
   @keyframes K_TranslatePrix {
     0% {
       transform: translateX(0);
     }
 
     100% {
-      transform: translateX(10%);
+      transform: translateX(-100%);
     }
   }
 
+  /*Keyframe pour reduitre la taille*/
+  @keyframes K_Reduce {
+    0% {
+      width: 100%;
+    }
+
+    100% {
+      width: 80%;
+    }
+  }
   /*------------------------------------------
   Liens sur les menus
   -------------------------------------------*/
