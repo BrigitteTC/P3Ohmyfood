@@ -259,6 +259,7 @@ main {
           opacity: 0; /* Caché jusqu'à nouvel ordre*/
         }
 
+        /* Gestion du survol  de PlatsListe__Load*/
         /* Survol  déclenche le .PlatsOK*/
         &:hover .PlatsOK {
           animation: K_TranslateMenuOK 2s ease forwards;
@@ -269,8 +270,7 @@ main {
             animation-fill-mode: forwards;*/
         }
 
-        /* Gestion du survol*/
-        /* Survol de PlatsListe__Load on fait tourner le logo*/
+        /* Survol  on fait tourner le logo*/
         &:hover .Logo {
           animation: K_RotateMenuOK 1s ease forwards;
         }
