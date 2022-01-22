@@ -200,7 +200,6 @@ main {
         @include M_flex_box(row, space-between);
         margin: $TailleEspaceStandard; /* Marge entre chaque plat et son prix*/
         background-color: $CouleurFondDescRestaurants; /* Couleur de fond*/
-        text-decoration: none;
 
         /* Taille*/
         height: $HauteurPlatDescr; /* hauteur de l'ensemble description + prix*/
@@ -223,6 +222,10 @@ main {
 
             margin-left: 10%; /* Position /bord gauche*/
             text-overflow: ellipsis;
+            h3 a:link {
+              text-decoration: none; /*lien pas souligné*/
+              color: $CouleurLienRepos; /* couleur du lien au repos */
+            }
           }
 
           .PlatsDetailEtPrix {
