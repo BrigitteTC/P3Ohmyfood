@@ -195,6 +195,20 @@ main {
           }
         }
 
+        /* cote cote:  Description + coche verte*/
+
+        @include M_flex_box(row, space-between);
+        background-color: $CouleurFondDescRestaurants; /* Couleur de fond*/
+        text-decoration: none;
+
+        /* Taille*/
+        height: $HauteurPlatDescr; /* hauteur de l'ensemble description + prix*/
+
+        background-color: $CouleurFondDescRestaurants; /* Couleur de fond*/
+        /* margin: $TailleEspaceStandard; /* Marge entre chaque plat et son prix*/
+
+        border-radius: $RadiusCard; /* On   arrondit les angles*/
+
         .PlatsDescr {
           @include M_flex_box(
             column,
