@@ -246,11 +246,9 @@ main {
         } /*fin PlatsDescr*/
         .PlatsOK {
           display: flex; /* Permet de centrer le petit icone*/
-          position: absolute; /* position fixe*/
-          left: 90%; /* Position /bord gauche*/
 
           height: $HauteurPlatDescr; /* hauteur de l'ensemble description + prix*/
-          width: 10%; /* Largeur jusqu'au bord droit*/
+          width: 0%; /* Largeur jusqu'au bord droit*/
 
           color: $CouleurOK; /* Couleur du petit icone*/
 
