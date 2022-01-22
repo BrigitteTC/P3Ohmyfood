@@ -198,6 +198,7 @@ main {
         /* cote cote:  Description + coche verte*/
 
         @include M_flex_box(row, space-between);
+        margin: $TailleEspaceStandard; /* Marge entre chaque plat et son prix*/
         background-color: $CouleurFondDescRestaurants; /* Couleur de fond*/
         text-decoration: none;
 
@@ -256,6 +257,37 @@ main {
 
           border-radius: 0 $RadiusCard $RadiusCard 0; /* On   arrondit les angles à droite*/
           opacity: 0; /* Caché jusqu'à nouvel ordre*/
+        }
+
+        /* Survol  déclenche le .PlatsOK*/
+        &:hover .PlatsOK {
+          animation: K_TranslateMenuOK 2s ease forwards;
+          /*  animation-duration: 1s;
+            animation-name: K_TranslateMenuOK;
+            animation-iteration-count: 1s;
+            transition-timing-function: ease;
+            animation-fill-mode: forwards;*/
+        }
+
+        /* Gestion du survol*/
+        /* Survol de PlatsListe__Load on fait tourner le logo*/
+        &:hover .Logo {
+          animation: K_RotateMenuOK 1s ease forwards;
+        }
+
+        /* Survol  on décale le prix*/
+        &:hover .PlatsPrix {
+          animation: K_TranslatePrix 2s ease forwards;
+        }
+
+        /* Survol  on décale le nom*/
+        &:hover .PlatsNom {
+          animation: K_Reduce 2s ease forwards;
+        }
+
+        /* Survol  on décale le a dexcription*/
+        &:hover .PlatsDescription {
+          animation: K_Reduce 2s ease forwards;
         }
       } /* Fin load*/
     } /*Fin PlatsListe*/
