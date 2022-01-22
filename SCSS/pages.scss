@@ -170,74 +170,74 @@ main {
 
       /* Apparition des menus*/
       &__load {
-        /*animation: arrivéé des menus par le bas et en douceue avec "ease"*/
+        /*animation: arrivéé des menus par le bas et en douceur avec "ease"*/
         animation: K_ApparitionMenu $anim-dur ease forwards; /*forwards: la valeur gardée est la dernièe*/
         @for $i from 1 through 4 {
           &--#{$i} {
             animation-delay: $anim-delay * $i;
           }
         }
-      }
 
-      .PlatsDescr {
-        @include M_flex_box(
-          column,
-          space-around
-        ); /* Nom du plat puis en dessous: détail et prix à côté*/
-        position: relative; /* Permet de fixer les elts*/
-
-        /* Taille*/
-        height: $HauteurPlatDescr; /* hauteur de l'ensemble description + prix*/
-        background-color: $CouleurFondDescRestaurants; /* Couleur de fond*/
-        margin: $TailleEspaceStandard; /* Marge entre chaque plat et son prix*/
-
-        border-radius: $RadiusCard; /* On   arrondit les angles*/
-
-        opacity: 0; /* invisible dans la page. N'apparaitra qu'avec l'animation*/
-
-        &:hover {
-          color: red;
-        }
-
-        /* Animation au survol du plat*/
-        &:hover + .PlatsPrix {
-          animation: K_TranslatePrix $anim-dur ease forwards; /*forwards: la valeur gardée est la dernièe*/
-        }
-
-        &:hover ~ .PlatsOK {
-          opacity: 1;
-          animation: K_TranslateMenuOK $anim-dur ease forwards; /*forwards: la valeur gardée est la dernièe*/
-        }
-        &:hover ~ .PlatsOK {
-          animation: K_RotateMenuOK $anim-dur ease forwards; /*forwards: la valeur gardée est la dernièe*/
-        }
-
-        .PlatsNom {
-          /* Le nom du plat*/
-          position: absolute; /* position fixe*/
-          top: 0; /* Tout en haut du container*/
-          left: 10%; /* Position /bord gauche*/
-        }
-
-        .PlatsDetailEtPrix {
-          /* L'ensemble détail du plat et son prix*/
+        .PlatsDescr {
           @include M_flex_box(
-            row,
+            column,
             space-around
-          ); /* description et prix à côté*/
+          ); /* Nom du plat puis en dessous: détail et prix à côté*/
           position: relative; /* Permet de fixer les elts*/
 
-          .PlatsDetails {
-            /* Le nom et description du plat à gauche*/
+          /* Taille*/
+          height: $HauteurPlatDescr; /* hauteur de l'ensemble description + prix*/
+          background-color: $CouleurFondDescRestaurants; /* Couleur de fond*/
+          margin: $TailleEspaceStandard; /* Marge entre chaque plat et son prix*/
+
+          border-radius: $RadiusCard; /* On   arrondit les angles*/
+
+          opacity: 0; /* invisible dans la page. N'apparaitra qu'avec l'animation*/
+
+          &:hover {
+            color: red;
+          }
+
+          /* Animation au survol du plat*/
+          &:hover + .PlatsPrix {
+            animation: K_TranslatePrix $anim-dur ease forwards; /*forwards: la valeur gardée est la dernièe*/
+          }
+
+          &:hover ~ .PlatsOK {
+            opacity: 1;
+            animation: K_TranslateMenuOK $anim-dur ease forwards; /*forwards: la valeur gardée est la dernièe*/
+          }
+          &:hover ~ .PlatsOK {
+            animation: K_RotateMenuOK $anim-dur ease forwards; /*forwards: la valeur gardée est la dernièe*/
+          }
+
+          .PlatsNom {
+            /* Le nom du plat*/
             position: absolute; /* position fixe*/
+            top: 0; /* Tout en haut du container*/
             left: 10%; /* Position /bord gauche*/
           }
 
-          .PlatsPrix {
-            position: absolute; /* position fixe*/
-            left: 90%; /* Position /bord gauche*/
+          .PlatsDetailEtPrix {
+            /* L'ensemble détail du plat et son prix*/
+            @include M_flex_box(
+              row,
+              space-around
+            ); /* description et prix à côté*/
+            position: relative; /* Permet de fixer les elts*/
+
+            .PlatsDetails {
+              /* Le nom et description du plat à gauche*/
+              position: absolute; /* position fixe*/
+              left: 10%; /* Position /bord gauche*/
+            }
+
+            .PlatsPrix {
+              position: absolute; /* position fixe*/
+              left: 90%; /* Position /bord gauche*/
+            }
           }
-        }
+        } /*fin PlatsDescr*/
         .PlatsOK {
           display: flex; /* Permet de centrer le petit icone*/
           position: absolute; /* position fixe*/
@@ -253,7 +253,7 @@ main {
           border-radius: 0 $RadiusCard $RadiusCard 0; /* On   arrondit les angles à droite*/
           opacity: 0; /* Caché jusqu'à nouvel ordre*/
         }
-      } /*fin PlatsDescr*/
+      } /* Fin load*/
     } /*Fin PlatsListe*/
   } /*Fin Plats*/
 
