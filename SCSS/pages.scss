@@ -222,10 +222,6 @@ main {
 
             margin-left: 10%; /* Position /bord gauche*/
             text-overflow: ellipsis;
-            h3 a:link {
-              text-decoration: none; /*lien pas souligné*/
-              color: $CouleurLienRepos; /* couleur du lien au repos */
-            }
           }
 
           .PlatsDetailEtPrix {
