@@ -221,6 +221,8 @@ main {
             /* Le nom du plat*/
 
             margin-left: 10%; /* Position /bord gauche*/
+            display: inline-flex;
+            white-space: nowrap;
             text-overflow: ellipsis;
           }
 
@@ -239,7 +241,6 @@ main {
             }
 
             .PlatsPrix {
-              text-decoration: none;
               margin-right: 10%;
             }
           }
