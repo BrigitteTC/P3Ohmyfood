@@ -225,3 +225,17 @@ Parametres:
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+/*---------------------------------------------------------*/
+/* Mixin pour Tronquer le texte
+Nom: M_Troncate
+Fonction: tronque le texte et affiche "..."
+Parametres:
+  Aucun
+
+/*---------------------------------------------------------*/
+@mixin M_Troncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

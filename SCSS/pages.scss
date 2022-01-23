@@ -148,7 +148,7 @@ main {
     }
 
     100% {
-      transform: translateX(-100%);
+      transform: translateX(-300%);
     }
   }
 
@@ -221,9 +221,8 @@ main {
             /* Le nom du plat*/
 
             margin-left: 10%; /* Position /bord gauche*/
-            display: inline-flex;
-            white-space: nowrap;
-            text-overflow: ellipsis;
+            /* tronque le texte*/
+            @include M_Troncate;
           }
 
           .PlatsDetailEtPrix {
@@ -237,7 +236,8 @@ main {
               /* Le nom et description du plat à gauche*/
 
               margin-left: 10%; /* Position /bord gauche*/
-              text-overflow: ellipsis; /* Affichera ... si le texte ne tient plus dans la case*/
+              /* tronque le texte*/
+              @include M_Troncate;
             }
 
             .PlatsPrix {
