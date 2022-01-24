@@ -97,10 +97,7 @@ Apparition de la page d'accueil après un spinner
     width: 50px;
 
     /* coloriage + mise en rond*/
-    border: 10px solid $CouleurPrimaire;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid $CouleurTertiaire;
-    border-left: 10px solid $CouleurSecondaire;
+    @include M_ColorSpinner;
     border-radius: $RadiusRond;
 
     /* Position au milieu à 200px du haut*/
@@ -144,20 +141,14 @@ Apparition de la page d'accueil après un spinner
 @keyframes Disparition {
   100%,
   0% {
-    border: 10px solid transparent;
+    border: 10px solid transparent; /* On le voit plus*/
   }
   5% {
-    border: 10px solid $CouleurPrimaire;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid $CouleurTertiaire;
-    border-left: 10px solid $CouleurSecondaire;
+    @include M_ColorSpinner; /* On le voit*/
   }
 
   95% {
-    border: 10px solid $CouleurPrimaire;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid $CouleurTertiaire;
-    border-left: 10px solid $CouleurSecondaire;
+    @include M_ColorSpinner; /* On le voit*/
   }
 }
 
