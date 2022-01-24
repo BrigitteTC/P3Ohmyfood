@@ -84,9 +84,9 @@ main {
   /*-------------------------------------------*/
   /* Keyframes relatives aux menus*/
   /*-------------------------------------------*/
-
-  $anim-dur: 1000ms; /* Durée de l'animation pour apparition des plats*/
-  $anim-delay: $anim-dur / 5; /* délay d'apparition de l'animation*/
+  $NbItems: 4; /* Nb de plats à afficher*/
+  $AnimDur: 1000ms; /* Durée de l'animation pour apparition des plats*/
+  $AnimDelay: $AnimDur / $NbItems; /* délay d'apparition de l'animation*/
   $AnimDurSurvol: 2s; /* Durée de l'animation pour le survol des menus*/
 
   /* Apparition des menus après un delay*/
@@ -189,10 +189,10 @@ main {
       &__load {
         opacity: 0; /*Caché et apparaitra avec l'animation*/
         /*animation: arrivéé des menus par le bas et en douceur avec "ease"*/
-        animation: K_ApparitionMenu $anim-dur ease forwards; /*forwards: la valeur gardée est la dernièe*/
-        @for $i from 1 through 4 {
+        animation: K_ApparitionMenu $AnimDur ease forwards; /*forwards: la valeur gardée est la dernièe*/
+        @for $i from 1 through $NbItems {
           &--#{$i} {
-            animation-delay: $anim-delay * $i;
+            animation-delay: $AnimDelay * $i;
           }
         }
 
