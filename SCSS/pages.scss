@@ -86,7 +86,8 @@ main {
   /*-------------------------------------------*/
 
   $anim-dur: 1000ms; /* Durée de l'animation pour apparition des plats*/
-  $anim-delay: $anim-dur / 5; /* délay d'apparition de l'animation*/
+  $max_item: 4; /*nombre d'items à afficher*/
+  $anim-delay: $anim-dur / $max_item; /* délay d'apparition de l'animation*/
 
   /* Apparition des menus après un delay*/
   /* On fait apparaitre le menu avant son arrivee*/
@@ -189,7 +190,7 @@ main {
       &__load {
         /*animation: arrivéé des menus par le bas et en douceur avec "ease"*/
         animation: K_ApparitionMenu $anim-dur ease forwards; /*forwards: la valeur gardée est la dernièe*/
-        @for $i from 1 through 4 {
+        @for $i from 1 through $max_item {
           &--#{$i} {
             animation-delay: $anim-delay * $i;
           }
