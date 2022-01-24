@@ -186,6 +186,7 @@ main {
 
       /* Apparition des menus*/
       &__load {
+        opacity: 0; /*Caché et apparaitra avec l'animation*/
         /*animation: arrivéé des menus par le bas et en douceur avec "ease"*/
         animation: K_ApparitionMenu $anim-dur ease forwards; /*forwards: la valeur gardée est la dernièe*/
         @for $i from 1 through 4 {
@@ -252,7 +253,7 @@ main {
           display: flex; /* Permet de centrer le petit icone*/
 
           height: $HauteurPlatDescr; /* hauteur de l'ensemble description + prix*/
-          width: 0%; /* Largeur jusqu'au bord droit*/
+          /* width: 0%; /* Largeur jusqu'au bord droit*/
 
           color: $CouleurOK; /* Couleur du petit icone*/
 
@@ -275,7 +276,7 @@ main {
 
         /* Survol  on fait tourner le logo*/
         &:hover .Logo {
-          animation: K_RotateMenuOK 1s ease forwards;
+          animation: K_RotateMenuOK 2s ease forwards;
         }
 
         /* Survol  on décale le prix*/
