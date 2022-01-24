@@ -105,14 +105,13 @@ main {
   /*Keyframe pour faire apparaite la coche OK au survol*/
   @keyframes K_TranslateMenuOK {
     0% {
-      transform: translateX(0);
-      width: 0%;
+      width: 0px;
       opacity: 0;
+      transform-origin: right; /* Permet de caller la petite coche verte tout à droite*/
     }
 
     100% {
-      transform: translateX(-10%);
-      width: 10%;
+      width: 40px;
       opacity: 1;
     }
   }
