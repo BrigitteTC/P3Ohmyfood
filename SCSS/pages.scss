@@ -284,13 +284,13 @@ main {
           animation: K_TranslatePrix 2s ease forwards;
         }
 
-        /* Survol  on décale le nom*/
-        &:hover .PlatsNom {
+        /* Survol  on décale le nom en activant la balise h3*/
+        &:hover h3 {
           animation: K_Reduce 2s ease forwards;
         }
 
-        /* Survol  on décale le a dexcription*/
-        &:hover .PlatsDescription {
+        /* Survol  on décale le a description en activant la balise p*/
+        &:hover p {
           animation: K_Reduce 2s ease forwards;
         }
       } /* Fin load*/
