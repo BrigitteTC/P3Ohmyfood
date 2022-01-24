@@ -1,0 +1,414 @@
+/*-------------------------*/
+/* -----------------------------
+Projet 3 OHMYFOOD
+Code CSS
+
+Création: 16/12/2021
+Auteur: BTC
+------------------------------*/
+/*Versions
+
+----------------------------*/
+
+/* Variables */
+
+:root {
+  /*Les couleurs*/
+  --CouleurPrimaire: #9356dc;
+  --CouleurSecondaire: #ff79da;
+  --CouleurTertiaire: #99e2d0;
+
+  --CouleurItem3: rgb(245, 237, 255);
+
+  --FondGris: #f2f2f2;
+  --FondGrisFonce: rgb(234, 234, 234);
+  --CouleurBordure: rgb(221, 221, 221);
+
+  --OmbreArticle: rgb(212, 208, 208); /* Couleur de l'ombre de l'article*/
+
+  /* Les marges*/
+
+  /* Les rayons de courbure*/
+  --RadiusCard: 15px; /* Rayon de courbure pour les items : petit arrondi*/
+  --RadiusRond: 50px; /*50px pour faire un rond*/
+
+  /* graisse du texte*/
+}
+
+/*Infos générales body*/
+body {
+  font-family: "Roboto", sans-serif;
+
+  color: black; /*Couleur du texte: noir*/
+
+  margin: 0; /* supprime la marge pour chrome*/
+}
+
+/* Balises sémantiques */
+h1 {
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 800;
+}
+h2 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 14px;
+  font-weight: 400;
+  /*padding:20 40px;*/ /* pas de padding*/
+}
+
+h6 {
+  font-size: 2px; /* tout petit pour rester caché dans une section où il faut une balise h1/h6*/
+}
+
+p {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+/*Classe pour tous les logos*/
+.Logo {
+  margin: auto; /* permet de centrer le logo*/
+}
+
+/* Classe pour englober un logo*/
+.PositionLogo {
+  /*deco du logo*/
+  display: flex; /* Permet de centrer l'icone'*/
+
+  padding: 17px; /* Marge interne pour décaler le logo sur son fond*/
+}
+
+/*Header*/
+/*--------------------------*/
+
+header {
+  display: flex;
+  flex-direction: column; /* en vertical*/
+  align-items: center;
+}
+
+/* Le logo du site*/
+.SiteLogo {
+  align-items: center;
+  width: 60%; /* Largeur/ container*/
+  height: 40px; /*Hauteur forcée en pixels*/
+}
+
+/*-----------------------------------------------------------------------------------*/
+
+/*Section de recherche avec son formulaire*/
+.Recherche {
+  /* la section recherche contient 2 elts le h6 caché et le bloc RechercheItem*/
+
+  display: flex;
+  flex-direction: column; /*RechercheItem puis h6*/
+
+  justify-content: center;
+  box-sizing: border-box;
+
+  width: 100%;
+
+  background-color: var(--FondGrisFonce);
+
+  margin: 20px auto 0 auto; /* haut | droit | bas | gauche */
+}
+
+/* 2 parties pour le champ de recherche
+le logo
+Le champ de saisie
+*/
+
+.RechercheItem {
+  /* l'ensemble logo + saisie*/
+  display: flex;
+  flex-direction: row; /*Horizontal*/
+
+  justify-content: center; /* l'ensemble centré*/
+  box-sizing: border-box;
+
+  /*Taille*/
+  width: 100%; /*Affichage sur toute la largeur*/
+  height: 50px; /*Hauteur forcée en pixels*/
+
+  /* Bordure solid, grise  en haut du champ de recherche*/
+  border-top: 5px solid var(--CouleurBordure); /* bordure en haut du champde recherche*/
+}
+
+.RechercheLogo {
+  display: flex; /* pour centrer le petit logo*/
+  margin-right: 2%; /* Séparation avec le champ de saisie*/
+}
+
+.RechercheChamp {
+  /*Champ de la recherche utilisateur*/
+
+  height: 100%;
+  margin-right: 2%; /* séparation avec le logo*/
+
+  background-color: var(--FondGrisFonce);
+}
+
+.RechercheChamp p {
+  /*Champ de la recherche utilisateur*/
+  height: 100%;
+
+  text-align: center;
+
+  margin: 0;
+}
+
+.saisie {
+  color: black; /* couleur texte de saisie*/
+  background-color: var(
+    --FondGrisFonce
+  ); /* fond du champ de saisie (sinon reste en blanc*/
+
+  height: 100%;
+
+  border: none; /* supprime la bordure du champ de saisie*/
+}
+
+/*--------------------------------------------------------------------------*/
+
+/*Promesse*/
+.Promesse {
+  display: flex;
+  flex-direction: column; /*vertical*/
+  box-sizing: border-box;
+  background-color: var(--FondGris);
+
+  align-items: center; /* centré*/
+
+  width: 100%;
+
+  padding: 20px 0 20px 0; /* Espace  haut et bas  haut | droit | bas | gauche */
+}
+
+.Bouton {
+  color: white; /* texte en blanc*/
+  background-color: var(--FondGris);
+
+  height: 50px; /* Hauteur forcée en pixels*/
+
+  /* Fond dégradé pour le bouton du bas vers le haut*/
+  background-image: linear-gradient(
+    to top,
+    var(--CouleurPrimaire),
+    var(--CouleurSecondaire)
+  );
+
+  border: none; /* Pas de bordure*/
+  padding: 0 20px 0 20px; /* Espace gauche et droite sur le texte du bouton  haut | droit | bas | gauche */
+
+  border-radius: 15px; /* Coins arrondis*/
+
+  /* petite ombre*/
+  box-shadow: 5px 5px 10px var(--OmbreArticle); /* Décalage horizontal, décalage vertical, force du dégradé, couleur*/
+}
+
+/*le bouton au survol*/
+.Bouton:hover {
+  /* Ajout d'une ombre  */
+  box-shadow: 5px 5px 5px blue; /* Décalage horizontal, décalage vertical, force du dégradé, couleur*/
+}
+
+/*--------------------------------------------------------------------------*/
+/* Liens articles (fonctionnement et Restaurants*/
+
+.LienArticle a:link {
+  /* lien au repos*/
+  text-decoration: none; /*lien pas souligné*/
+  color: black; /* couleur du lien au repos = noir*/
+}
+
+/* le lien au survol*/
+.LienArticle a:hover {
+  color: blue; /*bleu*/
+}
+
+/*--------------------------------------------------------------------------*/
+/*fonctionnement*/
+
+.Fonctionnement {
+  display: flex;
+  flex-direction: column; /* vertical: Le titre puis la liste */
+  box-sizing: border-box;
+}
+
+/* La liste des items de fonctionnement*/
+.FonctListe {
+  display: flex;
+  flex-direction: column; /* Les boutons les uns au dessus des autres*/
+  box-sizing: border-box;
+}
+
+/* Article avec le numéro l'icone et la description*/
+.FonctItem {
+  display: flex;
+  flex-direction: row; /* Horizontal*/
+  box-sizing: border-box;
+
+  position: relative; /* Permet de positionner les elts à l'intérieur*/
+
+  height: 60px; /*Hauteur forcée en pixels*/
+
+  margin: 20px; /* Marge / ecran et bouton suivant*/
+
+  border-radius: var(--RadiusCard); /* coins arrondis*/
+
+  /* Ajout d'une ombre*/
+  box-shadow: 5px 5px 10px var(--OmbreArticle); /* Décalage horizontal, décalage vertical, force du dégradé, couleur*/
+}
+
+.FondItem1_2 {
+  background-color: var(--FondGris);
+}
+/* Les couleurs de fond de chaque item*/
+.FondItem3 {
+  background-color: var(--CouleurItem3);
+}
+
+/* Le numéro*/
+.FonctNum {
+  display: flex;
+
+  position: absolute;
+
+  /* Carré de 30 pixels de côté qui dépasse de la moitié à gauche*/
+  left: -15px; /* dépasse à gauche*/
+  top: 15px; /* position / haut*/
+
+  height: 30px; /* Hauteur largeur fornée en px*/
+  width: 30px;
+
+  text-decoration: none; /*Pas de soulignement*/
+  color: white; /* texte en blanc*/
+
+  background-color: var(--CouleurPrimaire);
+
+  border-radius: var(--RadiusRond); /* Le numéro dans un rond*/
+}
+
+.FonctNum p {
+  /* Le numéro dans son rond*/
+
+  margin: auto; /* Permet de centrer le logo*/
+}
+
+/* Le petit icone du fonctionnement*/
+.FonctIcone {
+  margin: auto;
+  height: 40px;
+  width: 40px;
+
+  position: absolute;
+  left: 10%; /* Position / bord gauche*/
+  top: 20px;
+  bottom: auto;
+}
+
+/* couleur de l'icone 1 et 2*/
+.CouleurIconeItem12 {
+  color: black;
+}
+
+/* couleur de l'icone 3*/
+.CouleurIconeItem3 {
+  color: var(--CouleurPrimaire);
+}
+
+/* La Description*/
+.FonctDesc {
+  position: absolute;
+  left: 30%; /*Position / bord gauche*/
+}
+
+/*---------------------------------------*/
+/* Liste des restaurants*/
+/*---------------------------------------*/
+
+/* L'ensemble image + texte + coeur*/
+.RestaurantItem {
+  display: flex;
+  flex-direction: column; /* vertical: photo et en dessous la description*/
+
+  justify-content: space-between; /* disposition  sur la largeur*/
+
+  box-sizing: border-box; /*  bordure et le remplissage dans la valeur définie pour la largeur et la hauteur*/
+
+  background-color: white; /*sur fond blanc*/
+
+  margin: 20px; /* marge entre chaque restau*/
+
+  /* On arrondit les angles*/
+  border-radius: var(--RadiusCard); /* Tous les angles arrondis*/
+
+  /* Ajout d'une ombre*/
+  box-shadow: 5px 5px 10px var(--OmbreArticle); /* Décalage horizontal, décalage vertical, force du dégradé, couleur*/
+}
+
+.RestaurantDesc {
+  /* le nom , le lieu puis le petit icone coeur à côté*/
+  display: flex;
+  flex-direction: row; /*horizontal*/
+  justify-content: space-around; /* disposition avec des espaces entre chaque item et au bord*/
+
+  box-sizing: border-box; /*  bordure et le remplissage dans la valeur définie pour la largeur et la hauteur*/
+}
+
+.RestaurantNom {
+  width: 70%; /* Occupe 70% de la largeur*/
+  padding-left: 5%; /* petit décalage / bord*/
+}
+
+.RestaurantCoeur {
+  margin: auto; /* centré*/
+
+  /*color: red; /*Ne s'affiche plus*/
+  /* border: solid 2px black; /* la bordure affiche un carré autour du coeur*/
+}
+
+.RestaurantImg {
+  width: 100%; /* 100% du container*/
+  height: 300px;
+
+  /* On arrondit les angles en haut*/
+  border-radius: var(--RadiusCard) var(--RadiusCard) 0 0; /* Top left / Top right / Bottom right / Bottom left*/
+}
+
+/* Les liens sur les items restaurant*/
+
+/* Effets supplémentaires au survol   */
+.RestaurantItem:hover {
+  /* Ajout d'une ombre  */
+  box-shadow: 5px 5px 5px blue; /* Décalage horizontal, décalage vertical, force du dégradé, couleur*/
+} /* */
+
+/*--------------------------------------------------*/
+/*Footer                                            */
+/*--------------------------------------------------*/
+
+footer {
+  color: white; /*texte en blanc*/
+  background-color: black; /*Sur fond noir*/
+  padding: 20px;
+}
+
+footer h1 {
+  font-family: Shrikhand; /* Font family pou r le logo*/
+}
+
+.PiedDePage {
+  display: flex;
+  flex-direction: row;
+}

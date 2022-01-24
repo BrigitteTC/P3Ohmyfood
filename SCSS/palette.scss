@@ -74,7 +74,7 @@ main {
           }
         } /*fin  .TitreDescNom */
       } /* fin TitreDesc*/
-    } /*/* fin TitrePageDesc*/
+    } /* fin TitrePageDesc*/
   } /* fin   .TitrePage*/
 
   /*-------------------------------------------*/
@@ -105,14 +105,12 @@ main {
   /*Keyframe pour faire apparaite la coche OK au survol*/
   @keyframes K_TranslateMenuOK {
     0% {
-      transform: translateX(0);
-      width: 0%;
+      transform: translateX(200%);
       opacity: 0;
     }
 
     100% {
-      transform: translateX(-10%);
-      width: 10%;
+      transform: translateX(0);
       opacity: 1;
     }
   }
@@ -148,23 +146,15 @@ main {
     }
 
     100% {
-      transform: translateX(-300%);
+      transform: translateX(-400%);
     }
   }
 
-  /*Keyframe pour reduitre la taille*/
-  @keyframes K_Reduce {
-    0% {
-      width: 100%;
-    }
-
-    100% {
-      width: 80%;
-    }
-  }
   /*------------------------------------------
   Liens sur les menus
   -------------------------------------------*/
+
+  /* Ne pas toucher aux positions absolute et positions relatives car ça fonctionne*/
 
   .Plats {
     @include M_flex_box(
@@ -194,107 +184,129 @@ main {
             animation-delay: $anim-delay * $i;
           }
         }
+      }
 
-        /* cote cote:  Description + coche verte*/
-
-        @include M_flex_box(row, space-between);
-        margin: $TailleEspaceStandard; /* Marge entre chaque plat et son prix*/
-        background-color: $CouleurFondDescRestaurants; /* Couleur de fond*/
+      .PlatsDescr {
+        @include M_flex_box(
+          column,
+          space-around
+        ); /* Nom du plat puis en dessous: détail et prix à côté*/
+        position: relative; /* Permet de fixer les elts*/
+        z-index: 2; /* Div au repos devant la div au survol*/
 
         /* Taille*/
         height: $HauteurPlatDescr; /* hauteur de l'ensemble description + prix*/
-
         background-color: $CouleurFondDescRestaurants; /* Couleur de fond*/
-        /* margin: $TailleEspaceStandard; /* Marge entre chaque plat et son prix*/
+        margin: $TailleEspaceStandard; /* Marge entre chaque plat et son prix*/
 
         border-radius: $RadiusCard; /* On   arrondit les angles*/
 
-        .PlatsDescr {
+        .PlatsNom {
+          /* Le nom du plat*/
+          position: absolute; /* position fixe*/
+          top: 0; /* Tout en haut du container*/
+          left: 10%; /* Position /bord gauche*/
+        }
+
+        .PlatsDetailEtPrix {
+          /* L'ensemble détail du plat et son prix*/
           @include M_flex_box(
-            column,
+            row,
             space-around
-          ); /* Nom du plat puis en dessous: détail et prix à côté*/
+          ); /* description et prix à côté*/
 
-          width: 100%; /* Occupe 100% de la largeur*/
+          position: relative; /* Permet de fixer les elts*/
+        }
 
-          .PlatsNom {
-            /* Le nom du plat*/
+        .PlatsDetails {
+          /* Le nom et description du plat à gauche*/
+          position: absolute; /* position fixe*/
+          left: 10%; /* Position /bord gauche*/
+        }
 
-            margin-left: 10%; /* Position /bord gauche*/
-            /* tronque le texte*/
-            @include M_Troncate;
-          }
+        .PlatsPrix {
+          position: absolute; /* position fixe*/
+          left: 90%; /* Position /bord gauche*/
+        }
 
-          .PlatsDetailEtPrix {
-            /* L'ensemble détail du plat et son prix*/
-            @include M_flex_box(
-              row,
-              space-between
-            ); /* description et prix à côté*/
+        /* Survol de PlatsDescr déclenche le .PlatsDescrSurvol*/
+        &:hover + .PlatsDescrSurvol {
+          opacity: 1;
+          z-index: 10; /* Passe devant*/
 
-            .PlatsDetails {
-              /* Le nom et description du plat à gauche*/
+          /* l'animatin rotate ft à moitié
+            tout l'élement tourne*/
+          animation: K_TranslateMenuOK 1s ease forwards,
+            K_RotateMenuOK 1s ease forwards;
+        }
+      } /*fin PlatsDescr*/
 
-              margin-left: 10%; /* Position /bord gauche*/
-              /* tronque le texte*/
-              @include M_Troncate;
-            }
+      /* PlatsDescr au survol*/
 
-            .PlatsPrix {
-              margin-right: 10%;
-            }
-          }
-        } /*fin PlatsDescr*/
-        .PlatsOK {
+      .PlatsDescrSurvol {
+        @include M_flex_box(
+          column,
+          space-around
+        ); /* Nom du plat puis en dessous: détail et prix à côté*/
+
+        /* On positionnne la div de survol sur la div au repos*/
+        top: -($TailleEspaceStandard + $HauteurPlatDescr);
+
+        /* Ajustement de la positino et de la taille pour ne pas cacher le nom du plat*/
+        left: 39.9%; /* Décalé e  sur la gauche*/
+        width: 58%; /* Taille réduite */
+        position: relative; /* Permet de fixer les elts*/
+        z-index: 1; /* Derriere la div au repos en attendant d'etre déclenchée par le hover*/
+        opacity: 0; /* Caché car un petit bout de la coche verte déborde à droite*/
+
+        /* Taille*/
+        height: $HauteurPlatDescr; /* hauteur de l'ensemble description + prix*/
+        background-color: $CouleurFondDescRestaurants; /* Couleur de fond*/
+
+        border-radius: $RadiusCard; /* On   arrondit les angles*/
+
+        .PlatsNomSurvol {
+          /* Le nom du plat*/
+          position: absolute; /* position fixe*/
+          top: 0; /* Tout en haut du container*/
+          left: 10%; /* Position /bord gauche*/
+        }
+
+        .PlatsDetailEtPrixSurvol {
+          /* L'ensemble détail du plat et son prix*/
+          @include M_flex_box(
+            row,
+            space-around
+          ); /* description et prix à côté*/
+
+          position: relative; /* Permet de fixer les elts*/
+        }
+
+        .PlatsDetailsSurvol {
+          /* Le nom et description du plat à gauche*/
+          position: absolute; /* position fixe*/
+          left: 10%; /* Position /bord gauche*/
+        }
+
+        .PlatsPrixSurvol {
+          position: absolute; /* position fixe*/
+        }
+
+        .PlatsOKSurvol {
           display: flex; /* Permet de centrer le petit icone*/
+          position: absolute; /* position fixe*/
+          left: 80%; /* Position /bord gauche*/
 
           height: $HauteurPlatDescr; /* hauteur de l'ensemble description + prix*/
-          width: 0%; /* Largeur jusqu'au bord droit*/
+          width: 20%; /* Largeur jusqu'au bord droit*/
 
           color: $CouleurOK; /* Couleur du petit icone*/
 
           background-color: $CouleurTertiaire; /* Sur fond vert*/
 
           border-radius: 0 $RadiusCard $RadiusCard 0; /* On   arrondit les angles à droite*/
-          opacity: 0; /* Caché jusqu'à nouvel ordre*/
         }
-
-        /* Gestion du survol  de PlatsListe__Load*/
-        /* Survol  déclenche le .PlatsOK*/
-        &:hover .PlatsOK {
-          animation: K_TranslateMenuOK 2s ease forwards;
-          /*  animation-duration: 1s;
-            animation-name: K_TranslateMenuOK;
-            animation-iteration-count: 1s;
-            transition-timing-function: ease;
-            animation-fill-mode: forwards;*/
-        }
-
-        /* Survol  on fait tourner le logo*/
-        &:hover .Logo {
-          animation: K_RotateMenuOK 1s ease forwards;
-        }
-
-        /* Survol  on décale le prix*/
-        &:hover .PlatsPrix {
-          animation: K_TranslatePrix 2s ease forwards;
-        }
-
-        /* Survol  on décale le nom*/
-        &:hover .PlatsNom {
-          animation: K_Reduce 2s ease forwards;
-        }
-
-        /* Survol  on décale le a dexcription*/
-        &:hover .PlatsDescription {
-          animation: K_Reduce 2s ease forwards;
-        }
-      } /* Fin load*/
+      } /*fin PlatsDescrSurvol*/
     } /*Fin PlatsListe*/
   } /*Fin Plats*/
-
-  .Bouton {
-    width: 40%; /* Largeur du bouton*/
-    margin: auto;
-  }
 } /* fin du main*/

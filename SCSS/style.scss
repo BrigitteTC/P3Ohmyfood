@@ -97,7 +97,11 @@ Apparition de la page d'accueil après un spinner
     width: 50px;
 
     /* coloriage + mise en rond*/
-    @include M_CouleurSpinner;
+    border: 10px solid $CouleurPrimaire;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid $CouleurSecondaire;
+    border-radius: $RadiusRond;
 
     /* Position au milieu à 200px du haut*/
     top: 200px;
@@ -143,11 +147,17 @@ Apparition de la page d'accueil après un spinner
     border: 10px solid transparent;
   }
   5% {
-    @include M_CouleurSpinner;
+    border: 10px solid $CouleurPrimaire;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid $CouleurSecondaire;
   }
 
   95% {
-    @include M_CouleurSpinner;
+    border: 10px solid $CouleurPrimaire;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid $CouleurSecondaire;
   }
 }
 
@@ -459,7 +469,7 @@ header {
           width: 20%;
 
           z-index: 2; /* Place le popup devant l'image*/
-          color: $CouleurTextePopup;
+          color: green;
           background-color: $CouleurTertiaire;
           padding: 5px;
           p {
