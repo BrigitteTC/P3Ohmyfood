@@ -218,11 +218,13 @@ main {
           width: 100%; /* Occupe 100% de la largeur*/
 
           .PlatsNom {
-            /* Le nom du plat*/
+            h3 {
+              /* Le nom du plat*/
 
-            margin-left: 10%; /* Position /bord gauche*/
-            /* tronque le texte*/
-            @include M_Troncate;
+              margin-left: 20px; /* Position /bord gauche*/
+              /* tronque le texte*/
+              @include M_Troncate;
+            }
           }
 
           .PlatsDetailEtPrix {
@@ -233,15 +235,17 @@ main {
             ); /* description et prix à côté*/
 
             .PlatsDetails {
-              /* Le nom et description du plat à gauche*/
+              p {
+                /* Le nom et description du plat à gauche*/
 
-              margin-left: 10%; /* Position /bord gauche*/
-              /* tronque le texte*/
-              @include M_Troncate;
+                margin-left: 20px; /* Position /bord gauche*/
+                /* tronque le texte*/
+                @include M_Troncate;
+              }
             }
 
             .PlatsPrix {
-              margin-right: 10%;
+              margin-right: 100px;
             }
           }
         } /*fin PlatsDescr*/

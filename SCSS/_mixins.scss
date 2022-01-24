@@ -246,6 +246,7 @@ Fonction: tronque le texte et affiche "..."
 Parametres:
   Aucun
 
+  Attention: overflow: Hidden et pas text-overflow: hidden
 /*---------------------------------------------------------*/
 @mixin M_Troncate {
   white-space: nowrap;
