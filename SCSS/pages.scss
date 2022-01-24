@@ -88,9 +88,7 @@ main {
   $anim-dur: 1000ms; /* Durée de l'animation pour apparition des plats*/
   $max_item: 4; /*nombre d'items à afficher*/
   $anim-delay: $anim-dur / $max_item; /* délay d'apparition de l'animation*/
-  $HauteurApparition: (
-    $HauteurPlatDescr + $TailleEspaceStandard
-  ); /* Hauteur depuis laquelle viendront les menus*/
+  $HauteurApparition: $HauteurPlatDescr; /* Hauteur depuis laquelle viendront les menus*/
 
   /* Apparition des menus après un delay*/
   /* On fait apparaitre le menu avant son arrivee*/
