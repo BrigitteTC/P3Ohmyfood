@@ -99,7 +99,7 @@ Apparition de la page d'accueil après un spinner
     /* coloriage + mise en rond*/
     border: 10px solid $CouleurPrimaire;
     border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
+    border-bottom: 10px solid $CouleurTertiaire;
     border-left: 10px solid $CouleurSecondaire;
     border-radius: $RadiusRond;
 
@@ -149,14 +149,14 @@ Apparition de la page d'accueil après un spinner
   5% {
     border: 10px solid $CouleurPrimaire;
     border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
+    border-bottom: 10px solid $CouleurTertiaire;
     border-left: 10px solid $CouleurSecondaire;
   }
 
   95% {
     border: 10px solid $CouleurPrimaire;
     border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
+    border-bottom: 10px solid $CouleurTertiaire;
     border-left: 10px solid $CouleurSecondaire;
   }
 }
