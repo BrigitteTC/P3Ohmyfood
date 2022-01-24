@@ -236,6 +236,6 @@ Parametres:
 /*---------------------------------------------------------*/
 @mixin M_Troncate {
   white-space: nowrap;
-  text-overflow: hidden;
+  overflow: hidden;
   text-overflow: ellipsis;
 }
