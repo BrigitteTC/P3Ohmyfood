@@ -226,7 +226,7 @@ main {
             h3 {
               /* Le nom du plat*/
 
-              margin-left: 10%; /* Position /bord gauche*/
+              margin-left: 20px; /* Position /bord gauche*/
               /* tronque le texte*/
               @include M_Troncate;
             }
@@ -243,14 +243,14 @@ main {
               p {
                 /* Le nom et description du plat à gauche*/
 
-                margin-left: 10%; /* Position /bord gauche*/
+                margin-left: 20px; /* Position /bord gauche*/
                 /* tronque le texte*/
                 @include M_Troncate;
               }
             }
 
             .PlatsPrix {
-              margin-right: 10%;
+              margin-right: 20px;
             }
           }
         } /*fin PlatsDescr*/
