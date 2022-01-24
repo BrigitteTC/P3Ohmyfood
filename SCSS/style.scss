@@ -469,7 +469,7 @@ header {
           width: 20%;
 
           z-index: 2; /* Place le popup devant l'image*/
-          color: green;
+          color: $CouleurTextePopup;
           background-color: $CouleurTertiaire;
           padding: 5px;
           p {
