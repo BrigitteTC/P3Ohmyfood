@@ -90,6 +90,8 @@ main {
   $anim-delay: $anim-dur / $max_item; /* délay d'apparition de l'animation*/
   $HauteurApparition: $HauteurPlatDescr; /* Hauteur depuis laquelle viendront les menus*/
 
+  $SurvolAnimDur: 2000ms; /* Durée animation pour le survol des plats*/
+
   /* Apparition des menus après un delay*/
   /* On fait apparaitre le menu avant son arrivee*/
   @keyframes K_ApparitionMenu {
@@ -265,7 +267,7 @@ main {
         /* Gestion du survol  de PlatsListe__Load*/
         /* Survol  déclenche le .PlatsOK*/
         &:hover .PlatsOK {
-          animation: K_TranslateMenuOK 2s ease forwards;
+          animation: K_TranslateMenuOK $SurvolAnimDur ease forwards;
           /*  animation-duration: 1s;
             animation-name: K_TranslateMenuOK;
             animation-iteration-count: 1s;
@@ -275,22 +277,22 @@ main {
 
         /* Survol  on fait tourner le logo*/
         &:hover .Logo {
-          animation: K_RotateMenuOK 1s ease forwards;
+          animation: K_RotateMenuOK $SurvolAnimDur ease forwards;
         }
 
         /* Survol  on décale le prix*/
         &:hover .PlatsPrix {
-          animation: K_TranslatePrix 2s ease forwards;
+          animation: K_TranslatePrix $SurvolAnimDur ease forwards;
         }
 
         /* Survol  on décale le nom*/
         &:hover .PlatsNom {
-          animation: K_Reduce 2s ease forwards;
+          animation: K_Reduce $SurvolAnimDur ease forwards;
         }
 
         /* Survol  on décale le a dexcription*/
         &:hover .PlatsDescription {
-          animation: K_Reduce 2s ease forwards;
+          animation: K_Reduce $SurvolAnimDur ease forwards;
         }
       } /* Fin load*/
     } /*Fin PlatsListe*/
