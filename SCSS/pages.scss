@@ -152,7 +152,7 @@ main {
     }
 
     100% {
-      transform: translateX(-300%);
+      transform: translateX(-20%);
     }
   }
 
@@ -226,7 +226,7 @@ main {
             h3 {
               /* Le nom du plat*/
 
-              margin-left: $TailleEspaceStandard; /* Position /bord gauche*/
+              margin-left: 2 * $TailleEspaceStandard; /* Position /bord gauche*/
               /* tronque le texte*/
               @include M_Troncate;
             }
@@ -243,14 +243,14 @@ main {
               p {
                 /* Le nom et description du plat à gauche*/
 
-                margin-left: $TailleEspaceStandard; /* Position /bord gauche*/
+                margin-left: 2 * $TailleEspaceStandard; /* Position /bord gauche*/
                 /* tronque le texte*/
                 @include M_Troncate;
               }
             }
 
             .PlatsPrix {
-              margin-right: $TailleEspaceStandard;
+              margin-right: 5 * $TailleEspaceStandard;
             }
           }
         } /*fin PlatsDescr*/
@@ -290,12 +290,12 @@ main {
         }
 
         /* Survol  on décale le nom*/
-        &:hover .PlatsNom {
+        &:hover h3 {
           animation: K_Reduce $SurvolAnimDur ease forwards;
         }
 
         /* Survol  on décale le a dexcription*/
-        &:hover .PlatsDescription {
+        &:hover p {
           animation: K_Reduce $SurvolAnimDur ease forwards;
         }
       } /* Fin load*/
