@@ -69,6 +69,19 @@ Parametres:
   padding: 20px 5%; /* Espace intérieur Haut/bas et Gauche/droite*/
 }
 
+/*-------------------------------------------------------
+Mixin: Couleur du spipnner
+Fonction: mets en couleurs le spinner
+Paramètres: aucun
+
+-----------------------------------------------------------*/
+@mixin M_CouleurSpinner {
+  border: 10px solid $CouleurPrimaire;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid $CouleurTertiaire;
+  border-left: 10px solid $CouleurSecondaire;
+}
+
 /*---------------------------------------------------------*/
 /*---------------------------------------------------------*/
 /* Mixin pour affichage d'une ombre 
@@ -100,7 +113,7 @@ Parametres:
 /*---------------------------------------------------------*/
 /* keyframes spinner
 Nom: K_spinner
-Fonction: Affiche un rond d'attenee
+Fonction: Affiche un rond d'attente
 Parametres:
   aucun
 
@@ -229,7 +242,7 @@ Parametres:
 /*---------------------------------------------------------*/
 /* Mixin pour Tronquer le texte quand il n'y a plus de place poru l'affichage.
 Nom: M_Troncate
-Fonction: tronque le texte et affiche "..."
+Fonction: tronque le texte et affiche "..." à la fin.
 Parametres:
   Aucun
 

@@ -97,11 +97,7 @@ Apparition de la page d'accueil après un spinner
     width: 50px;
 
     /* coloriage + mise en rond*/
-    border: 10px solid $CouleurPrimaire;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid $CouleurTertiaire;
-    border-left: 10px solid $CouleurSecondaire;
-    border-radius: $RadiusRond;
+    @include M_CouleurSpinner;
 
     /* Position au milieu à 200px du haut*/
     top: 200px;
@@ -147,17 +143,11 @@ Apparition de la page d'accueil après un spinner
     border: 10px solid transparent;
   }
   5% {
-    border: 10px solid $CouleurPrimaire;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid $CouleurTertiaire;
-    border-left: 10px solid $CouleurSecondaire;
+    @include M_CouleurSpinner;
   }
 
   95% {
-    border: 10px solid $CouleurPrimaire;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid $CouleurTertiaire;
-    border-left: 10px solid $CouleurSecondaire;
+    @include M_CouleurSpinner;
   }
 }
 
