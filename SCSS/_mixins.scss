@@ -69,6 +69,19 @@ Parametres:
   padding: 20px 5%; /* Espace intérieur Haut/bas et Gauche/droite*/
 }
 
+/*------------------------------------------------------------
+Mixin pour coloriage su spinner
+Nom: M_ColorSpinner
+Paramètres: aucun
+/*------------------------------------------------------------*/
+
+@mixin M_ColorSpinner {
+  border: 10px solid $CouleurPrimaire;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid $CouleurTertiaire;
+  border-left: 10px solid $CouleurSecondaire;
+}
+
 /*---------------------------------------------------------*/
 /*---------------------------------------------------------*/
 /* Mixin pour affichage d'une ombre 
