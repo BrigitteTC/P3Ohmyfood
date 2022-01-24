@@ -106,18 +106,17 @@ main {
     }
   }
 
-  /*Keyframe pour faire apparaite la coche OK au survol*/
+  /*Keyframe pour faire apparaite la coche OK au survol
+  par augmentation de la taille.*/
   @keyframes K_TranslateMenuOK {
     0% {
-      transform: translateX(0);
-      width: 0%;
+      width: 0px;
       opacity: 0;
       transform-origin: right;
     }
 
     100% {
-      transform: translateX(-10%);
-      width: 10%;
+      width: 40px;
       opacity: 1;
     }
   }
@@ -255,7 +254,7 @@ main {
           display: flex; /* Permet de centrer le petit icone*/
 
           height: $HauteurPlatDescr; /* hauteur de l'ensemble description + prix*/
-          width: 0%; /* Largeur jusqu'au bord droit*/
+          /* width: 0%; /* Largeur jusqu'au bord droit*/
 
           color: $CouleurOK; /* Couleur du petit icone*/
 
