@@ -227,15 +227,16 @@ Parametres:
 }
 
 /*---------------------------------------------------------*/
-/* Mixin pour Tronquer le texte
+/* Mixin pour Tronquer le texte quand il n'y a plus de place poru l'affichage.
 Nom: M_Troncate
 Fonction: tronque le texte et affiche "..."
 Parametres:
   Aucun
 
+  Important: Il faut bien mettre le paramètre overflow et pas text-overflow.
 /*---------------------------------------------------------*/
 @mixin M_Troncate {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  white-space: nowrap; /* Pas de retour à la ligne*/
+  overflow: hidden; /* overflow caché*/
+  text-overflow: ellipsis; /*affiche "..."*/
 }

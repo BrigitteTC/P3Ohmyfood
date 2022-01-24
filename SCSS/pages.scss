@@ -289,12 +289,12 @@ main {
           animation: K_TranslatePrix $SurvolAnimDur ease forwards;
         }
 
-        /* Survol  on décale le nom*/
+        /* Survol  on décale le nom en jouant sur la balise h3*/
         &:hover h3 {
           animation: K_Reduce $SurvolAnimDur ease forwards;
         }
 
-        /* Survol  on décale le a dexcription*/
+        /* Survol  on décale la description en jouant sur la balise p*/
         &:hover p {
           animation: K_Reduce $SurvolAnimDur ease forwards;
         }
