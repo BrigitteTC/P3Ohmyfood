@@ -93,7 +93,7 @@ main {
   /* On fait apparaitre le menu avant son arrivee*/
   @keyframes K_ApparitionMenu {
     0% {
-      transform: translateY(9999px);
+      transform: translateY($HauteurPlatDescr);
       opacity: 0;
     }
 
