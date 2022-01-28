@@ -41,9 +41,11 @@ body {
 }
 
 /* Couleur des liens fixée*/
+a,
 a:link,
-a:hover,
+a:visited,
 a:focus,
+a:hover,
 a:active {
   color: $CouleurLienRepos;
 }
