@@ -297,17 +297,18 @@ main {
         }
 
         /* Survol  on décale le nom en activant la balise h3*/
-        &:hover h3 {
-          animation: K_Reduce $AnimDurSurvol ease forwards;
-        }
+        /*&:hover h3 {
+          /* pas de réduction pour le desktop*/
+        /* @media screen and (max-width: $TailleEcranDesktop) {
+            animation: K_Reduce $AnimDurSurvol ease forwards;
+          }
+       /* }*/
 
         /* Survol  on décale la description en activant la balise p*/
         &:hover p {
-          animation: K_Reduce $AnimDurSurvol ease forwards;
-
           /* pas de réduction pour le desktop*/
-          @media screen and (min-width: $TailleEcranDesktop) {
-            animation: K_ReduceDesktop $AnimDurSurvol ease forwards;
+          @media screen and (max-width: $TailleEcranDesktop) {
+            animation: K_Reduce $AnimDurSurvol ease forwards;
           }
         }
       } /* Fin load*/
