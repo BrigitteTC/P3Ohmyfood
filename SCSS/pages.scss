@@ -162,6 +162,17 @@ main {
       width: 70%;
     }
   }
+
+  /*Keyframe pour reduitre la taille*/
+  @keyframes K_ReduceDesktop {
+    0% {
+      width: 100%;
+    }
+
+    100% {
+      width: 100%;
+    }
+  }
   /*------------------------------------------
   Liens sur les menus
   -------------------------------------------*/
@@ -290,9 +301,14 @@ main {
           animation: K_Reduce $AnimDurSurvol ease forwards;
         }
 
-        /* Survol  on décale le a description en activant la balise p*/
+        /* Survol  on décale la description en activant la balise p*/
         &:hover p {
           animation: K_Reduce $AnimDurSurvol ease forwards;
+
+          /* pas de réduction pour le desktop*/
+          @media screen and (min-width: $TailleEcranDesktop) {
+            animation: K_ReduceDesktop $AnimDurSurvol ease forwards;
+          }
         }
       } /* Fin load*/
     } /*Fin PlatsListe*/
